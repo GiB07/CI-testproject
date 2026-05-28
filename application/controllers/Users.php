@@ -137,7 +137,7 @@ public function login(){
     }
 
     public function register(){
-        $this->load->view('users/register');
+        $this->load->view('register');
     }
 
     public function insert_registration(){
