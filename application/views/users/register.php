@@ -26,7 +26,7 @@
     }
 
     .left-side {
-        background-image:url(../assets/img/kevinturcios.jpg);
+        background-image:url(/assets/img/kevinturcios.jpg);
         );
         background-size: cover;
         border-radius: 20px 0px 0px 20px;
@@ -121,7 +121,7 @@
     }
 </style>
 <section class="login-panel">
-    <form method="POST" action="<?php echo base_url(); ?>users/insert_registration">
+    <form method="POST" action="<?php echo base_url('insert_registration'); ?>">
         <div class="left-side" style="text-align:center">
           <div class='msg'></div>
         </div>
