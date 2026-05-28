@@ -167,7 +167,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </style>
 <div class="app">
     <div class="bg"></div>
-    <form  method="POST" action="<?php echo base_url(); ?>users/login">
+    <form  method="POST" action="<?php echo base_url(); ?>/users/login">
     <label style="color: #54546b; font-family:Monotype Corsiva; font-size: 30px;">Get Inked! Tattoo Shop</label><br>
     <label style="color: #54546b; font-size: 15px;"></label>
     <label style="color: #54546b; font-style: italic; font-size: 15px;">We Ink Whatever you Think</label>
@@ -188,9 +188,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <br>
         <br>
         <input type="submit" value="Login" style="background: #000;">
-         <p>Don't have an account? <a href="<?php echo base_url(); ?>users/register">Register</a></p>
+         <p>Don't have an account? <a href="<?php echo base_url(); ?>/users/register">Register</a></p>
     </form>
-    <form style = "display:none" action="<?php echo base_url(); ?>users/reset" method="post">
+    <form style = "display:none" action="<?php echo base_url(); ?>/users/reset" method="post">
         <header></header>
         <div class="row">
             <div class="col-md-12">
