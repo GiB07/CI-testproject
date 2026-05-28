@@ -166,7 +166,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
 </style>
 <div class="app">
-    <div class="bg"></div>
+    <div class="bg">
     <form  method="POST" action="<?php echo base_url(); ?>users/login">
     <label style="color: #54546b; font-family:Monotype Corsiva; font-size: 30px;">Get Inked! Tattoo Shop</label><br>
     <label style="color: #54546b; font-size: 15px;"></label>
@@ -210,6 +210,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
     </form>
+    </div>
 </div>
 <script>
     $(document).ready(function(){
