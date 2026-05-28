@@ -7,7 +7,7 @@
         padding-right: 450px!important; 
     }
     body{
-        background-image: url(assets/img/tatshopbg.jpg)!important;
+        background-image: url(/assets/img/tatshopbg.jpg)!important;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -22,7 +22,7 @@
             <div class="col-md-7 align-self-center text-right">
                 <div class="d-flex justify-content-end align-items-center">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?php echo base_url("users/dashboard/") ?>">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<?php echo base_url('dashboard'); ?>">Home</a></li>
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                 </div>
@@ -36,7 +36,7 @@
                             <h5 class="card-title "><b>RESERVATIONS</b></h5>
                         </div>
                         <center>
-                            <a href="<?php echo base_url(); ?>users/hut_reserve" class="btn btn-dark btn-md" id="huts" >
+                            <a href="<?php echo base_url('hut_reserve'); ?>" class="btn btn-dark btn-md" id="huts" >
                                 <center>
                                     <span class="fa fa-calendar" aria-hidden="true" style="font-size:200px"></span><br>
                                     Reservation
