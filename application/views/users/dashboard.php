@@ -7,7 +7,7 @@
         padding-right: 450px!important; 
     }
     body{
-        background-image: url(../../assets/img/tatshopbg.jpg)!important;
+        background-image: url(../assets/img/tatshopbg.jpg)!important;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
