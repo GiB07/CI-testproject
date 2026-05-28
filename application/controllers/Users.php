@@ -137,7 +137,8 @@ public function login(){
     }
 
     public function register(){
-        $this->load->view('users/register');
+        // $this->load->view('users/register');
+        echo "dasd";
     }
 
     public function insert_registration(){
