@@ -72,7 +72,7 @@ public function login(){
                'logged_in'=> TRUE,
             );
             $this->session->set_userdata($newdata);
-            redirect(base_url().'users/dashboard/');
+            redirect(base_url().'users/dashboard');
         }
         else{
             $this->session->set_flashdata('error_msg', 'Email And Password Do not Exist!');
