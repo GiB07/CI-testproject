@@ -188,9 +188,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <br>
         <br>
         <input type="submit" value="Login" style="background: ##000;">
-         <p>Don't have an account? <a href="<?php echo base_url(); ?>users/register">Register</a></p>
+         <p>Don't have an account? <a href="<?php echo base_url(); ?>register">Register</a></p>
     </form>
-    <form style = "display:none" action="<?php echo base_url(); ?>users/reset" method="post">
+    <form style = "display:none" action="<?php echo base_url(); ?>reset" method="post">
         <header></header>
         <div class="row">
             <div class="col-md-12">
