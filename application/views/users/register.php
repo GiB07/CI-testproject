@@ -5,7 +5,7 @@
       margin: 0;
       height: 100vh;
       width: 100%;
-      background-image:url(../assets/img/blackk.jpg);
+      background-image:url(assets/img/blackk.jpg);
       background-size: cover;
       display: flex;
       justify-content: center;
