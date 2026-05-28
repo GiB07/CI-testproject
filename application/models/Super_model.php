@@ -22,7 +22,7 @@ class super_model extends CI_Model
 
     public function login_register($email, $password){
         $this->db->select('*');
-        $this->db->from('registration');
+        $this->db->from('if0_42022156_registration');
         $this->db->where("email='$email' AND (password = '$password' OR password = '".md5($password)."')");
         $query=$this->db->get();
         $rows=$query->num_rows();
