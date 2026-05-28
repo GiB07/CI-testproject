@@ -77,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         left: 0;
         right: 0;
         margin: auto;
-        background-image: url(<?php echo base_url() ?>assets/img/fallon-michael.jpg);
+        background-image: url(<?php echo base_url() ?>/assets/img/fallon-michael.jpg);
         background-position: left;
         background-size: 85%;
         background-repeat: no-repeat;
@@ -188,9 +188,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <br>
         <br>
         <input type="submit" value="Login" style="background: #257aa6">
-         <p>Don't have an account? <a href="<?php echo base_url(); ?>users/register">Register</a></p>
+         <p>Don't have an account? <a href="<?php echo base_url('users/register'); ?>">Register</a></p>
     </form>
-    <form style = "display:none" action="<?php echo base_url(); ?>users/reset" method="post">
+    <form style = "display:none" action="<?php echo base_url('users/reset'); ?>" method="post">
         <header></header>
         <div class="row">
             <div class="col-md-12">
