@@ -26,7 +26,7 @@
     }
 
     .left-side {
-        background-image:url(../assets/img/kevin-turcios.jpg);
+        background-image:url(../assets/img/kevinturcios.jpg);
         );
         background-size: cover;
         border-radius: 20px 0px 0px 20px;

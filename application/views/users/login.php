@@ -77,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         left: 0;
         right: 0;
         margin: auto;
-        background-image: url(<?php echo base_url() ?>/assets/img/tatshopbg.jpg);
+        background-image: url(<?php echo base_url() ?>/assets/img/fallonmichael.jpg);
         background-position: left;
         background-size: 85%;
         background-repeat: no-repeat;
