@@ -22,7 +22,7 @@
             <div class="col-md-7 align-self-center text-right">
                 <div class="d-flex justify-content-end align-items-center">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= base_url('dashboard'); ?>">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<?= base_url('users/dashboard'); ?>">Home</a></li>
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                 </div>
