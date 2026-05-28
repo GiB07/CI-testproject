@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
     'dsn'      => '',
-    'hostname' => 'sql312.byetcluster.com',
+    'hostname' => 'sql305.infinityfree.com',
     'username' => 'if0_42022156',
     'password' => 'ahgeb015',
     'database' => 'if0_42022156_registration',
