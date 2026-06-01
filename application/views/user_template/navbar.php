@@ -18,7 +18,7 @@
             <a class="navbar-brand" href="<?= base_url('users/dashboard'); ?>">
 
                 <div class="brand-logo">
-                    <i class="fa fa-paint-brush"></i>
+                    <i class="glyphicon glyphicon-record"></i>
                 </div>
 
                 <div class="brand-text">
@@ -43,7 +43,7 @@
                         aria-haspopup="true"
                         aria-expanded="false">
 
-                        <i class="fa fa-user"></i>
+                        <i class="glyphicon glyphicon-user"></i>
 
                     </a>
 
