@@ -21,6 +21,7 @@
     <link href="<?php echo base_url(); ?>assets/node_modules/morrisjs/morris.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/dist/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/modern_ui.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/dist/css/pages/dashboard1.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/dist/css/jquery.dataTables.min.css" rel="stylesheet">      
     <link href='<?php echo base_url(); ?>assets/css/fullcalendar.min.css' rel='stylesheet' />
