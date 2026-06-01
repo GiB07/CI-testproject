@@ -1,3 +1,4 @@
+<link href="<?php echo base_url('assets/css/dashboard.css'); ?>" rel="stylesheet">
 <?php 
     $CI =& get_instance();
     $user_id = $_SESSION['user_id'];  
