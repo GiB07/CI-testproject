@@ -21,11 +21,6 @@
 
 .login-card{
     width:100%;
-    max-width:450px;
-}
-
-.login-card{
-    width:100%;
     max-width:420px;
     background:rgba(255,255,255,.12);
     backdrop-filter:blur(18px);
