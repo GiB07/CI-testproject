@@ -3359,3 +3359,9 @@ tr.table-row {
         font-size: 1.6em;
     }
 }
+
+.bi::before {
+    font-family: "bootstrap-icons" !important;
+    display: inline-block;
+    font-style: normal;
+}
