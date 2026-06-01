@@ -3,7 +3,10 @@
     $CI =& get_instance();
     $user_id = $_SESSION['user_id'];  
 ?>
-
+<div style="font-size:50px;">
+    <i class="bi bi-house-fill"></i>
+    TEST
+</div>
 <div class="page-wrapper">
     <div class="container-fluid py-4">
 
@@ -43,6 +46,7 @@
             </div>
 
         </div>
+
 
         <!-- Main Content -->
         <div class="glass-container">
