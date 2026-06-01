@@ -37,9 +37,11 @@
 
                 <div class="dropdown">
 
-                    <a href="#"
-                       class="user-menu dropdown-toggle"
-                       data-toggle="dropdown">
+                    <a href="javascript:void(0);"
+                        class="user-menu dropdown-toggle"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
 
                         <i class="fa fa-user"></i>
 
