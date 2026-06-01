@@ -11,7 +11,7 @@
     <div id="main-wrapper">
         <header class="topbar">
 
-    <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+    <nav class="navbar-header top-navbar navbar-expand-md navbar-dark">
 
         <a class="navbar-brand" href="<?= base_url('users/hut_reserve'); ?>">
 

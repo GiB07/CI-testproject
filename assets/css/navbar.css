@@ -10,6 +10,26 @@
     padding:0 25px;
 }
 
+.topbar .navbar-header{
+    width:auto !important;
+    flex:none !important;
+}
+
+.topbar .navbar-brand{
+    width:auto !important;
+    margin-right:30px;
+    padding:0;
+}
+
+.topbar .navbar-collapse{
+    display:flex !important;
+    justify-content:space-between;
+}
+
+.top-navbar{
+    padding:0 25px !important;
+}
+
 .navbar-brand{
     display:flex;
     align-items:center;
