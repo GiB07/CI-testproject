@@ -18,7 +18,7 @@
             <a class="navbar-brand" href="<?= base_url('users/dashboard'); ?>">
 
                 <div class="brand-logo">
-                    <i class="fas fa-airplane"></i>
+                    <i class="fas fa-plane"></i>
                 </div>
 
                 <div class="brand-text">
