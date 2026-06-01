@@ -18,7 +18,7 @@
             <a class="navbar-brand" href="<?= base_url('users/dashboard'); ?>">
 
                 <div class="brand-logo">
-                    <i class="bi bi-stars"></i>
+                    <i class="bi bi-airplane"></i>
                 </div>
 
                 <div class="brand-text">
