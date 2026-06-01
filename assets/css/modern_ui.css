@@ -10,7 +10,7 @@ body{
     justify-content:center;
     align-items:center;
     font-family:'Poppins',sans-serif;
-    background-image: url("<?php echo base_url() ?>/assets/img/tatshopbg.jpg");
+    background-image: url("<?php echo base_url('/assets/img/tatshopbg.jpg') ?>");
     background-size:cover;
     background-position:center;
     padding:20px;
