@@ -4,20 +4,6 @@
     box-sizing:border-box;
 }
 
-body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-family:'Poppins',sans-serif;
-    background-image:
-        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url('<?= base_url("assets/img/tatshopbg.jpg"); ?>');
-    background-size:cover;
-    background-position:center;
-    padding:20px;
-}
-
 .login-card{
     width:100%;
     max-width:420px;
