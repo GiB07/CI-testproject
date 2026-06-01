@@ -19,6 +19,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="">
     <title>ZZZ</title>
     <link href="<?php echo base_url('assets/bootstrap5/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/bootstrap5/css/bootstrap-icons.min.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/modern_ui.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/dataTables.dataTables.min.css'); ?>" rel="stylesheet">
