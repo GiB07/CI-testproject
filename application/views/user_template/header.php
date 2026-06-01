@@ -18,7 +18,7 @@
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="">
     <title>ZZZ</title>
-    <link href="<?php echo base_url('assets/dist/css/style.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/modern_ui.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/dataTables.dataTables.min.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/font-awesome.css'); ?>" rel="stylesheet">      
