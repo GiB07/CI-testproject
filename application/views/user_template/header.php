@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="">
-    <title>ZZZ</title>
+    <title>Get Inked!</title>
     <link href="<?php echo base_url('assets/bootstrap5/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/bootstrap5/css/bootstrap-icons.min.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">

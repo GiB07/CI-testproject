@@ -1,4 +1,5 @@
 <link href="<?php echo base_url('assets/css/dashboard.css'); ?>" rel="stylesheet">
+<link href="<?php echo base_url('assets/bootstrap5/css/bootstrap-icons.min.css'); ?>" rel="stylesheet">
 <?php 
     $CI =& get_instance();
     $user_id = $_SESSION['user_id'];  
