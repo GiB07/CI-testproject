@@ -18,7 +18,7 @@
             <a class="navbar-brand" href="<?= base_url('users/dashboard'); ?>">
 
                 <div class="brand-logo">
-                    <i class="fas fa-paint-brush"></i>
+                    <i class="fa-solid fa-paintbrush"></i>
                 </div>
 
                 <div class="brand-text">
