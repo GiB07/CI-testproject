@@ -12,9 +12,9 @@ body{
     align-items:center;
     padding:20px;
     font-family:'Poppins',sans-serif;
-    background:
+    /* background:
         linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-        url('<?= base_url("assets/img/blackk.jpg"); ?>');
+        url('<?= base_url("assets/img/blackk.jpg"); ?>'); */
     background-size:cover;
     background-position:center;
 }
@@ -33,9 +33,9 @@ body{
 }
 
 .left-side{
-    background:
+    /* background:
         linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-        url('<?= base_url("assets/img/kevinturcios.jpg"); ?>');
+        url('<?= base_url("assets/img/kevinturcios.jpg"); ?>'); */
     background-size:cover;
     background-position:center;
 }
