@@ -32,16 +32,6 @@ body {
     overflow-x: hidden;
 }
 
-@font-face {
-    font-family: 'Montserrat-Regular';
-    src: url(../fonts/Montserrat-Regular.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Muli-Regular';
-    src: url(../fonts/Muli-Regular.ttf) format('truetype');
-}
-
 body a {
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
