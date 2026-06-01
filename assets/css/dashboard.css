@@ -1,7 +1,7 @@
 body{
     background:
         linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-        url('<?= base_url("assets/img/tatshopbg.jpg"); ?>');
+        url('<?= base_url("../img/tatshopbg.jpg"); ?>');
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
