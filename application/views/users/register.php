@@ -1,3 +1,4 @@
+<link href="<?php echo base_url(); ?>assets/css/reg_page.css" rel="stylesheet">
 <div class="register-card">
 
     <div class="left-side"></div>
