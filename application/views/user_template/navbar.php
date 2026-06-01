@@ -1,7 +1,7 @@
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
  <link href="<?php echo base_url('assets/css/navbar.css'); ?>" rel="stylesheet">
-<body class="skin-default-dark fixed-layout">
+<body class="">
     <div class="preloader">
         <div class="loader">
             <div class="loader__figure"></div>
