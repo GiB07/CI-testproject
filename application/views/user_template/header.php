@@ -18,11 +18,11 @@
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="">
     <title>ZZZ</title>
-    <link href="<?php echo base_url(); ?>assets/dist/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url('assets/dist/css/style.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/modern_ui.css'); ?>" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>assets/dist/css/jquery.dataTables.min.css" rel="stylesheet">      
-    <link href='<?php echo base_url(); ?>assets/css/fullcalendar.min.css' rel='stylesheet' />
-    <link href='<?php echo base_url(); ?>assets/css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+    <link href="<?php echo base_url('assets/dist/css/jquery.dataTables.min.css'); ?>" rel="stylesheet">      
+    <link href='<?php echo base_url('assets/css/fullcalendar.min.css'); ?>' rel='stylesheet' />
+    <link href='<?php echo base_url('assets/css/fullcalendar.print.min.css'); ?>' rel='stylesheet' media='print' />
 </head>
 <!-- <body class="skin-default-dark fixed-layout"> -->
     <!-- ============================================================== -->
