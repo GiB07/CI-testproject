@@ -5,10 +5,10 @@
     
 
     <!-- <script src="<?php echo base_url(); ?>assets/dist/js/jquery.min.js"></script> -->
-    <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
-    <!-- <script src="<?php echo base_url(); ?>assets/dist/js/jquery-1.11.1.min.js"></script> -->
-    <script src="<?php echo base_url(); ?>assets/js/moment.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/fullcalendar.js"></script>
+    <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/dataTables.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/moment.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/fullcalendar.js'); ?>"></script>
     <!-- <script src="dist/js/dashboard1.js"></script> -->
     <script type="text/javascript">
         $(document).ready(function(){
