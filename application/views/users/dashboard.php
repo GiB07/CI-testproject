@@ -2,68 +2,69 @@
     $CI =& get_instance();
     $user_id = $_SESSION['user_id'];  
 ?>
-<style type="text/css">
-    .modaling{
-        padding-right: 450px!important; 
-    }
-    body{
-        background-image: url(/assets/img/tatshopbg.jpg)!important;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-</style>
+
 <div class="page-wrapper">
     <div class="container-fluid">
-        <div class="row page-titles">
-            <div class="col-md-5 align-self-center">
-                <h4 class="text-themecolor">Dashboard</h4>
+
+        <div class="row dashboard-header">
+            <div class="col-md-6">
+                <h2 class="dashboard-title">
+                    Welcome Back
+                </h2>
+                <p class="dashboard-subtitle">
+                    Manage your tattoo shop reservations.
+                </p>
             </div>
-            <div class="col-md-7 align-self-center text-right">
-                <div class="d-flex justify-content-end align-items-center">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= base_url('users/dashboard'); ?>">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
-                    </ol>
-                </div>
+
+            <div class="col-md-6 text-md-right">
+                <ol class="breadcrumb justify-content-md-end">
+                    <li class="breadcrumb-item">
+                        <a href="<?= base_url('users/dashboard'); ?>">
+                            Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        Dashboard
+                    </li>
+                </ol>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card oh">
-                    <div class="card-body">
-                        <div class="d-flex m-b-30 align-items-center no-block">
-                            <h5 class="card-title "><b>RESERVATIONS</b></h5>
-                        </div>
-                        <center>
-                            <a href="<?php echo base_url('hut_reserve'); ?>" class="btn btn-dark btn-md" id="huts" >
-                                <center>
-                                    <span class="fa fa-calendar" aria-hidden="true" style="font-size:200px"></span><br>
-                                    Reservation
-                                </center>
-                            </a>
-                            <!-- <a data-toggle="modal" data-target="#delivery" class="btn btn-dark btn-md" id="foods">
-                                <center>
-                                    <span class="fa fa-cutlery" aria-hidden="true" style="font-size:200px"></span><br>
-                                    Delivery
-                                </center>
-                            </a> -->
-                            <!-- <a href="<?php echo base_url(); ?>users/order_delivery" class="btn btn-dark btn-md" id="foods" >
-                                <center>
-                                    <span class="fa fa-cutlery" aria-hidden="true" style="font-size:200px"></span><br>
-                                    Delivery
-                                </center>
-                            </a> -->
-                            <!-- <a href="<?php echo base_url(); ?>users/index" class="btn btn-dark btn-md" id="table">
-                                <center>
-                                    <span class="fa fa-coffee" aria-hidden="true" style="font-size:200px"></span><br>
-                                    Tables
-                                </center>
-                            </a> -->
-                        </center>
+
+        <div class="glass-container">
+
+            <h4 class="text-white mb-4">
+                Reservation Services
+            </h4>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <div class="reservation-card">
+
+                        <a href="<?= base_url('hut_reserve'); ?>" class="card-link">
+
+                            <div class="card-icon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+
+                            <div class="card-title">
+                                Reservation
+                            </div>
+
+                            <div class="card-desc">
+                                Book your tattoo session and manage your appointments.
+                            </div>
+
+                        </a>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
 </div>
