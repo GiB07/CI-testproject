@@ -1,5 +1,6 @@
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+ <link href="<?php echo base_url('assets/css/navbar.css'); ?>" rel="stylesheet">
 <body class="skin-default-dark fixed-layout">
     <div class="preloader">
         <div class="loader">
@@ -9,34 +10,75 @@
     </div>
     <div id="main-wrapper">
         <header class="topbar">
-            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>users/hut_reserve">
-                        <span>
-                            <h3 style="font-family:Monotype Corsiva;">GET INKED!</h3>
-                     	</span> 
-                 	</a>
-                </div>
-                <div class="navbar-collapse">
-                    <ul class="navbar-nav mr-auto">                        
-                        <!-- <li class="nav-item">
-                            <a class="nav-link text-muted waves-effect waves-dark" data-toggle="modal" data-target="#navModal" title="Dashboard"><i class="fa fa-bars "></i></a>
-                        </li> -->
-                    </ul>
-                    <ul class="navbar-nav my-lg-0">
-                        <!-- <li class="nav-item hidden-sm-up"> <a class="nav-link nav-toggler waves-effect waves-light" href="javascript:void(0)"><i class="ti-menu"></i></a></li> -->
-                        <li class="nav-item dropdown" style="border-left:1px solid rgba(0, 0, 0, 0.1)"></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-cog"></span></a>
-                            <div class="dropdown-menu shadow ">
-                              <a class="dropdown-item" href="<?php echo base_url(); ?>users/user_logout" style="color:#000!important">Logout</a>
-                            </div>
-                        </li>
-                    </ul>
+
+    <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+
+        <a class="navbar-brand" href="<?= base_url('users/hut_reserve'); ?>">
+
+            <div class="brand-logo">
+                <i class="fa fa-paint-brush"></i>
+            </div>
+
+            <div class="brand-text">
+                <h3 class="brand-title">
+                    GET INKED!
+                </h3>
+                <span class="brand-subtitle">
+                    Tattoo Studio
+                </span>
+            </div>
+
+        </a>
+
+        <div class="ml-auto nav-right">
+
+            <div class="dropdown">
+
+                <a class="user-menu dropdown-toggle"
+                   href="#"
+                   data-toggle="dropdown">
+
+                    <i class="fa fa-user"></i>
+
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+
+                    <a class="dropdown-item"
+                       href="<?= base_url('users/dashboard'); ?>">
+
+                        <i class="fa fa-home mr-2"></i>
+                        Dashboard
+
+                    </a>
+
+                    <a class="dropdown-item"
+                       href="<?= base_url('hut_reserve'); ?>">
+
+                        <i class="fa fa-calendar mr-2"></i>
+                        Reservations
+
+                    </a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <a class="dropdown-item text-danger"
+                       href="<?= base_url('users/user_logout'); ?>">
+
+                        <i class="fa fa-sign-out mr-2"></i>
+                        Logout
+
+                    </a>
 
                 </div>
-            </nav>
-        </header>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
         <div class="modal fade" id="navModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-mlg" role="document">
                 <div class="modal-content modal-nobak m-t-150">                                    
