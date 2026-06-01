@@ -43,9 +43,8 @@
             </div>
 
         </div>
-        <div style="font-size:50px;">
+        <div style="font-size:50px;color:red;">
     <i class="bi bi-house-fill"></i>
-    TEST
 </div>
 
         <!-- Main Content -->
