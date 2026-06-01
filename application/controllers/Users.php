@@ -45,7 +45,7 @@ class Users extends CI_Controller {
     }
 
     public function dashboard(){
-        // $this->load->view('user_template/header');
+        $this->load->view('user_template/header');
         $this->load->view('user_template/navbar');
         $this->load->view('users/dashboard');
         $this->load->view('user_template/footer');
