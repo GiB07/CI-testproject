@@ -1,4 +1,4 @@
-<!-- <link href="<?php echo base_url(); ?>assets/css/modern_ui.css" rel="stylesheet"> -->
+<link href="<?php echo base_url(); ?>assets/css/modern_ui.css" rel="stylesheet">
 <div class="login-card">
 
     <div class="logo">

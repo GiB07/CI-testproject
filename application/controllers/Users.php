@@ -42,9 +42,6 @@ class Users extends CI_Controller {
 
     public function index(){
         $this->load->view('users/login');
-        $this->load->view('user_template/header');
-        $this->load->view('user_template/navbar');
-        $this->load->view('user_template/footer');
     }
 
     public function dashboard(){
