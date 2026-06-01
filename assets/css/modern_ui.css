@@ -10,7 +10,7 @@ body{
     justify-content:center;
     align-items:center;
     font-family:'Poppins',sans-serif;
-    background:
+    background-image:
         linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
         url('<?= base_url("assets/img/tatshopbg.jpg"); ?>');
     background-size:cover;
