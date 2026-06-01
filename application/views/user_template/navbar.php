@@ -47,7 +47,7 @@
                                 <a href="<?php echo base_url(); ?>users/hut_reserve" class="btn btn-dark btn-md" id="huts" >
                                     <center>
                                         <span class="fa fa-home" aria-hidden="true" style="font-size:200px"></span><br>
-                                        Reservation
+                                        Reservationssssssssssssss
                                     </center>
                                 </a>
                             </div>
