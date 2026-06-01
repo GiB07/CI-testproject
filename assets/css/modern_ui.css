@@ -3,6 +3,26 @@
     padding:0;
     box-sizing:border-box;
 }
+.auth-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url('../img/tatshopbg.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.login-card{
+    width:100%;
+    max-width:450px;
+}
 
 .login-card{
     width:100%;
