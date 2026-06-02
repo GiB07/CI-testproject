@@ -202,3 +202,80 @@
 
 </div>
 <!-- end modal -->
+
+<script>
+$(document).ready(function(){
+
+    $('#productForm').submit(function(e){
+        e.preventDefault();
+
+        let formData = new FormData(this);
+
+        $.ajax({
+            url: "<?= base_url('products/save_product'); ?>",
+            type: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+
+            beforeSend: function(){
+                Swal.fire({
+                    title: 'Saving...',
+                    text: 'Please wait',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    }
+                });
+            },
+
+            success: function(response){
+
+                Swal.close();
+
+                if(response.status === 'success'){
+
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: response.message,
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+
+                        $('#productModal').modal('hide');
+                        $('#productForm')[0].reset();
+
+
+                    });
+
+                }else{
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: response.message
+                    });
+
+                }
+            },
+
+            error: function(xhr){
+
+                Swal.close();
+
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Server Error',
+                    text: 'Something went wrong. Please try again.'
+                });
+
+                console.log(xhr.responseText);
+            }
+
+        });
+
+    });
+
+});
+</script>

@@ -63,3 +63,4 @@ $route['user_logout'] 						= 'Users/user_logout';
 
 $route['dashboard'] 						= 'Users/dashboard';
 $route['upload'] 						    = 'Users/upload';
+$route['products/save_product']             = 'products/save_product';
