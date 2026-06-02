@@ -153,7 +153,7 @@
                 </h5>
 
                 <button type="button"
-                        class="close"
+                        class="btn btn-danger close"
                         data-bs-dismiss="modal">
 
                     <span>&times;</span>
