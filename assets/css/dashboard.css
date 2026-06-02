@@ -7,7 +7,7 @@ body{
     background-attachment:fixed;
 }
 
-.upload{
+body .upload{
     background-image:
         linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
         url('../img/blackk.jpg');
