@@ -176,7 +176,7 @@ public function login(){
 
     public function save_product()
     {
-        $config['upload_path']   = './uploads/products/';
+        $config['upload_path'] = FCPATH . 'uploads/products/';
         $config['allowed_types'] = 'jpg|jpeg|png|webp';
         $config['encrypt_name']  = TRUE;
 
