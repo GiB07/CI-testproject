@@ -1,13 +1,4 @@
 <link href="<?php echo base_url('assets/css/dashboard.css'); ?>" rel="stylesheet">
-<?php 
-    $CI =& get_instance();
-    $user_id = $_SESSION['register_id'];  
-
-    $user = $CI->db
-        ->where('register_id', $user_id)
-        ->get('registration')
-        ->row();
-?>
 
 <div class="page-wrapper">
     <div class="container-fluid py-4">
@@ -17,7 +8,10 @@
 
             <div class="col-md-6">
                 <h2 class="dashboard-title mb-1">
-                    Welcome Back, <?= ucfirst($user->fname); ?> 👋
+                    Welcome Back,
+                    <span class="user-name">
+                        <?= ucwords($this->session->userdata('fullname')); ?>
+                    </span>
                 </h2>
 
                 <p class="dashboard-subtitle mb-0">
