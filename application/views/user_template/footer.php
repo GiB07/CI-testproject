@@ -9,6 +9,7 @@
     <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/dataTables.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/navbar.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/jquery-4.0.0.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/sweetalert.all.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/moment.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/fullcalendar.js'); ?>"></script>
