@@ -208,9 +208,11 @@ $(document).ready(function(){
 
     $('#productForm').submit(function(e){
         e.preventDefault();
-alert('test');
+// alert('test');
         let formData = new FormData(this);
-
+<script>
+alert(typeof $);
+</script>
         $.ajax({
             url: "<?= base_url('products/save_product'); ?>",
             type: "POST",
