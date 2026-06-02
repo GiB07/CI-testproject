@@ -163,70 +163,41 @@
 
             </div>
 
-            <form action="<?= base_url('products/save'); ?>"
-                  method="post"
-                  enctype="multipart/form-data">
-
+            <form id="productForm" enctype="multipart/form-data">
                 <div class="modal-body">
 
                     <div class="form-group">
                         <label>Product Name</label>
-                        <input type="text"
-                               name="product_name"
-                               class="form-control"
-                               required>
+                        <input type="text" name="product_name" class="form-control" required>
                     </div>
 
                     <div class="form-group">
                         <label>Description</label>
-                        <textarea name="description"
-                                  class="form-control"
-                                  rows="3"></textarea>
+                        <textarea name="description" class="form-control"></textarea>
                     </div>
 
                     <div class="form-group">
                         <label>Price</label>
-                        <input type="number"
-                               step="0.01"
-                               name="price"
-                               class="form-control"
-                               required>
+                        <input type="number" step="0.01" name="price" class="form-control" required>
                     </div>
 
                     <div class="form-group">
                         <label>Stocks</label>
-                        <input type="number"
-                               name="stocks"
-                               class="form-control"
-                               required>
+                        <input type="number" name="stocks" class="form-control" required>
                     </div>
 
                     <div class="form-group">
                         <label>Product Image</label>
-                        <input type="file"
-                               name="product_image"
-                               class="form-control"
-                               accept="image/*"
-                               required>
+                        <input type="file" name="product_image" class="form-control" required>
                     </div>
 
                 </div>
 
                 <div class="modal-footer">
-
-                    <button type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal">
-                        Close
-                    </button>
-
-                    <button type="submit"
-                            class="btn btn-success">
+                    <button type="submit" class="btn btn-success">
                         Save Product
                     </button>
-
                 </div>
-
             </form>
 
         </div>
