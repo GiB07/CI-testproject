@@ -10,7 +10,7 @@
                 <h2 class="dashboard-title mb-1">
                     Welcome Back,
                     <span class="user-name">
-                       <button class="btn btn-success" style="font-size: 16px;"> <?= ucwords($this->session->userdata('fullname')); ?> </button>
+                       <?= ucwords($this->session->userdata('fullname')); ?>
                     </span>
                 </h2>
 
