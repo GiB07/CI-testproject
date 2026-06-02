@@ -208,7 +208,7 @@ $(document).ready(function(){
 
     $('#productForm').submit(function(e){
         e.preventDefault();
-
+alert('test');
         let formData = new FormData(this);
 
         $.ajax({
