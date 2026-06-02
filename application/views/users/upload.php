@@ -65,7 +65,7 @@
                     <button class="btn btn-primary"
                             data-toggle="modal"
                             data-target="#productModal">
-                        <i class="fa fa-plus"></i> Add Product
+                        <i class="bi bi-plus"></i> Add Product
                     </button>
 
                 </div>
