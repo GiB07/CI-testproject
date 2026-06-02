@@ -1,6 +1,6 @@
 <link href="<?php echo base_url('assets/css/dashboard.css'); ?>" rel="stylesheet">
 
-<div class="page-wrapper">
+<div class="page-wrapper upload">
     <div class="container-fluid py-4">
 
         <!-- Header -->
