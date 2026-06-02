@@ -240,19 +240,8 @@ function saveProduct()
 
             }
 
-        },
-
-        error: function(xhr){
-
-            console.log(xhr.responseText);
-
-            swal(
-                "Server Error",
-                "Something went wrong.",
-                "error"
-            );
-
         }
+
     });
 }
 </script>
