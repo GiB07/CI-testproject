@@ -18,7 +18,7 @@
             <a class="navbar-brand" href="<?= base_url('users/dashboard'); ?>">
 
                 <div class="brand-logo">
-                    <i class="bi bi-palette-fill"></i>
+                    <i class="bi bi-brush"></i>
                 </div>
 
                 <div class="brand-text">
