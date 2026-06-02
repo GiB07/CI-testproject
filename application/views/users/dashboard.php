@@ -90,7 +90,7 @@
                 </div>
 
                 <!-- Future Card Example -->
-                <!--
+                
                 <div class="col-12 col-sm-6 col-lg-4">
 
                     <a href="#" class="text-decoration-none">
@@ -118,7 +118,7 @@
                     </a>
 
                 </div>
-                -->
+               
 
             </div>
 
