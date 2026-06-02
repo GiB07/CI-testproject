@@ -190,7 +190,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button class="btn btn-primary" onclick="saveProduct()">Save</button>
+                    <button type="button" class="btn btn-primary" onclick="saveProduct()">Save</button>
                 </div>
             </form>
 
