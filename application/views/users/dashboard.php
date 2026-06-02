@@ -1,10 +1,10 @@
 <link href="<?php echo base_url('assets/css/dashboard.css'); ?>" rel="stylesheet">
 <?php 
     $CI =& get_instance();
-    $user_id = $_SESSION['user_id'];  
+    $user_id = $_SESSION['register_id'];  
 
     $user = $CI->db
-        ->where('user_id', $user_id)
+        ->where('register_id', $user_id)
         ->get('registration')
         ->row();
 ?>
