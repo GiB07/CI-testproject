@@ -151,7 +151,7 @@
                 <button type="button"
                         class="btn btn-danger close"
                         data-bs-dismiss="modal"
-                        style="float: right;">
+                        style="margin-left: auto;">
 
                     <span>&times;</span>
 
