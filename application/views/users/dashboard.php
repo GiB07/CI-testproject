@@ -43,9 +43,6 @@
             </div>
 
         </div>
-        <div style="font-size:50px;color:red;">
-    <i class="bi bi-house-fill"></i>
-</div>
 
         <!-- Main Content -->
         <div class="glass-container">
