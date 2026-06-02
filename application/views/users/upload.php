@@ -205,7 +205,6 @@
 function saveProduct()
 {
     var formData = new FormData(document.getElementById('productForm'));
-    alert('sample');
 
     $.ajax({
         url: "<?= base_url('products/save_product'); ?>",
@@ -216,14 +215,12 @@ function saveProduct()
         dataType: "json",
 
         beforeSend: function(){
-            Swal.fire({
-                title: 'Saving...',
-                text: 'Please wait',
-                allowOutsideClick: false,
-                didOpen: function(){
-                    Swal.showLoading();
-                }
+
+            swal({
+                title: "Saving...",
+                text: "Please wait..."
             });
+
         },
 
         success: function(response){
@@ -232,25 +229,38 @@ function saveProduct()
 
             if(response.status == 'success'){
 
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success!',
-                    text: response.message
-                });
+                swal(
+                    "Success!",
+                    response.message,
+                    "success"
+                );
+
+                document.getElementById('productForm').reset();
+
+                $('#productModal').modal('hide');
 
             }else{
 
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: response.message
-                });
+                swal(
+                    "Error!",
+                    response.message,
+                    "error"
+                );
 
             }
+
         },
 
         error: function(xhr){
+
             console.log(xhr.responseText);
+
+            swal(
+                "Server Error",
+                "Something went wrong.",
+                "error"
+            );
+
         }
     });
 }
