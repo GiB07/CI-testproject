@@ -52,7 +52,7 @@
                         <a class="dropdown-item"
                            href="<?= base_url('users/dashboard'); ?>">
 
-                            <i class="fa fa-home mr-2"></i>
+                            <i class="bi bi-house-door"></i>
                             Dashboard
 
                         </a>
@@ -60,7 +60,7 @@
                         <a class="dropdown-item"
                            href="<?= base_url('hut_reserve'); ?>">
 
-                            <i class="fa fa-calendar mr-2"></i>
+                            <i class="bi bi-calendar"></i>
                             Reservations
 
                         </a>
@@ -70,7 +70,7 @@
                         <a class="dropdown-item text-danger"
                            href="<?= base_url('users/user_logout'); ?>">
 
-                            <i class="fa fa-sign-out mr-2"></i>
+                            <i class="bi bi-box-arrow-right"></i>
                             Logout
 
                         </a>
