@@ -56,33 +56,19 @@
 
             <div class="row g-4">
 
-            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
 
-                <a href="<?= base_url('products'); ?>" class="text-decoration-none">
+                    <h4 class="text-white mb-0">
+                        Reservation Services
+                    </h4>
 
-                    <div class="reservation-card h-100">
+                    <button class="btn btn-primary"
+                            data-toggle="modal"
+                            data-target="#productModal">
+                        <i class="fa fa-plus"></i> Add Product
+                    </button>
 
-                        <div class="card-body text-center">
-
-                            <div class="card-icon mb-4">
-                                <i class="fa fa-shopping-bag"></i>
-                            </div>
-
-                            <h5 class="card-title text-white fw-bold">
-                                Tattoo Shop
-                            </h5>
-
-                            <p class="card-desc mb-0">
-                                Browse and purchase tattoo products and merchandise.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-            </div>
+                </div>
 
                 <!-- Reservation Card -->
                 <div class="col-12 col-sm-6 col-lg-4">
@@ -153,3 +139,98 @@
 
     </div>
 </div>
+<!-- modal -->
+ <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+
+    <div class="modal-dialog modal-lg" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Add Tattoo Product
+                </h5>
+
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal">
+
+                    <span>&times;</span>
+
+                </button>
+
+            </div>
+
+            <form action="<?= base_url('products/save'); ?>"
+                  method="post"
+                  enctype="multipart/form-data">
+
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label>Product Name</label>
+                        <input type="text"
+                               name="product_name"
+                               class="form-control"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea name="description"
+                                  class="form-control"
+                                  rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="number"
+                               step="0.01"
+                               name="price"
+                               class="form-control"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Stocks</label>
+                        <input type="number"
+                               name="stocks"
+                               class="form-control"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Product Image</label>
+                        <input type="file"
+                               name="product_image"
+                               class="form-control"
+                               accept="image/*"
+                               required>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal">
+                        Close
+                    </button>
+
+                    <button type="submit"
+                            class="btn btn-success">
+                        Save Product
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- end modal -->
