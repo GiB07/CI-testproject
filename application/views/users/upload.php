@@ -190,9 +190,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">
-                        Save Product
-                    </button>
+                    <button onclick="saveProduct()">Save</button
                 </div>
             </form>
 
@@ -204,81 +202,56 @@
 <!-- end modal -->
 
 <script>
-$(document).ready(function(){
+function saveProduct()
+{
+    var formData = new FormData(document.getElementById('productForm'));
+    alert('sample');
 
-    $('#productForm').submit(function(e){
-        e.preventDefault();
-// alert('test');
-        let formData = new FormData(this);
-<script>
-alert(typeof $);
-</script>
-        $.ajax({
-            url: "<?= base_url('products/save_product'); ?>",
-            type: "POST",
-            data: formData,
-            processData: false,
-            contentType: false,
-            dataType: "json",
+    $.ajax({
+        url: "<?= base_url('products/save_product'); ?>",
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        dataType: "json",
 
-            beforeSend: function(){
-                Swal.fire({
-                    title: 'Saving...',
-                    text: 'Please wait',
-                    allowOutsideClick: false,
-                    didOpen: () => {
-                        Swal.showLoading();
-                    }
-                });
-            },
-
-            success: function(response){
-                console.log(response);
-
-                Swal.close();
-
-                if(response.status === 'success'){
-
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Success!',
-                        text: response.message,
-                        confirmButtonText: 'OK'
-                    }).then((result) => {
-
-                        $('#productModal').modal('hide');
-                        $('#productForm')[0].reset();
-
-
-                    });
-
-                }else{
-
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: response.message
-                    });
-
+        beforeSend: function(){
+            Swal.fire({
+                title: 'Saving...',
+                text: 'Please wait',
+                allowOutsideClick: false,
+                didOpen: function(){
+                    Swal.showLoading();
                 }
-            },
+            });
+        },
 
-            error: function(xhr){
+        success: function(response){
 
-                Swal.close();
+            console.log(response);
+
+            if(response.status == 'success'){
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: response.message
+                });
+
+            }else{
 
                 Swal.fire({
                     icon: 'error',
-                    title: 'Server Error',
-                    text: 'Something went wrong. Please try again.'
+                    title: 'Error',
+                    text: response.message
                 });
 
-                console.log(xhr.responseText);
             }
+        },
 
-        });
-
+        error: function(xhr){
+            console.log(xhr.responseText);
+        }
     });
-
-});
+}
 </script>
