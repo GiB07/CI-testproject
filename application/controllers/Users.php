@@ -175,39 +175,43 @@ public function login(){
     }
 
     public function save_product()
-    {
-        $config['upload_path'] = FCPATH . 'uploads/products/';
-        $config['allowed_types'] = 'jpg|jpeg|png|webp';
-        $config['encrypt_name']  = TRUE;
+{
+    $path = './uploads/products/';
 
-        $this->load->library('upload', $config);
+    if (!is_dir($path)) {
+        mkdir($path, 0755, true);
+    }
 
-        if(!$this->upload->do_upload('product_image'))
-        {
-            echo json_encode([
-                'status' => 'error',
-                'message' => $this->upload->display_errors('', '')
-            ]);
-            return;
-        }
+    $config['upload_path'] = $path;
+    $config['allowed_types'] = 'jpg|jpeg|png|webp';
+    $config['encrypt_name'] = TRUE;
 
-        $upload_data = $this->upload->data();
+    $this->load->library('upload', $config);
 
-        $data = array(
-            'product_name' => $this->input->post('product_name'),
-            'description'  => $this->input->post('description'),
-            'price'        => $this->input->post('price'),
-            'stocks'       => $this->input->post('stocks'),
-            'image'        => $upload_data['file_name']
-        );
-
-        $this->db->insert('products', $data);
+    if (!$this->upload->do_upload('product_image')) {
 
         echo json_encode([
-            'status' => 'success',
-            'message' => 'Product added successfully.'
+            'status' => 'error',
+            'message' => $this->upload->display_errors('', '')
         ]);
+        return;
     }
+
+    $file = $this->upload->data();
+
+    $this->db->insert('products', [
+        'product_name' => $this->input->post('product_name'),
+        'description'  => $this->input->post('description'),
+        'price'        => $this->input->post('price'),
+        'stocks'       => $this->input->post('stocks'),
+        'image'        => $file['file_name']
+    ]);
+
+    echo json_encode([
+        'status' => 'success',
+        'message' => 'Product uploaded successfully'
+    ]);
+}
 
 
 
