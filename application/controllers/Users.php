@@ -174,40 +174,40 @@ public function login(){
         window.location ='".base_url()."users/index'; </script>";
     }
 
-    // public function save_product()
-    // {
-    //     $config['upload_path']   = './uploads/products/';
-    //     $config['allowed_types'] = 'jpg|jpeg|png|webp';
-    //     $config['encrypt_name']  = TRUE;
+    public function save_product()
+    {
+        $config['upload_path']   = './uploads/products/';
+        $config['allowed_types'] = 'jpg|jpeg|png|webp';
+        $config['encrypt_name']  = TRUE;
 
-    //     $this->load->library('upload', $config);
+        $this->load->library('upload', $config);
 
-    //     if(!$this->upload->do_upload('product_image'))
-    //     {
-    //         echo json_encode([
-    //             'status' => 'error',
-    //             'message' => $this->upload->display_errors('', '')
-    //         ]);
-    //         return;
-    //     }
+        if(!$this->upload->do_upload('product_image'))
+        {
+            echo json_encode([
+                'status' => 'error',
+                'message' => $this->upload->display_errors('', '')
+            ]);
+            return;
+        }
 
-    //     $upload_data = $this->upload->data();
+        $upload_data = $this->upload->data();
 
-    //     $data = array(
-    //         'product_name' => $this->input->post('product_name'),
-    //         'description'  => $this->input->post('description'),
-    //         'price'        => $this->input->post('price'),
-    //         'stocks'       => $this->input->post('stocks'),
-    //         'image'        => $upload_data['file_name']
-    //     );
+        $data = array(
+            'product_name' => $this->input->post('product_name'),
+            'description'  => $this->input->post('description'),
+            'price'        => $this->input->post('price'),
+            'stocks'       => $this->input->post('stocks'),
+            'image'        => $upload_data['file_name']
+        );
 
-    //     $this->db->insert('products', $data);
+        $this->db->insert('products', $data);
 
-    //     echo json_encode([
-    //         'status' => 'success',
-    //         'message' => 'Product added successfully.'
-    //     ]);
-    // }
+        echo json_encode([
+            'status' => 'success',
+            'message' => 'Product added successfully.'
+        ]);
+    }
 
 
 
