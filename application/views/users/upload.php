@@ -58,10 +58,6 @@
 
                 <div class="d-flex justify-content-between align-items-center mb-4">
 
-                    <h4 class="text-white mb-0">
-                        Reservation Services
-                    </h4>
-
                     <button class="btn btn-primary"
                             data-bs-toggle="modal"
                             data-bs-target="#productModal">
