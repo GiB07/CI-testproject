@@ -47,184 +47,82 @@
         <!-- Main Content -->
         <div class="glass-container">
 
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h4 class="text-white mb-0">
-            Milk Tea Menu
-        </h4>
+            <div class="d-flex justify-content-between align-items-center mb-4">
 
-        <span class="badge badge-pill badge-success px-3 py-2">
-            Cart: 0 Items
-        </span>
-    </div>
+                <h4 class="text-white mb-0">
+                    Reservation Services
+                </h4>
 
-    <div class="row">
+            </div>
 
-        <!-- Products -->
-        <div class="col-lg-8">
+            <div class="row g-4">
 
-            <div class="row">
+                <!-- Reservation Card -->
+                <div class="col-12 col-sm-6 col-lg-4">
 
-                <!-- Product Card -->
-                <div class="col-md-6 col-xl-4 mb-4">
+                    <a href="<?= base_url('hut_reserve'); ?>"
+                       class="text-decoration-none">
 
-                    <div class="menu-card">
+                        <div class="reservation-card h-100">
 
-                        <img src="<?= base_url('assets/images/classic-milktea.jpg'); ?>"
-                             class="img-fluid menu-img">
+                            <div class="card-body text-center">
 
-                        <div class="p-3">
+                                <div class="card-icon mb-4">
 
-                            <h5 class="text-white mb-2">
-                                Classic Milk Tea
-                            </h5>
-
-                            <p class="text-muted small">
-                                Brown sugar pearls with premium tea.
-                            </p>
-
-                            <div class="mb-3">
-                                <label class="text-white small">
-                                    Size
-                                </label>
-
-                                <select class="form-control">
-                                    <option>Small - ₱79</option>
-                                    <option>Medium - ₱99</option>
-                                    <option>Large - ₱119</option>
-                                </select>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-
-                                <div class="qty-control">
-
-                                    <button class="btn btn-sm btn-dark">
-                                        -
-                                    </button>
-
-                                    <span class="mx-2 text-white">
-                                        1
-                                    </span>
-
-                                    <button class="btn btn-sm btn-dark">
-                                        +
-                                    </button>
+                                    <i class="fa fa-calendar"></i>
 
                                 </div>
 
-                                <h5 class="text-success mb-0">
-                                    ₱99
+                                <h5 class="card-title text-white fw-bold">
+                                    Reservation
                                 </h5>
 
-                            </div>
+                                <p class="card-desc mb-0">
+                                    Book your tattoo session and manage your appointments.
+                                </p>
 
-                            <button class="btn btn-success btn-block">
-                                <i class="fa fa-shopping-cart"></i>
-                                Add to Cart
-                            </button>
+                            </div>
 
                         </div>
 
-                    </div>
+                    </a>
 
                 </div>
 
-                <!-- Product Card -->
-                <div class="col-md-6 col-xl-4 mb-4">
+                <!-- Future Card Example -->
+                
+                <div class="col-12 col-sm-6 col-lg-4">
 
-                    <div class="menu-card">
+                    <a href="#" class="text-decoration-none">
 
-                        <img src="<?= base_url('assets/images/taro.jpg'); ?>"
-                             class="img-fluid menu-img">
+                        <div class="reservation-card h-100">
 
-                        <div class="p-3">
+                            <div class="card-body text-center">
 
-                            <h5 class="text-white">
-                                Taro Milk Tea
-                            </h5>
+                                <div class="card-icon mb-4">
+                                    <i class="fa fa-user"></i>
+                                </div>
 
-                            <p class="text-muted small">
-                                Creamy taro flavor with pearls.
-                            </p>
+                                <h5 class="card-title text-white fw-bold">
+                                    Artists
+                                </h5>
 
-                            <div class="mb-3">
-                                <select class="form-control">
-                                    <option>Small - ₱89</option>
-                                    <option>Medium - ₱109</option>
-                                    <option>Large - ₱129</option>
-                                </select>
+                                <p class="card-desc mb-0">
+                                    View available tattoo artists.
+                                </p>
+
                             </div>
-
-                            <button class="btn btn-success btn-block">
-                                Add to Cart
-                            </button>
 
                         </div>
 
-                    </div>
+                    </a>
 
                 </div>
+               
 
             </div>
 
         </div>
-
-        <!-- Cart -->
-        <div class="col-lg-4">
-
-            <div class="cart-panel">
-
-                <h5 class="text-white mb-4">
-                    Order Summary
-                </h5>
-
-                <div class="cart-item">
-
-                    <div class="d-flex justify-content-between">
-
-                        <div>
-                            <strong class="text-white">
-                                Classic Milk Tea
-                            </strong>
-
-                            <div class="small text-muted">
-                                Medium × 2
-                            </div>
-                        </div>
-
-                        <span class="text-success">
-                            ₱198
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <hr>
-
-                <div class="d-flex justify-content-between">
-
-                    <h5 class="text-white">
-                        Total
-                    </h5>
-
-                    <h5 class="text-success">
-                        ₱198
-                    </h5>
-
-                </div>
-
-                <button class="btn btn-success btn-lg btn-block mt-4">
-                    Checkout
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
 
     </div>
 </div>
