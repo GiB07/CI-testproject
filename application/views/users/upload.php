@@ -56,6 +56,34 @@
 
             <div class="row g-4">
 
+            <div class="col-12 col-sm-6 col-lg-4">
+
+                <a href="<?= base_url('products'); ?>" class="text-decoration-none">
+
+                    <div class="reservation-card h-100">
+
+                        <div class="card-body text-center">
+
+                            <div class="card-icon mb-4">
+                                <i class="fa fa-shopping-bag"></i>
+                            </div>
+
+                            <h5 class="card-title text-white fw-bold">
+                                Tattoo Shop
+                            </h5>
+
+                            <p class="card-desc mb-0">
+                                Browse and purchase tattoo products and merchandise.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
                 <!-- Reservation Card -->
                 <div class="col-12 col-sm-6 col-lg-4">
 
