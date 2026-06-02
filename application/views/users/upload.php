@@ -224,7 +224,7 @@ function saveProduct()
                     "Success!",
                     response.message,
                     "success"
-                );
+                ),
 
                 document.getElementById('productForm').reset();
 
@@ -236,7 +236,7 @@ function saveProduct()
                     "Error!",
                     response.message,
                     "error"
-                );
+                ),
 
             }
 
