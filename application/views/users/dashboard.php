@@ -2,6 +2,11 @@
 <?php 
     $CI =& get_instance();
     $user_id = $_SESSION['user_id'];  
+
+    $user = $CI->db
+        ->where('user_id', $user_id)
+        ->get('users')
+        ->row();
 ?>
 
 <div class="page-wrapper">
@@ -12,7 +17,7 @@
 
             <div class="col-md-6">
                 <h2 class="dashboard-title mb-1">
-                    Welcome Back
+                    Welcome Back, <?= ucfirst($user->fname); ?> 👋
                 </h2>
 
                 <p class="dashboard-subtitle mb-0">
