@@ -58,10 +58,10 @@
                         </a>
 
                         <a class="dropdown-item"
-                           href="<?= base_url('hut_reserve'); ?>">
+                           href="<?= base_url('upload'); ?>">
 
-                            <i class="bi bi-calendar"></i>
-                            Reservations
+                            <i class="bi bi-upload"></i>
+                            Upload stocks
 
                         </a>
 

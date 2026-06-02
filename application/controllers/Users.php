@@ -51,6 +51,13 @@ class Users extends CI_Controller {
         $this->load->view('user_template/footer');
     }
 
+    public function upload(){
+        $this->load->view('user_template/header');
+        $this->load->view('user_template/navbar');
+        $this->load->view('users/upload');
+        $this->load->view('user_template/footer');
+    }
+
 
 public function login(){
         $email=$this->input->post('email');
