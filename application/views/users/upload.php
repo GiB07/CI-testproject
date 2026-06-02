@@ -214,15 +214,6 @@ function saveProduct()
         contentType: false,
         dataType: "json",
 
-        beforeSend: function(){
-
-            swal({
-                title: "Saving...",
-                text: "Please wait..."
-            });
-
-        },
-
         success: function(response){
 
             console.log(response);
