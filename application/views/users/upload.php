@@ -63,8 +63,8 @@
                     </h4>
 
                     <button class="btn btn-primary"
-                            data-toggle="modal"
-                            data-target="#productModal">
+                            data-bs-toggle="modal"
+                            data-bs-target="#productModal">
                         <i class="bi bi-plus"></i> Add Product
                     </button>
 
