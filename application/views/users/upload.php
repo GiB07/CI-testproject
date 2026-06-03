@@ -160,39 +160,74 @@
             </div>
 
             <form id="productForm" enctype="multipart/form-data">
+
                 <div class="modal-body">
 
-                    <div class="form-group">
-                        <label>Product Name</label>
-                        <input type="text" name="product_name" class="form-control" required>
+                    <div class="form-group mb-3">
+                        <label><strong>Product Name</strong></label>
+                        <input type="text" name="product_name" id="product_name" class="form-control" maxlength="100" placeholder="Enter product name" required>
                     </div>
 
-                    <div class="form-group">
-                        <label>Description</label>
-                        <textarea name="description" class="form-control"></textarea>
+                    <div class="form-group mb-3">
+                        <label><strong>Description</strong></label>
+                        <textarea name="description" id="description" class="form-control" rows="4" placeholder="Enter product description"></textarea>
                     </div>
 
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input type="number" step="0.01" name="price" class="form-control" required>
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                            <div class="form-group mb-3">
+                                <label><strong>Price (₱)</strong></label>
+                                <input type="number" name="price" id="price" class="form-control" min="0" step="0.01" placeholder="0.00" required>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="form-group mb-3">
+                                <label><strong>Stocks</strong></label>
+                                <input type="number" name="stocks" id="stocks" class="form-control" min="1" step="1" placeholder="Quantity" required>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div class="form-group">
-                        <label>Stocks</label>
-                        <input type="number" name="stocks" class="form-control" required>
+                    <div class="form-group mb-3">
+
+                        <label><strong>Product Image</strong></label>
+
+                        <input type="file" name="product_image" id="product_image" class="form-control" accept=".jpg,.jpeg,.png,.webp" 
+                        onchange="previewImage(this)" required>
+
+                        <small class="text-muted">
+                            Allowed: JPG, JPEG, PNG, WEBP
+                        </small>
+
                     </div>
 
-                    <div class="form-group">
-                        <label>Product Image</label>
-                        <input type="file" name="product_image" class="form-control" required>
-                        <img id="preview" width="200">
+                    <div class="text-center">
+
+                        <img id="imagePreview" src="" style="display:none; max-width:200px; max-height:200px;" class="img-thumbnail">
+
                     </div>
 
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="saveProduct()">Save</button>
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Cancel
+                    </button>
+
+                    <button type="button" class="btn btn-primary" onclick="saveProduct()">
+                        Save Product
+                    </button>
+
                 </div>
+
             </form>
 
         </div>
@@ -237,9 +272,4 @@ function saveProduct()
 
     });
 }
-
-document.getElementById('product_image').onchange = function(e){
-    document.getElementById('preview').src =
-        URL.createObjectURL(e.target.files[0]);
-};
 </script>
