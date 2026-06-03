@@ -175,43 +175,43 @@ public function login(){
     }
 
     public function save_product()
-{
-    $path = './uploads/products/';
+    {
+        $path = './uploads/products/';
 
-    if (!is_dir($path)) {
-        mkdir($path, 0755, true);
-    }
+        if (!is_dir($path)) {
+            mkdir($path, 0755, true);
+        }
 
-    $config['upload_path'] = $path;
-    $config['allowed_types'] = 'jpg|jpeg|png|webp';
-    $config['encrypt_name'] = TRUE;
+        $config['upload_path'] = $path;
+        $config['allowed_types'] = 'jpg|jpeg|png|webp';
+        $config['encrypt_name'] = TRUE;
 
-    $this->load->library('upload', $config);
+        $this->load->library('upload', $config);
 
-    if (!$this->upload->do_upload('product_image')) {
+        if (!$this->upload->do_upload('product_image')) {
+
+            echo json_encode([
+                'status' => 'error',
+                'message' => $this->upload->display_errors('', '')
+            ]);
+            return;
+        }
+
+        $file = $this->upload->data();
+
+        $this->db->insert('products', [
+            'product_name' => $this->input->post('product_name'),
+            'description'  => $this->input->post('description'),
+            'price'        => $this->input->post('price'),
+            'stocks'       => $this->input->post('stocks'),
+            'image'        => $file['file_name']
+        ]);
 
         echo json_encode([
-            'status' => 'error',
-            'message' => $this->upload->display_errors('', '')
+            'status' => 'success',
+            'message' => 'Product uploaded successfully'
         ]);
-        return;
     }
-
-    $file = $this->upload->data();
-
-    $this->db->insert('products', [
-        'product_name' => $this->input->post('product_name'),
-        'description'  => $this->input->post('description'),
-        'price'        => $this->input->post('price'),
-        'stocks'       => $this->input->post('stocks'),
-        'image'        => $file['file_name']
-    ]);
-
-    echo json_encode([
-        'status' => 'success',
-        'message' => 'Product uploaded successfully'
-    ]);
-}
 
 
 
