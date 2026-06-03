@@ -185,6 +185,7 @@
                     <div class="form-group">
                         <label>Product Image</label>
                         <input type="file" name="product_image" class="form-control" required>
+                        <img id="preview" width="200">
                     </div>
 
                 </div>
@@ -236,4 +237,9 @@ function saveProduct()
 
     });
 }
+
+document.getElementById('product_image').onchange = function(e){
+    document.getElementById('preview').src =
+        URL.createObjectURL(e.target.files[0]);
+};
 </script>
