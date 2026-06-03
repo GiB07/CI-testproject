@@ -184,6 +184,9 @@ public function login(){
 
         $config['upload_path'] = $path;
         $config['allowed_types'] = 'jpg|jpeg|png|webp';
+        $config['max_size'] = 2048; // 2MB
+        $config['max_width']  = 3000;
+        $config['max_height'] = 3000;
 
         $this->load->library('upload', $config);
 
