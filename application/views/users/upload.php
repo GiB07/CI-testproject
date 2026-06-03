@@ -220,11 +220,7 @@ function saveProduct()
 
             if(response.status == 'success'){
 
-                swal(
-                    "Success!",
-                    response.message,
-                    "success"
-                );
+                swal("Success!", response.message, "success");
 
                 document.getElementById('productForm').reset();
 
@@ -232,11 +228,7 @@ function saveProduct()
 
             }else{
 
-                swal(
-                    "Error!",
-                    response.message,
-                    "error"
-                );
+                swal("Error!", response.message, "error");
 
             }
 
