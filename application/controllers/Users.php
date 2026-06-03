@@ -184,7 +184,6 @@ public function login(){
 
         $config['upload_path'] = $path;
         $config['allowed_types'] = 'jpg|jpeg|png|webp';
-        $config['encrypt_name'] = TRUE;
 
         $this->load->library('upload', $config);
 
