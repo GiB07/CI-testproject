@@ -218,7 +218,7 @@
 
                 <div class="modal-footer">
 
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                         Cancel
                     </button>
 
@@ -240,7 +240,37 @@
 <script>
 function saveProduct()
 {
+    var product_name = $('#product_name').val().trim();
+    var price = $('#price').val();
+    var stocks = $('#stocks').val();
+    var image = $('#product_image').val();
+
+    if(product_name == '')
+    {
+        swal("Warning", "Product Name is required.", "warning");
+        return false;
+    }
+
+    if(price == '' || parseFloat(price) <= 0)
+    {
+        swal("Warning", "Please enter a valid price.", "warning");
+        return false;
+    }
+
+    if(stocks == '' || parseInt(stocks) <= 0)
+    {
+        swal("Warning", "Please enter valid stock quantity.", "warning");
+        return false;
+    }
+
+    if(image == '')
+    {
+        swal("Warning", "Please select a product image.", "warning");
+        return false;
+    }
+
     var formData = new FormData(document.getElementById('productForm'));
+
 
     $.ajax({
         url: "<?= base_url('products/save_product'); ?>",
