@@ -138,7 +138,7 @@
 <!-- modal -->
  <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
 
-    <div class="modal-dialog modal-s" role="document">
+    <div class="modal-dialog modal-sm" role="document">
 
         <div class="modal-content">
 
