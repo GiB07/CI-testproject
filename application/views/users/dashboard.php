@@ -56,7 +56,7 @@
 
     <div class="row g-4">
 
-        <?php foreach($products as $p): ?>
+        <?php foreach($product as $p): ?>
 
         <div class="col-12 col-sm-6 col-lg-3">
 
