@@ -218,7 +218,7 @@ public function login(){
     }
 
     public function add_to_cart(){
-        
+
         $id = $this->input->post('product_id');
         $qty = $this->input->post('qty');
 
@@ -231,12 +231,6 @@ public function login(){
         }
 
         $p = $product[0];
-
-        if($qty > $p->stocks)
-        {
-            echo json_encode(['status'=>'error','message'=>'Not enough stock']);
-            return;
-        }
 
         $cart = $this->session->userdata('cart');
 
