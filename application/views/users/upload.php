@@ -288,7 +288,11 @@ function saveProduct()
 
                 swal("Success!", response.message, "success");
 
-                    $('#productModal').modal('hide');
+                    var modal = new bootstrap.Modal(
+                        document.getElementById('productModal')
+                    );
+
+                    modal.hide();
 
                     $('#productModal').on('hidden.bs.modal', function () {
                         document.getElementById('productForm').reset();
