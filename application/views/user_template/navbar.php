@@ -34,6 +34,10 @@
             </a>
 
             <div class="nav-right">
+                
+            <span id="cartCount">
+                <?= isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart'], 'qty')) : 0; ?>
+            </span>
 
                 <div class="dropdown">
 
