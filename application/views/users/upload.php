@@ -184,15 +184,6 @@
 
                         </div>
 
-                        <div class="col-md-6">
-
-                            <div class="form-group mb-3">
-                                <label><strong>Stocks</strong></label>
-                                <input type="number" name="stocks" id="stocks" class="form-control" min="1" step="1" placeholder="Quantity" required>
-                            </div>
-
-                        </div>
-
                     </div>
 
                     <div class="form-group mb-3">
@@ -253,12 +244,6 @@ function saveProduct()
     if(price == '' || parseFloat(price) <= 0)
     {
         swal("Warning", "Please enter a valid price.", "warning");
-        return false;
-    }
-
-    if(stocks == '' || parseInt(stocks) <= 0)
-    {
-        swal("Warning", "Please enter valid stock quantity.", "warning");
         return false;
     }
 

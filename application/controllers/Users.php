@@ -208,7 +208,6 @@ public function login(){
             'product_name' => $this->input->post('product_name'),
             'description'  => $this->input->post('description'),
             'price'        => $this->input->post('price'),
-            'stocks'       => $this->input->post('stocks'),
             'image'        => $file['file_name']
         ]);
 

@@ -73,10 +73,6 @@
                     ₱<?= number_format($p->price,2); ?>
                 </p>
 
-                <span class="badge bg-info mb-2">
-                    Stock: <?= $p->stocks; ?>
-                </span>
-
                 <div class="mt-2">
 
                     <?php if($p->stocks > 0): ?>
