@@ -232,12 +232,6 @@ public function login(){
 
         $p = $product[0];
 
-        if($p->stocks <= 0)
-        {
-            echo json_encode(['status'=>'error','message'=>'Out of stock']);
-            return;
-        }
-
         $cart = $this->session->userdata('cart');
 
         if(isset($cart[$id]))
