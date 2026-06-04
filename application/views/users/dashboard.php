@@ -44,84 +44,67 @@
         </div>
 
         <!-- Main Content -->
-        <div class="glass-container">
+        <div class="glass-container mt-4">
 
-            <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
 
-                <h4 class="text-white mb-0">
-                    Reservation Services
-                </h4>
+        <h4 class="text-white mb-0">
+            Tattoo Products
+        </h4>
 
-            </div>
+    </div>
 
-            <div class="row g-4">
+    <div class="row g-4">
 
-                <!-- Reservation Card -->
-                <div class="col-12 col-sm-6 col-lg-4">
+        <?php foreach($products as $p): ?>
 
-                    <a href="<?= base_url('hut_reserve'); ?>"
-                       class="text-decoration-none">
+        <div class="col-12 col-sm-6 col-lg-3">
 
-                        <div class="reservation-card h-100">
+            <div class="reservation-card h-100 text-center">
 
-                            <div class="card-body text-center">
+                <img src="<?= base_url('uploads/products/'.$p->image); ?>"
+                     style="width:100%; height:180px; object-fit:cover; border-radius:10px;">
 
-                                <div class="card-icon mb-4">
+                <h5 class="text-white mt-3">
+                    <?= $p->product_name; ?>
+                </h5>
 
-                                    <i class="fa fa-calendar"></i>
+                <p class="text-light mb-1">
+                    ₱<?= number_format($p->price,2); ?>
+                </p>
 
-                                </div>
+                <span class="badge bg-info mb-2">
+                    Stock: <?= $p->stocks; ?>
+                </span>
 
-                                <h5 class="card-title text-white fw-bold">
-                                    Reservation
-                                </h5>
+                <div class="mt-2">
 
-                                <p class="card-desc mb-0">
-                                    Book your tattoo session and manage your appointments.
-                                </p>
+                    <?php if($p->stocks > 0): ?>
 
-                            </div>
+                        <button class="btn btn-success btn-sm"
+                                onclick="checkout(<?= $p->product_id; ?>)">
+                            Checkout
+                        </button>
 
-                        </div>
+                    <?php else: ?>
 
-                    </a>
+                        <button class="btn btn-secondary btn-sm" disabled>
+                            Out of Stock
+                        </button>
 
-                </div>
-
-                <!-- Future Card Example -->
-                
-                <div class="col-12 col-sm-6 col-lg-4">
-
-                    <a href="#" class="text-decoration-none">
-
-                        <div class="reservation-card h-100">
-
-                            <div class="card-body text-center">
-
-                                <div class="card-icon mb-4">
-                                    <i class="fa fa-user"></i>
-                                </div>
-
-                                <h5 class="card-title text-white fw-bold">
-                                    Artists
-                                </h5>
-
-                                <p class="card-desc mb-0">
-                                    View available tattoo artists.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </a>
+                    <?php endif; ?>
 
                 </div>
-               
 
             </div>
 
         </div>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</div>
 
     </div>
 </div>
