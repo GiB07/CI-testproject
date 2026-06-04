@@ -218,9 +218,9 @@ public function login(){
     }
 
     public function add_to_cart(){
-
+        
         $id = $this->input->post('product_id');
-        $qty = 1;
+        $qty = $this->input->post('qty');
 
         $product = $this->super_model->select_custom_where('products', "product_id = '$id'");
 
@@ -232,18 +232,24 @@ public function login(){
 
         $p = $product[0];
 
+        if($qty > $p->stocks)
+        {
+            echo json_encode(['status'=>'error','message'=>'Not enough stock']);
+            return;
+        }
+
         $cart = $this->session->userdata('cart');
 
         if(isset($cart[$id]))
         {
-            $cart[$id]['qty'] += 1;
+            $cart[$id]['qty'] += $qty;
         }
         else
         {
             $cart[$id] = [
                 'name'  => $p->product_name,
                 'price' => $p->price,
-                'qty'   => 1,
+                'qty'   => $qty,
                 'image' => $p->image
             ];
         }
@@ -254,23 +260,6 @@ public function login(){
             'status' => 'success',
             'message' => 'Added to cart'
         ]);
-    }
-
-    public function cart_count(){
-            
-        $cart = $this->session->userdata('cart');
-
-        $count = 0;
-
-        if($cart)
-        {
-            foreach($cart as $item)
-            {
-                $count += $item['qty'];
-            }
-        }
-
-        echo $count;
     }
 
 
