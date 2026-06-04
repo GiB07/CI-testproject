@@ -199,8 +199,7 @@
 
                         <label><strong>Product Image</strong></label>
 
-                        <input type="file" name="product_image" id="product_image" class="form-control" accept=".jpg,.jpeg,.png,.webp" 
-                        onchange="previewImage(this)" required>
+                        <input type="file" name="product_image" id="product_image" class="form-control" accept=".jpg,.jpeg,.png,.webp" required>
 
                         <small class="text-muted">
                             Allowed: JPG, JPEG, PNG, WEBP
@@ -271,9 +270,6 @@ function saveProduct()
 
     var formData = new FormData(document.getElementById('productForm'));
 
-    document.getElementById('product_image').addEventListener('change', function(){
-        previewImage(this);
-    });
 
     $.ajax({
         url: "<?= base_url('products/save_product'); ?>",
