@@ -62,5 +62,11 @@ $route['user_logout'] 						= 'Users/user_logout';
 
 
 $route['dashboard'] 						= 'Users/dashboard';
+// upload ug new stocks
 $route['upload'] 						    = 'Users/upload';
 $route['products/save_product']             = 'Users/save_product';
+// end
+// add to cart and cart count
+$route['products/add_to_cart']              = 'Users/add_to_cart';
+$route['products/cart_count']               = 'Users/cart_count';
+// end

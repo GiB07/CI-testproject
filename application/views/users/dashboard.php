@@ -81,9 +81,9 @@
 
                     <?php if($p->stocks > 0): ?>
 
-                        <button class="btn btn-success btn-sm"
-                                onclick="checkout(<?= $p->product_id; ?>)">
-                            Checkout
+                        <button class="btn btn-primary btn-sm"
+                                onclick="addToCart(<?= $p->product_id; ?>)">
+                            Add to Cart
                         </button>
 
                     <?php else: ?>
@@ -108,3 +108,40 @@
 
     </div>
 </div>
+
+<script>
+    function addToCart(product_id){
+
+    $.ajax({
+        url: "<?= base_url('products/add_to_cart'); ?>",
+        type: "POST",
+        data: { product_id: product_id },
+        dataType: "json",
+
+        success: function(res)
+        {
+            if(res.status == "success")
+            {
+                swal("Added", res.message, "success");
+                updateCartCount();
+            }
+            else
+            {
+                swal("Error", res.message, "error");
+            }
+        }
+    });
+}
+
+    function updateCartCount(){
+        
+        $.ajax({
+            url: "<?= base_url('products/cart_count'); ?>",
+            type: "GET",
+            success: function(res)
+            {
+                $('#cartCount').html(res);
+            }
+        });
+    }
+</script>

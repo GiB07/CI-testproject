@@ -218,6 +218,68 @@ public function login(){
         ]);
     }
 
+    public function add_to_cart(){
+
+        $id = $this->input->post('product_id');
+        $qty = 1;
+
+        $product = $this->super_model->select_custom_where('products', "product_id = '$id'");
+
+        if(!$product)
+        {
+            echo json_encode(['status'=>'error','message'=>'Product not found']);
+            return;
+        }
+
+        $p = $product[0];
+
+        if($p->stocks <= 0)
+        {
+            echo json_encode(['status'=>'error','message'=>'Out of stock']);
+            return;
+        }
+
+        $cart = $this->session->userdata('cart');
+
+        if(isset($cart[$id]))
+        {
+            $cart[$id]['qty'] += 1;
+        }
+        else
+        {
+            $cart[$id] = [
+                'name'  => $p->product_name,
+                'price' => $p->price,
+                'qty'   => 1,
+                'image' => $p->image
+            ];
+        }
+
+        $this->session->set_userdata('cart', $cart);
+
+        echo json_encode([
+            'status' => 'success',
+            'message' => 'Added to cart'
+        ]);
+    }
+
+    public function cart_count(){
+            
+        $cart = $this->session->userdata('cart');
+
+        $count = 0;
+
+        if($cart)
+        {
+            foreach($cart as $item)
+            {
+                $count += $item['qty'];
+            }
+        }
+
+        echo $count;
+    }
+
 
 
 }
