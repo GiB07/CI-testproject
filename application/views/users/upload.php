@@ -271,6 +271,9 @@ function saveProduct()
 
     var formData = new FormData(document.getElementById('productForm'));
 
+    document.getElementById('product_image').addEventListener('change', function(){
+        previewImage(this);
+    });
 
     $.ajax({
         url: "<?= base_url('products/save_product'); ?>",
