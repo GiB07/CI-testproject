@@ -243,7 +243,7 @@ function saveProduct()
     var product_name = $('#product_name').val().trim();
     var price = $('#price').val();
     var stocks = $('#stocks').val();
-    var image = $('#product_image').val();
+    var image = document.getElementById('product_image').files.length;
 
     if(product_name == '')
     {
@@ -263,7 +263,7 @@ function saveProduct()
         return false;
     }
 
-    if(image == '')
+    if(image == 0)
     {
         swal("Warning", "Please select a product image.", "warning");
         return false;
@@ -288,9 +288,11 @@ function saveProduct()
 
                 swal("Success!", response.message, "success");
 
-                document.getElementById('productForm').reset();
+                    $('#productModal').modal('hide');
 
-                $('#productModal').modal('hide');
+                    $('#productModal').on('hidden.bs.modal', function () {
+                        document.getElementById('productForm').reset();
+                    });
 
             }else{
 
