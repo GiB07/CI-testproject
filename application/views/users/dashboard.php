@@ -75,20 +75,10 @@
 
                 <div class="mt-2">
 
-                    <?php if($p->stocks > 0): ?>
-
                         <button class="btn btn-primary btn-sm"
                                 onclick="addToCart(<?= $p->product_id; ?>)">
                             Add to Cart
                         </button>
-
-                    <?php else: ?>
-
-                        <button class="btn btn-secondary btn-sm" disabled>
-                            Out of Stock
-                        </button>
-
-                    <?php endif; ?>
 
                 </div>
 
