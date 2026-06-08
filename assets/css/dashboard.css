@@ -216,7 +216,7 @@ body .upload{
     color: #fff;
 }
 
-.product-container .card .contentBx .size,
+.product-container .card .contentBx .price,
 .product-container .card .contentBx .color {
     display: flex;
     justify-content: center;
@@ -227,7 +227,7 @@ body .upload{
     visibility: hidden;
 }
 
-.product-container .card:hover .contentBx .size {
+.product-container .card:hover .contentBx .price {
     opacity: 1;
     visibility: visible;
     transition-delay: .5s;
@@ -239,7 +239,7 @@ body .upload{
     transition-delay: .6s;
 }
 
-.product-container .card .contentBx .size h3,
+.product-container .card .contentBx .price h3,
 .product-container .card .contentBx .color h3 {
     color: white;
     font-weight: 300;
@@ -249,7 +249,7 @@ body .upload{
     margin-right: 10px;
 }
 
-.product-container .card .contentBx .size span {
+.product-container .card .contentBx {
     width: 26px;
     height: 26px;
     text-align: center;
@@ -265,7 +265,7 @@ body .upload{
     cursor: pointer;
 }
 
-.product-container .card .contentBx .size span:hover {  /* other bug */
+.product-container .card .contentBx {  /* other bug */
     background: #B90000;
 }
 

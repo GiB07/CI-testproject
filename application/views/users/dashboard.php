@@ -69,7 +69,7 @@
                             <h2><?= $p->product_name; ?></h2>
 
                             <!-- PRICE (replaces size/color section) -->
-                            <div class="size">
+                            <div class="price">
                                 <h3>Price :</h3>
                                 <span>₱<?= number_format($p->price,2); ?></span>
                             </div>
