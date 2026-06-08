@@ -68,15 +68,9 @@
 
                             <h2><?= $p->product_name; ?></h2>
 
+                            <!-- PRICE (replaces size/color section) -->
                             <div class="price">
                                 ₱<?= number_format($p->price,2); ?>
-                            </div>
-
-                            <div class="size">
-                                <h3>Size :</h3>
-                                <span value="small">small</span>
-                                <span value="medium">medium</span>
-                                <span value="large">large</span>
                             </div>
 
                             <!-- BUTTON -->
@@ -125,6 +119,25 @@
         <input type="number" id="cartQty" class="qty-modern" min="1" value="1">
 
         <input type="hidden" id="cartProductId">
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDefault" id="small" value="small">
+                <label class="form-check-label" for="small">
+                    Small
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDefault" id="medium" value="medium">
+                <label class="form-check-label" for="medium">
+                    Medium
+                </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDefault" id="large" value="large">
+                <label class="form-check-label" for="large">
+                    Large
+                </label>
+        </div>
 
       </div>
 
@@ -190,12 +203,16 @@
 
         var product_id = $('#cartProductId').val();
         var qty = $('#cartQty').val();
+        var size = $('input[name="radioDefault"]:checked').val();
 
         $.ajax({
             url: "<?= base_url('products/add_to_cart'); ?>",
             type: "POST",
             data: {
                 product_id: product_id,
+                qty: qty,
+                size: size
+            },
                 qty: qty
             },
             dataType: "json",
