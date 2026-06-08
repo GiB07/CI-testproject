@@ -131,7 +131,9 @@ body .upload{
 }
 /* new card design */
 .product-container {
+    background:rgba(255,255,255,.08);
     position: relative;
+    
 }
 
 .product-container .card .contentBx .price {
