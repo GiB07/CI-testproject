@@ -47,11 +47,7 @@
         <div class="product-container mt-4">
 
             <div class="d-flex justify-content-between align-items-center mb-4">
-
-                <h4 class="text-white mb-0">
-                    Tattoo Products
-                </h4>
-
+                <h4 class="text-white mb-0">Tattoo Products</h4>
             </div>
 
             <div class="row g-4">
@@ -60,26 +56,29 @@
 
                 <div class="col-12 col-sm-6 col-lg-3">
 
-                    <div class="reservation-card h-100 text-center">
+                    <div class="card">
 
-                        <img src="<?= base_url('uploads/products/'.$p->image); ?>"
-                            style="width:100%; height:180px; object-fit:cover; border-radius:10px;">
+                        <!-- IMAGE SECTION -->
+                        <div class="imgBx">
+                            <img src="<?= base_url('uploads/products/'.$p->image); ?>" alt="<?= $p->product_name; ?>">
+                        </div>
 
-                        <h5 class="text-white mt-3">
-                            <?= $p->product_name; ?>
-                        </h5>
-                        <br>
+                        <!-- CONTENT SECTION -->
+                        <div class="contentBx">
 
-                        <p class="text-light mb-1">
-                           <span class="badge bg-danger" style="font-size: medium;"> ₱<?= number_format($p->price,2); ?></span>
-                        </p>
+                            <h2><?= $p->product_name; ?></h2>
 
-                        <div class="mt-2">
+                            <!-- PRICE (replaces size/color section) -->
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>₱<?= number_format($p->price,2); ?></span>
+                            </div>
 
-                                <button class="btn btn-primary btn-sm"
-                                        onclick="openCartModal(<?= $p->product_id; ?>, '<?= $p->product_name; ?>', <?= $p->price; ?>, '<?= $p->image; ?>')">
-                                    Add to Cart
-                                </button>
+                            <!-- BUTTON -->
+                            <a href="javascript:void(0);"
+                            onclick="openCartModal(<?= $p->product_id; ?>, '<?= $p->product_name; ?>', <?= $p->price; ?>, '<?= $p->image; ?>')">
+                                Add to Cart
+                            </a>
 
                         </div>
 
