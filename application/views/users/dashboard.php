@@ -112,7 +112,7 @@
 
         <h5 id="cartProductName"></h5>
 
-        <p class="text-light" id="cartPrice"></p>
+        <p class="text-light badge bg-primary" id="cartPrice"></p>
 
         <label>Quantity</label>
         
