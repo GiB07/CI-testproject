@@ -132,6 +132,9 @@ body .upload{
 /* new card design */
 .product-container {
     background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border-radius:24px;
+    padding:30px;
     position: relative;
     
 }
