@@ -68,9 +68,15 @@
 
                             <h2><?= $p->product_name; ?></h2>
 
-                            <!-- PRICE (replaces size/color section) -->
                             <div class="price">
                                 ₱<?= number_format($p->price,2); ?>
+                            </div>
+
+                            <div class="size">
+                                <h3>Size :</h3>
+                                <span value="small">small</span>
+                                <span value="medium">medium</span>
+                                <span value="large">large</span>
                             </div>
 
                             <!-- BUTTON -->
