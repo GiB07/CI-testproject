@@ -172,7 +172,7 @@ body .upload{
 
 .product-container .card:after {
     content: "sweet";
-    position: absolute;
+    position: initial;
     top: 30%;
     left: -20%;
     font-size: 12em;
