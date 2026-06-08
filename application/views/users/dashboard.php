@@ -44,7 +44,7 @@
         </div>
 
         <!-- Main Content -->
-        <div class="product-container glass-container mt-4">
+        <div class="product-container mt-4">
 
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h4 class="text-white mb-0">Tattoo Products</h4>
