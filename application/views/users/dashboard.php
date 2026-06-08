@@ -116,7 +116,13 @@
 
         <label>Quantity</label>
         
-        <input type="number" id="cartQty" class="qty-modern" min="1" value="1">
+        <div class="qty-box">
+            <button type="button" class="qty-btn minus">−</button>
+
+            <input type="number" id="cartQty" value="1" min="1" readonly>
+
+            <button type="button" class="qty-btn plus">+</button>
+        </div>
 
         <input type="hidden" id="cartProductId">
 
@@ -151,6 +157,22 @@
 <!-- end -->
 
 <script>
+    $(document).ready(function () {
+
+    $(".plus").click(function () {
+        let qty = parseInt($("#cartQty").val());
+        $("#cartQty").val(qty + 1);
+    });
+
+    $(".minus").click(function () {
+        let qty = parseInt($("#cartQty").val());
+
+        if (qty > 1) {
+            $("#cartQty").val(qty - 1);
+        }
+    });
+
+});
 
     function openCartModal(id, name, price, image){
 
