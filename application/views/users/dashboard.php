@@ -233,24 +233,18 @@
         });
     }
 
+  $(function () {
+
     $(document).on("click", ".plus", function () {
-        let qty = parseInt($("#cartQty").val());
-
-        if (isNaN(qty)) qty = 1;
-
+        let qty = parseInt($("#cartQty").val()) || 1;
         $("#cartQty").val(qty + 1);
     });
 
     $(document).on("click", ".minus", function () {
-        let qty = parseInt($("#cartQty").val());
-
-        if (isNaN(qty)) qty = 1;
-
-        if (qty > 1) {
-            $("#cartQty").val(qty - 1);
-        }
+        let qty = parseInt($("#cartQty").val()) || 1;
+        if (qty > 1) $("#cartQty").val(qty - 1);
     });
-$(document).ready(function () {
-    console.log("jQuery is working");
+
 });
+
 </script>
