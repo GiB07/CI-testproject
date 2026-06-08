@@ -44,7 +44,7 @@
         </div>
 
         <!-- Main Content -->
-        <div class="glass-container mt-4">
+        <div class="product-container mt-4">
 
             <div class="d-flex justify-content-between align-items-center mb-4">
 
