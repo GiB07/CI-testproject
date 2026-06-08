@@ -5,7 +5,7 @@
 <div class="preloader">
     <div class="loader">
         <div class="loader__figure"></div>
-        <p class="loader__label">GET INKED!</p>
+        <p class="loader__label">The 8:30 Club!</p>
     </div>
 </div>
 
@@ -23,11 +23,11 @@
 
                 <div class="brand-text">
                     <h3 class="brand-title">
-                        GET INKED!
+                        The 8:30 Club!
                     </h3>
 
                     <span class="brand-subtitle">
-                        Tattoo Studio
+                        Freshly Brewed
                     </span>
                 </div>
 
