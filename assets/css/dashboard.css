@@ -134,6 +134,13 @@ body .upload{
     position: relative;
 }
 
+.product-container .card .contentBx .price {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
 .product-container .card {
     position: relative;
     width: 320px;
@@ -214,13 +221,6 @@ body .upload{
     font-weight: 600;
     letter-spacing: 1px;
     color: #fff;
-}
-
-.product-container .card .contentBx .price {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 8px;
 }
 
 .product-container .card .contentBx .size,

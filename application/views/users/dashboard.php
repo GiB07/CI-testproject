@@ -70,8 +70,7 @@
 
                             <!-- PRICE (replaces size/color section) -->
                             <div class="price">
-                                <h3>Price :</h3>
-                                <span>₱<?= number_format($p->price,2); ?></span>
+                                ₱<?= number_format($p->price,2); ?>
                             </div>
 
                             <!-- BUTTON -->
