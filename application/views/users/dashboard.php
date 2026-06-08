@@ -44,7 +44,7 @@
         </div>
 
         <!-- Main Content -->
-        <div class="product-container mt-4">
+        <div class="container mt-4">
 
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h4 class="text-white mb-0">Tattoo Products</h4>
@@ -76,7 +76,8 @@
 
                             <!-- BUTTON -->
                             <a href="javascript:void(0);"
-                            onclick="openCartModal(<?= $p->product_id; ?>, '<?= $p->product_name; ?>', <?= $p->price; ?>, '<?= $p->image; ?>')">
+                               class="btn btn-primary"
+                               onclick="openCartModal(<?= $p->product_id; ?>, '<?= $p->product_name; ?>', <?= $p->price; ?>, '<?= $p->image; ?>')">
                                 Add to Cart
                             </a>
 
