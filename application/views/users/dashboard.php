@@ -68,9 +68,10 @@
                         <h5 class="text-white mt-3">
                             <?= $p->product_name; ?>
                         </h5>
+                        <br>
 
                         <p class="text-light mb-1">
-                           <span class="badge bg-success"> ₱<?= number_format($p->price,2); ?></span>
+                           <span class="badge bg-danger" style="font-size: medium;"> ₱<?= number_format($p->price,2); ?></span>
                         </p>
 
                         <div class="mt-2">
