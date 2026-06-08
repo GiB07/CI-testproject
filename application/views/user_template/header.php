@@ -26,6 +26,8 @@
     <link href="<?php echo base_url('assets/css/sweetalert2.min.css'); ?>" rel="stylesheet">   
     <link href='<?php echo base_url('assets/css/fullcalendar.min.css'); ?>' rel="stylesheet"/>
     <link href='<?php echo base_url('assets/css/fullcalendar.print.min.css'); ?>' rel="stylesheet"/>
+
+    <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
 </head>
 <!-- <body class="skin-default-dark fixed-layout"> -->
     <!-- ============================================================== -->
