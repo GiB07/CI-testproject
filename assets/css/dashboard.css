@@ -317,3 +317,44 @@ body .upload{
     transition-delay: .7s;
 }
 /* end */
+
+/* for sizes */
+.size-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.size-group input {
+    display: none;
+}
+
+.size-group label {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255,255,255,0.3);
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: 600;
+    background: rgba(255,255,255,0.05);
+}
+
+/* hover effect */
+.size-group label:hover {
+    transform: translateY(-2px);
+    border-color: #1BBFE9;
+}
+
+/* selected state */
+.size-group input:checked + label {
+    background: #1BBFE9;
+    border-color: #1BBFE9;
+    color: #000;
+}
+/* end */

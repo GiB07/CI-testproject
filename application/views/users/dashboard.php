@@ -120,23 +120,15 @@
 
         <input type="hidden" id="cartProductId">
 
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioDefault" id="small" value="small">
-                <label class="form-check-label" for="small">
-                    Small
-                </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioDefault" id="medium" value="medium">
-                <label class="form-check-label" for="medium">
-                    Medium
-                </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioDefault" id="large" value="large">
-                <label class="form-check-label" for="large">
-                    Large
-                </label>
+       <div class="size-group">
+            <input type="radio" id="small" name="size" value="small">
+            <label for="small">S</label>
+
+            <input type="radio" id="medium" name="size" value="medium">
+            <label for="medium">M</label>
+
+            <input type="radio" id="large" name="size" value="large">
+            <label for="large">L</label>
         </div>
 
       </div>
