@@ -116,11 +116,8 @@
         <p class="text-light" id="cartPrice"></p>
 
         <label>Quantity</label>
-        <input type="number"
-               id="cartQty"
-               class="form-control"
-               min="1"
-               value="1">
+        
+        <input type="number" id="cartQty" class="qty-modern" min="1" value="1">
 
         <input type="hidden" id="cartProductId">
 

@@ -113,3 +113,19 @@ body .upload{
         font-size:40px;
     }
 }
+
+.qty-modern {
+    width: 90px;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.qty-modern:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13,110,253,.15);
+}
