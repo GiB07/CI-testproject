@@ -213,8 +213,6 @@
                 qty: qty,
                 size: size
             },
-                qty: qty
-            },
             dataType: "json",
 
             success: function(res)
