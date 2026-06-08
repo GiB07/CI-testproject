@@ -157,22 +157,23 @@
 <!-- end -->
 
 <script>
-    $(document).ready(function () {
-
-    $(".plus").click(function () {
+    $(document).on("click", ".plus", function () {
         let qty = parseInt($("#cartQty").val());
+
+        if (isNaN(qty)) qty = 1;
+
         $("#cartQty").val(qty + 1);
     });
 
-    $(".minus").click(function () {
+    $(document).on("click", ".minus", function () {
         let qty = parseInt($("#cartQty").val());
+
+        if (isNaN(qty)) qty = 1;
 
         if (qty > 1) {
             $("#cartQty").val(qty - 1);
         }
     });
-
-});
 
     function openCartModal(id, name, price, image){
 
