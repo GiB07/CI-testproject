@@ -157,7 +157,7 @@ body .upload{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #1BBFE9;
+    background: #C69C6D;
     clip-path: circle(150px at 80% 20%);
     transition: 0.5s ease-in-out;
 }
@@ -348,13 +348,13 @@ body .upload{
 /* hover effect */
 .size-group label:hover {
     transform: translateY(-2px);
-    border-color: #1BBFE9;
+    border-color: #C69C6D;
 }
 
 /* selected state */
 .size-group input:checked + label {
-    background: #1BBFE9;
-    border-color: #1BBFE9;
+    background: #C69C6D;
+    border-color: #C69C6D;
     color: #000;
 }
 /* end */
@@ -392,7 +392,7 @@ body .upload{
 }
 
 .qty-btn:hover {
-    background: #1BBFE9;
+    background: #C69C6D;
     color: #000;
 }
 
