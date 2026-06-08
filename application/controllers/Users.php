@@ -46,7 +46,7 @@ class Users extends CI_Controller {
 
     public function dashboard(){
 
-        $data['products'] = $this->super_model->select_all_order_by('products', 'product_id', 'DESC');
+        $data['products'] = $this->super_model->select_all_order_by('products', 'product_id', 'ASC');
 
         $this->load->view('user_template/header');
         $this->load->view('user_template/navbar');
