@@ -250,5 +250,7 @@
             $("#cartQty").val(qty - 1);
         }
     });
-
+$(document).ready(function () {
+    console.log("jQuery is working");
+});
 </script>
