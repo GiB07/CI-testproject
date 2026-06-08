@@ -155,7 +155,7 @@
         // var modal = new bootstrap.Modal(document.getElementById('cartModal'));
         // modal.show();
 
-        $('#cartModal').modal('hide');
+        $('#cartModal').modal('show');
     }
 
     function addToCart(product_id){
