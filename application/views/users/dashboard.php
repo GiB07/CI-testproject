@@ -152,8 +152,10 @@
 
         $('#cartQty').val(1);
 
-        var modal = new bootstrap.Modal(document.getElementById('cartModal'));
-        modal.show();
+        // var modal = new bootstrap.Modal(document.getElementById('cartModal'));
+        // modal.show();
+
+        $('#cartModal').modal('hide');
     }
 
     function addToCart(product_id){
@@ -199,10 +201,12 @@
                 {
                     swal("Success", res.message, "success");
 
-                    var modal = bootstrap.Modal.getInstance(
-                        document.getElementById('cartModal')
-                    );
-                    modal.hide();
+                    // var modal = bootstrap.Modal.getInstance(
+                    //     document.getElementById('cartModal')
+                    // );
+                    // modal.hide();
+
+                    $('#cartModal').modal('hide');
                 }
                 else
                 {
