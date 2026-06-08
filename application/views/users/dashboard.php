@@ -118,9 +118,7 @@
         
         <div class="qty-box">
             <button type="button" class="qty-btn minus">−</button>
-
-            <input type="number" id="cartQty" value="1" min="1" readonly>
-
+            <input type="number" id="cartQty" value="1" min="1">
             <button type="button" class="qty-btn plus">+</button>
         </div>
 
