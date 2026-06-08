@@ -256,7 +256,7 @@ body .upload{
     margin-right: 10px;
 }
 
-.product-container .card .contentBx {
+.product-container .card .contentBx .size span {
     width: 26px;
     height: 26px;
     text-align: center;
@@ -272,7 +272,7 @@ body .upload{
     cursor: pointer;
 }
 
-.product-container .card .contentBx {  /* other bug */
+.product-container .card .contentBx .size span:hover {  /* other bug */
     background: #B90000;
 }
 
