@@ -15,7 +15,7 @@
                 </h2>
 
                 <p class="dashboard-subtitle mb-0">
-                    Manage your tattoo shop reservations.
+                    Manage your freshly brewed coffee shop reservations.
                 </p>
             </div>
 
@@ -47,7 +47,7 @@
         <div class="product-container mt-4">
 
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h4 class="text-white mb-0">Tattoo Products</h4>
+                <h4 class="text-white mb-0">Freshly Brewed</h4>
             </div>
 
             <div class="row g-4">
