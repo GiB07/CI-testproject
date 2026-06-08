@@ -76,8 +76,7 @@
 
                             <!-- BUTTON -->
                             <a href="javascript:void(0);"
-                               class="btn btn-primary"
-                               onclick="openCartModal(<?= $p->product_id; ?>, '<?= $p->product_name; ?>', <?= $p->price; ?>, '<?= $p->image; ?>')">
+                            onclick="openCartModal(<?= $p->product_id; ?>, '<?= $p->product_name; ?>', <?= $p->price; ?>, '<?= $p->image; ?>')">
                                 Add to Cart
                             </a>
 
