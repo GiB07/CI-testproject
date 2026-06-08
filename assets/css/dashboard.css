@@ -216,7 +216,14 @@ body .upload{
     color: #fff;
 }
 
-.product-container .card .contentBx .price,
+.product-container .card .contentBx .price {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.product-container .card .contentBx .size,
 .product-container .card .contentBx .color {
     display: flex;
     justify-content: center;
@@ -227,7 +234,7 @@ body .upload{
     visibility: hidden;
 }
 
-.product-container .card:hover .contentBx .price {
+.product-container .card:hover .contentBx .size {
     opacity: 1;
     visibility: visible;
     transition-delay: .5s;
@@ -239,7 +246,7 @@ body .upload{
     transition-delay: .6s;
 }
 
-.product-container .card .contentBx .price h3,
+.product-container .card .contentBx .size h3,
 .product-container .card .contentBx .color h3 {
     color: white;
     font-weight: 300;
