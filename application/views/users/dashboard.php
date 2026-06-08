@@ -70,7 +70,7 @@
                         </h5>
 
                         <p class="text-light mb-1">
-                            ₱<?= number_format($p->price,2); ?>
+                           <span class="badge bg-success"> ₱<?= number_format($p->price,2); ?></span>
                         </p>
 
                         <div class="mt-2">
