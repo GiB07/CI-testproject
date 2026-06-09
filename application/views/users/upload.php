@@ -188,7 +188,7 @@
 
                     <div class="form-group mb-3">
                         <label><strong>Option</strong></label>
-                        <select name="options" required>
+                        <select class="form-select" aria-label="Default select example" name="options" required>
                             <option value="" disabled selected>-- Please choose an option --</option>
                             <option value="hot">hot</option>
                             <option value="cold">cold</option>
