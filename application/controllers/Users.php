@@ -282,6 +282,54 @@ public function login(){
         echo $count;
     }
 
+    public function checkout(){
+        
+        $cart = $this->session->userdata('cart');
+        $user_id = $this->session->userdata('user_id');
+
+        if(!$cart || count($cart) == 0)
+        {
+            echo json_encode(['status'=>'error','message'=>'Cart is empty']);
+            return;
+        }
+
+        $total = 0;
+
+        foreach($cart as $item){
+            $total += $item['price'] * $item['qty'];
+        }
+
+        // 1. save order
+        $this->db->insert('orders', [
+            'user_id' => $user_id,
+            'total_amount' => $total,
+            'status' => 'pending'
+        ]);
+
+        $order_id = $this->db->insert_id();
+
+        // 2. save items
+        foreach($cart as $id => $item){
+
+            $this->db->insert('order_items', [
+                'order_id' => $order_id,
+                'product_id' => $id,
+                'product_name' => $item['name'],
+                'price' => $item['price'],
+                'qty' => $item['qty'],
+                'subtotal' => $item['price'] * $item['qty']
+            ]);
+        }
+
+        // 3. clear session cart
+        $this->session->unset_userdata('cart');
+
+        echo json_encode([
+            'status' => 'success',
+            'message' => 'Order placed successfully'
+        ]);
+    }
+
 
 
 }

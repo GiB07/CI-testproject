@@ -280,4 +280,31 @@
         });
     }
 
+    function checkoutCart(){
+
+        $.ajax({
+            url: "<?= base_url('products/checkout'); ?>",
+            type: "POST",
+            dataType: "json",
+
+            success: function(res)
+            {
+                if(res.status == "success")
+                {
+                    swal("Success", res.message, "success");
+
+                    // clear UI cart count / modal
+                    $('#cartModal').modal('hide');
+
+                    // optional reset qty
+                    $('#cartQty').val(1);
+                }
+                else
+                {
+                    swal("Error", res.message, "error");
+                }
+            }
+        });
+    }
+
 </script>
