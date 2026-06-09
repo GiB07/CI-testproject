@@ -44,6 +44,28 @@
         </div>
 
         <!-- Main Content -->
+
+        <div class="d-flex justify-content-center gap-3 mb-4">
+
+        <?php $type = $this->input->get('type'); ?>
+
+            <a href="<?= base_url('users/dashboard'); ?>" 
+            class="btn btn-sm <?= !$type ? 'btn-light' : 'btn-outline-light' ?>">
+                All
+            </a>
+
+            <a href="<?= base_url('users/dashboard?type=hot'); ?>" 
+            class="btn btn-sm <?= $type=='hot' ? 'btn-danger' : 'btn-outline-light' ?>">
+                Hot
+            </a>
+
+            <a href="<?= base_url('users/dashboard?type=cold'); ?>" 
+            class="btn btn-sm <?= $type=='cold' ? 'btn-info' : 'btn-outline-light' ?>">
+                Cold
+            </a>
+
+        </div>
+
         <div class="product-container mt-4">
 
             <div class="d-flex justify-content-between align-items-center mb-4">
