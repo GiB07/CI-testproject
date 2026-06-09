@@ -41,6 +41,12 @@
 
             </div>
 
+            <div class="text-center mt-4">
+                <button class="btn btn-success" onclick="checkoutCart()">
+                    Checkout Orders
+                </button>
+            </div>
+
         </div>
 
         <!-- Main Content -->
@@ -91,6 +97,7 @@
                             <h2><?= $p->product_name; ?></h2>
 
                             <p class="product-desc"><?= $p->description; ?></p>
+                            <p class="product-desc" hidden><?= $p->type; ?></p>
 
                             <!-- PRICE (replaces size/color section) -->
                             <div class="price">
@@ -99,7 +106,7 @@
 
                             <!-- BUTTON -->
                             <a href="javascript:void(0);"
-                            onclick="openCartModal(<?= $p->product_id; ?>, '<?= $p->product_name; ?>', <?= $p->price; ?>, '<?= $p->image; ?>')">
+                            onclick="openCartModal(<?= $p->product_id; ?>, '<?= $p->product_name; ?>', <?= $p->price; ?>, '<?= $p->image; ?>', '<?= $p->type; ?>')">
                                 Add to Cart
                             </a>
 
@@ -197,7 +204,7 @@
         }
     });
 
-    function openCartModal(id, name, price, image){
+    function openCartModal(id, name, price, image, type){
 
         $('#cartProductId').val(id);
         $('#cartProductName').text(name);
@@ -240,7 +247,7 @@
 
         var product_id = $('#cartProductId').val();
         var qty = $('#cartQty').val();
-        var size = $('input[name="radioDefault"]:checked').val();
+        var size = $('input[name="size"]:checked').val();
 
         $.ajax({
             url: "<?= base_url('products/add_to_cart'); ?>",
