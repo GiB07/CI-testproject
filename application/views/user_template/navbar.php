@@ -18,7 +18,7 @@
             <a class="navbar-brand" href="<?= base_url('users/dashboard'); ?>">
 
                 <div class="brand-logo">
-                    <i class="bi bi-brush"></i>
+                    <i class="bi bi-cup-hot"></i>
                 </div>
 
                 <div class="brand-text">
@@ -27,7 +27,7 @@
                     </h3>
 
                     <span class="brand-subtitle">
-                        Freshly Brewed
+                        Coffee: because adulting is hard
                     </span>
                 </div>
 

@@ -5,8 +5,8 @@
     <div class="login-card">
 
         <div class="logo">
-            <h1>Get Inked!</h1>
-            <p>We Ink Whatever You Think</p>
+            <h1>The 8:30 Club!</h1>
+            <p>Coffee: because adulting is hard</p>
         </div>
 
         <?php if($this->session->flashdata('error_msg')): ?>
