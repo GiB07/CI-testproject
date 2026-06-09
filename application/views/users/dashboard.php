@@ -41,12 +41,6 @@
 
             </div>
 
-            <div class="text-center mt-4">
-                <button class="btn btn-success" onclick="checkoutCart()">
-                    Checkout Orders
-                </button>
-            </div>
-
         </div>
 
         <!-- Main Content -->
@@ -220,28 +214,28 @@
         $('#cartModal').modal('show');
     }
 
-    function addToCart(product_id){
+    // function addToCart(product_id){
 
-        $.ajax({
-            url: "<?= base_url('products/add_to_cart'); ?>",
-            type: "POST",
-            data: { product_id: product_id },
-            dataType: "json",
+    //     $.ajax({
+    //         url: "<?= base_url('products/add_to_cart'); ?>",
+    //         type: "POST",
+    //         data: { product_id: product_id },
+    //         dataType: "json",
 
-            success: function(res)
-            {
-                if(res.status == "success")
-                {
-                    swal("Added", res.message, "success");
-                    updateCartCount();
-                }
-                else
-                {
-                    swal("Error", res.message, "error");
-                }
-            }
-        });
-    }
+    //         success: function(res)
+    //         {
+    //             if(res.status == "success")
+    //             {
+    //                 swal("Added", res.message, "success");
+    //                 updateCartCount();
+    //             }
+    //             else
+    //             {
+    //                 swal("Error", res.message, "error");
+    //             }
+    //         }
+    //     });
+    // }
 
     function addToCart(){
 
@@ -271,33 +265,6 @@
                     // modal.hide();
 
                     $('#cartModal').modal('hide');
-                }
-                else
-                {
-                    swal("Error", res.message, "error");
-                }
-            }
-        });
-    }
-
-    function checkoutCart(){
-
-        $.ajax({
-            url: "<?= base_url('products/checkout'); ?>",
-            type: "POST",
-            dataType: "json",
-
-            success: function(res)
-            {
-                if(res.status == "success")
-                {
-                    swal("Success", res.message, "success");
-
-                    // clear UI cart count / modal
-                    $('#cartModal').modal('hide');
-
-                    // optional reset qty
-                    $('#cartQty').val(1);
                 }
                 else
                 {
