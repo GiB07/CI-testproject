@@ -188,7 +188,7 @@
 
                     <div class="form-group mb-3">
                         <label><strong>Option</strong></label>
-                        <select class="form-select" aria-label="Default select example" name="options" required>
+                        <select class="form-select" aria-label="Default select example" name="type" required>
                             <option value="" disabled selected>-- Please choose an option --</option>
                             <option value="hot">hot</option>
                             <option value="cold">cold</option>
@@ -241,7 +241,7 @@ function saveProduct()
 {
     var product_name = $('#product_name').val().trim();
     var price = $('#price').val();
-    var options = $('#options').val();
+    var options = $('#type').val();
     var image = document.getElementById('product_image').files.length;
 
     if(product_name == '')
@@ -262,7 +262,7 @@ function saveProduct()
         return false;
     }
 
-    if(options == '')
+    if(type == '')
     {
         swal("Warning", "Please choose an option(hot/cold)", "warning");
         return false;
