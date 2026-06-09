@@ -414,8 +414,10 @@ body .upload{
 
     /* prevents cramping */
     display: -webkit-box;
+    -webkit-line-clamp: 2;   /* limit to 2 lines */
+    line-clamp: 2;
     -webkit-box-orient: vertical;
-    overflow: hidden;
+    overflow: scroll;
 
     word-break: break-word;
 }
