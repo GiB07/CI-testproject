@@ -4,7 +4,7 @@
     $password = ($this->session->userdata('password'));
     } else {
         echo "<script>alert('You are not logged in. Please login to continue.'); 
-            window.location ='".base_url()."masterfile/login'; </script>";
+            window.location ='".base_url()."login'; </script>";
     }
 ?>
 <!DOCTYPE html>
