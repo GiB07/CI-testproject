@@ -220,28 +220,28 @@
         $('#cartModal').modal('show');
     }
 
-    // function addToCart(product_id){
+    function addToCart(product_id){
 
-    //     $.ajax({
-    //         url: "<?= base_url('products/add_to_cart'); ?>",
-    //         type: "POST",
-    //         data: { product_id: product_id },
-    //         dataType: "json",
+        $.ajax({
+            url: "<?= base_url('products/add_to_cart'); ?>",
+            type: "POST",
+            data: { product_id: product_id },
+            dataType: "json",
 
-    //         success: function(res)
-    //         {
-    //             if(res.status == "success")
-    //             {
-    //                 swal("Added", res.message, "success");
-    //                 updateCartCount();
-    //             }
-    //             else
-    //             {
-    //                 swal("Error", res.message, "error");
-    //             }
-    //         }
-    //     });
-    // }
+            success: function(res)
+            {
+                if(res.status == "success")
+                {
+                    swal("Added", res.message, "success");
+                    updateCartCount();
+                }
+                else
+                {
+                    swal("Error", res.message, "error");
+                }
+            }
+        });
+    }
 
     function addToCart(){
 
