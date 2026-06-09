@@ -14,7 +14,7 @@ body{
     font-family:'Poppins',sans-serif;
     background-image:
         linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url('../img/blackk.jpg');
+        url('../img/kapewhite.jpg');
     background-size:cover;
     background-position:center;
 }
@@ -35,7 +35,7 @@ body{
 .left-side{
     background-image:
         linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url('../img/kevinturcios.jp');
+        url('../img/kape.jpg');
     background-size:cover;
     background-position:center;
 }
