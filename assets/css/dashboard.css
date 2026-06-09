@@ -1,7 +1,7 @@
 body{
     background-image:
         linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url('../img/tatshopbg.jpg');
+        url('../img/kapewhite.jpg');
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
@@ -10,7 +10,7 @@ body{
 body .upload{
     background-image:
         linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url('../img/blackk.jpg');
+        url('../img/kapedark.jpg');
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
