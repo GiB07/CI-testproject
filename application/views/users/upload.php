@@ -241,7 +241,7 @@ function saveProduct()
 {
     var product_name = $('#product_name').val().trim();
     var price = $('#price').val();
-    var options = $('#type').val();
+    var type = $('#type').val();
     var image = document.getElementById('product_image').files.length;
 
     if(product_name == '')
