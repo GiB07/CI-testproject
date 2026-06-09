@@ -283,7 +283,7 @@ public function login(){
     }
 
     public function checkout(){
-        
+
         $cart = $this->session->userdata('cart');
         $user_id = $this->session->userdata('user_id');
 
@@ -305,6 +305,7 @@ public function login(){
             'total_amount' => $total,
             'status' => 'pending'
         ]);
+        var_dump($user_id);
 
         $order_id = $this->db->insert_id();
 
