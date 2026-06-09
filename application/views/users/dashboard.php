@@ -89,7 +89,8 @@
                         <div class="contentBx">
 
                             <h2><?= $p->product_name; ?></h2>
-                            <p>"<?= $p->description; ?>"</p>
+
+                            <p class="product-desc"><?= $p->description; ?></p>
 
                             <!-- PRICE (replaces size/color section) -->
                             <div class="price">
