@@ -5,7 +5,7 @@
     box-sizing:border-box;
 }
 
-/* body{
+body{
     min-height:100vh;
     display:flex;
     justify-content:center;
@@ -17,12 +17,12 @@
         url('../img/kapedark.jpg');
     background-size:cover;
     background-position:center;
-} */
- body{
+}
+ /* body{
     background:
     radial-gradient(circle at top left,#8b5cf6,#111827),
     radial-gradient(circle at bottom right,#ec4899,#111827);
-}
+} */
 
 /* Background */
 .auth-page{
