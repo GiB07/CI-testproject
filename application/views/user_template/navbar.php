@@ -96,23 +96,28 @@
     <script src="<?php echo base_url('assets/js/sweetalert.min.js'); ?>"></script>
 
     <script>
-        function logoutUser(){
-
-        alert('clicked');
-
+        function logoutUser()
+            alert("YAWA");
+        {
             swal({
-                title: "Logout",
-                text: "Are you sure you want to logout?",
+                title: "Logout?",
+                text: "You will be logged out of your account.",
                 type: "warning",
                 showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
                 confirmButtonText: "Yes, Logout",
-                cancelButtonText: "Cancel",
-                closeOnConfirm: false
-            },
-            function()
-            {
-                window.location = "<?= base_url('user_logout'); ?>";
+                cancelButtonText: "Cancel"
+            }, function(isConfirm) {
+
+                if (isConfirm) {
+
+                    swal("Success!", "You have successfully logged out.", "success");
+
+                    setTimeout(function() {
+                        window.location = "<?= base_url('users/user_logout'); ?>";
+                    }, 1000);
+
+                }
+
             });
         }
     </script>
