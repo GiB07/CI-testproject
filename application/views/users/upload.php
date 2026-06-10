@@ -122,10 +122,15 @@
                                             ₱<?= number_format($toggle->price,2); ?>
                                         </div>
 
-                                        <input type="checkbox"
-                                            onchange="toggleProduct(this, <?= $toggle->product_id; ?>)"
-                                            <?= ($toggle->toggle == 'on') ? 'checked' : ''; ?>>
-                                        <label>Available</label>
+                                        <h2>
+                                            <?= $toggle->product_name; ?>
+                                            <label class="ios-switch">
+                                                <input type="checkbox"
+                                                    onchange="toggleProduct(this, <?= $toggle->product_id; ?>)"
+                                                    <?= ($toggle->status == 'ON') ? 'checked' : ''; ?>>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </h2>
 
                                     </div>
 
