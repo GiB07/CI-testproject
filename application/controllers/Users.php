@@ -68,7 +68,7 @@ class Users extends CI_Controller {
 
         $this->load->view('user_template/header');
         $this->load->view('user_template/navbar');
-        $this->load->view('users/upload');
+        $this->load->view('users/upload', $data);
         $this->load->view('user_template/footer');
     }
 
