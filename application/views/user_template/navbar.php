@@ -75,14 +75,12 @@
 
                         <div class="dropdown-divider"></div>
 
-                        <a class="dropdown-item text-danger"
-   href="javascript:void(0);"
-   onclick="logoutUser()">
+                        <a class="dropdown-item text-danger" href="javascript:void(0);" onclick="logoutUser()">
 
-    <i class="bi bi-box-arrow-right"></i>
-    Logout
+                            <i class="bi bi-box-arrow-right"></i>
+                            Logout
 
-</a>
+                        </a>
 
                     </div>
 
@@ -94,19 +92,19 @@
 
     </header>
 <script>
-function logoutUser()
-{
-    swal({
-        title: "Logout?",
-        text: "You will be logged out of your account.",
-        icon: "warning",
-        buttons: true
-    }).then(function(result) {
+    function logoutUser(){
 
-        if (result) {
-            window.location = "<?= base_url('users/user_logout'); ?>";
-        }
+        swal({
+            title: "Logout?",
+            text: "You will be logged out of your account.",
+            icon: "warning",
+            buttons: true
+        }).then(function(result) {
 
-    });
-}
+            if (result) {
+                window.location = "<?= base_url('users/user_logout'); ?>";
+            }
+
+        });
+    }
 </script>

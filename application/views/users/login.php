@@ -14,11 +14,14 @@
                 <?= $this->session->flashdata('error_msg'); ?>
             </div>
         <?php endif; ?>
+
+        <!-- for logging out -->
         <?php if($this->session->flashdata('success')): ?>
-<script>
-swal("Success!", "<?= $this->session->flashdata('success'); ?>", "success");
-</script>
-<?php endif; ?>
+            <script>
+            swal("Success!", "<?= $this->session->flashdata('success'); ?>", "success");
+            </script>
+        <?php endif; ?>
+        <!-- end -->
 
         <!-- LOGIN FORM -->
         <form id="loginForm" action="<?= base_url('users/login'); ?>" method="post">
