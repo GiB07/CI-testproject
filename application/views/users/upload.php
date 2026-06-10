@@ -62,6 +62,38 @@
 
                     </div>
 
+                    <!-- Reservation Card -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+
+                        <a href="<?= base_url('hut_reserve'); ?>"
+                        class="text-decoration-none">
+
+                            <div class="reservation-card h-100">
+
+                                <div class="card-body text-center">
+
+                                    <div class="card-icon mb-4">
+
+                                        <i class="fa fa-calendar"></i>
+
+                                    </div>
+
+                                    <h5 class="card-title text-white fw-bold">
+                                        Reservation
+                                    </h5>
+
+                                    <p class="card-desc mb-0">
+                                        Book your tattoo session and manage your appointments.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
                     <!-- Future Card Example -->
 
                         <div class="row g-4">
