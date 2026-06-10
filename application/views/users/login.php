@@ -86,3 +86,18 @@
     </div>
 
 </div>
+ <!-- for registering -->
+<?php if($this->session->flashdata('success')): ?>
+<script>
+$(document).ready(function(){
+
+    swal(
+        "Success!",
+        "<?= $this->session->flashdata('success'); ?>",
+        "success"
+    );
+
+});
+</script>
+<?php endif; ?>
+        <!-- end -->
