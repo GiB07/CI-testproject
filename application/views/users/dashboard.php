@@ -76,39 +76,43 @@
 
                 <?php foreach($products as $p): ?>
 
-                <div class="col-12 col-sm-6 col-lg-3">
+                    <?php if ($p->toggle == 'on'): ?>
 
-                    <div class="card">
+                        <div class="col-12 col-sm-6 col-lg-3">
 
-                        <!-- IMAGE SECTION -->
-                        <div class="imgBx">
-                            <img src="<?= base_url('uploads/products/'.$p->image); ?>" alt="<?= $p->product_name; ?>">
-                        </div>
+                            <div class="card">
 
-                        <!-- CONTENT SECTION -->
-                        <div class="contentBx">
+                                <!-- IMAGE SECTION -->
+                                <div class="imgBx">
+                                    <img src="<?= base_url('uploads/products/'.$p->image); ?>" alt="<?= $p->product_name; ?>">
+                                </div>
 
-                            <h2><?= $p->product_name; ?></h2>
+                                <!-- CONTENT SECTION -->
+                                <div class="contentBx">
 
-                            <p class="product-desc"><?= $p->description; ?></p>
-                            <p class="product-desc" hidden><?= $p->type; ?></p>
+                                    <h2><?= $p->product_name; ?></h2>
 
-                            <!-- PRICE (replaces size/color section) -->
-                            <div class="price">
-                                ₱<?= number_format($p->price,2); ?>
+                                    <p class="product-desc"><?= $p->description; ?></p>
+                                    <p class="product-desc" hidden><?= $p->type; ?></p>
+
+                                    <!-- PRICE (replaces size/color section) -->
+                                    <div class="price">
+                                        ₱<?= number_format($p->price,2); ?>
+                                    </div>
+
+                                    <!-- BUTTON -->
+                                    <a href="javascript:void(0);"
+                                    onclick="openCartModal(<?= $p->product_id; ?>, '<?= $p->product_name; ?>', <?= $p->price; ?>, '<?= $p->image; ?>', '<?= $p->type; ?>')">
+                                        Add to Cart
+                                    </a>
+
+                                </div>
+
                             </div>
 
-                            <!-- BUTTON -->
-                            <a href="javascript:void(0);"
-                            onclick="openCartModal(<?= $p->product_id; ?>, '<?= $p->product_name; ?>', <?= $p->price; ?>, '<?= $p->image; ?>', '<?= $p->type; ?>')">
-                                Add to Cart
-                            </a>
-
                         </div>
 
-                    </div>
-
-                </div>
+                    <?php endif; ?>
 
                 <?php endforeach; ?>
 
