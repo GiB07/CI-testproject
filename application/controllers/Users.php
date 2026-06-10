@@ -195,10 +195,10 @@ public function login(){
         }
     }
 
-   public function user_logout(){
-    
+    public function user_logout(){
         $this->session->sess_destroy();
-        redirect('users/index');
+        echo "<script>alert('You have successfully logged out.'); 
+        window.location ='".base_url()."users/index'; </script>";
     }
 
     public function save_product()
