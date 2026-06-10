@@ -195,10 +195,9 @@ public function login(){
         }
     }
 
-    public function user_logout(){
-
+   public function user_logout(){
+    
         $this->session->sess_destroy();
-        $this->session->set_flashdata('success', 'You have successfully logged out.');
         redirect('users/index');
     }
 
