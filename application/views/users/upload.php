@@ -83,7 +83,7 @@
                                     </h5>
 
                                     <p class="card-desc mb-0">
-                                        Book your tattoo session and manage your appointments.
+                                        for future reservations
                                     </p>
 
                                 </div>
