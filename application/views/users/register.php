@@ -1,53 +1,99 @@
 <link href="<?php echo base_url('assets/css/reg_page.css'); ?>" rel="stylesheet">
-<div class="register-card">
+<div class="auth-page">
 
-    <div class="left-side"></div>
+    <div class="register-card">
 
-    <div class="right-side">
-
-        <h1>Create Account</h1>
-        <p class="subtitle">Join Get Inked Tattoo Shop</p>
-
-        <div class="password-msg" id="msg"></div>
+        <div class="brand-section">
+            <h1>Get Inked</h1>
+            <p>Create your account and start booking tattoos.</p>
+        </div>
 
         <form method="POST" action="<?= base_url('insert_registration'); ?>">
 
-            <div class="form-group">
-                <input type="text" name="fname" class="form-control" placeholder="First Name" required>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="input-group-modern">
+                        <i class="bi bi-person"></i>
+                        <input type="text"
+                               name="fname"
+                               class="form-control"
+                               placeholder="First Name"
+                               required>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="input-group-modern">
+                        <i class="bi bi-person"></i>
+                        <input type="text"
+                               name="mname"
+                               class="form-control"
+                               placeholder="Middle Name">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="input-group-modern">
+                        <i class="bi bi-person"></i>
+                        <input type="text"
+                               name="lname"
+                               class="form-control"
+                               placeholder="Last Name"
+                               required>
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <input type="text" name="mname" class="form-control" placeholder="Middle Name">
+            <div class="input-group-modern">
+                <i class="bi bi-phone"></i>
+                <input type="tel"
+                       name="contact_no"
+                       class="form-control"
+                       placeholder="Contact Number"
+                       required>
             </div>
 
-            <div class="form-group">
-                <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+            <div class="input-group-modern">
+                <i class="bi bi-envelope"></i>
+                <input type="email"
+                       name="email"
+                       class="form-control"
+                       placeholder="Email Address"
+                       required>
             </div>
 
-            <div class="form-group">
-                <input type="tel" name="contact_no" class="form-control" placeholder="Contact Number" required>
+            <div class="input-group-modern">
+                <i class="bi bi-lock"></i>
+                <input type="password"
+                       id="password"
+                       name="password"
+                       class="form-control"
+                       placeholder="Password"
+                       required>
             </div>
 
-            <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+            <div class="input-group-modern">
+                <i class="bi bi-shield-lock"></i>
+                <input type="password"
+                       id="re_password"
+                       name="re_password"
+                       class="form-control"
+                       placeholder="Confirm Password"
+                       required>
             </div>
 
-            <div class="form-group">
-                <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-            </div>
+            <div id="msg" class="password-msg"></div>
 
-            <div class="form-group">
-                <input type="password" id="re_password" name="re_password" class="form-control" placeholder="Confirm Password" required>
-            </div>
-
-            <button type="submit" id="registerBtn" class="btn-register">
-                Register
+            <button type="submit"
+                    id="registerBtn"
+                    class="btn-register">
+                Create Account
             </button>
 
             <div class="login-link">
                 Already have an account?
                 <a href="<?= base_url('users/index'); ?>">
-                    Login
+                    Sign In
                 </a>
             </div>
 
@@ -57,34 +103,42 @@
 
 </div>
 <script>
-const password = document.getElementById('password');
-const confirmPassword = document.getElementById('re_password');
-const msg = document.getElementById('msg');
-const registerBtn = document.getElementById('registerBtn');
+    $(document).ready(function(){
 
-function validatePassword() {
+        $("#password, #re_password").on("keyup", function(){
 
-    if(confirmPassword.value === '') {
-        msg.style.display = 'none';
-        registerBtn.disabled = false;
-        return;
-    }
+            var password = $("#password").val();
+            var confirmPassword = $("#re_password").val();
 
-    if(password.value !== confirmPassword.value){
+            if(confirmPassword === ""){
+                $("#msg").hide();
+                $("#registerBtn").prop("disabled", false);
+                return;
+            }
 
-        msg.style.display = 'block';
-        msg.className = 'password-msg password-error';
-        msg.innerHTML = 'Passwords do not match.';
-        registerBtn.disabled = true;
+            if(password !== confirmPassword){
 
-    }else{
+                $("#msg")
+                    .show()
+                    .removeClass("password-success")
+                    .addClass("password-error")
+                    .html("✗ Passwords do not match.");
 
-        msg.style.display = 'none';
-        registerBtn.disabled = false;
+                $("#registerBtn").prop("disabled", true);
 
-    }
-}
+            } else {
 
-password.addEventListener('input', validatePassword);
-confirmPassword.addEventListener('input', validatePassword);
+                $("#msg")
+                    .show()
+                    .removeClass("password-error")
+                    .addClass("password-success")
+                    .html("✓ Passwords match.");
+
+                $("#registerBtn").prop("disabled", false);
+
+            }
+
+        });
+
+    });
 </script>

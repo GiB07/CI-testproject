@@ -174,26 +174,39 @@ public function login(){
         $this->load->view('users/register');
     }
 
-    public function insert_registration(){
-        $fname = trim($this->input->post('fname')," ");
-        $lname = trim($this->input->post('lname')," ");
-        $mname = trim($this->input->post('mname')," ");
-        $contact_no = trim($this->input->post('contact_no')," ");
-        $email = trim($this->input->post('email')," ");
-        $password = trim($this->input->post('password')," ");
-        $data = array(
-            'fname'=>$fname,
-            'mname'=>$mname,
-            'lname'=>$lname,
-            'contact_no'=>$contact_no,
-            'email'=>$email,
-            'password'=>$password,
+public function insert_registration()
+{
+    $data = array(
+        'fname'      => trim($this->input->post('fname')),
+        'mname'      => trim($this->input->post('mname')),
+        'lname'      => trim($this->input->post('lname')),
+        'contact_no' => trim($this->input->post('contact_no')),
+        'email'      => trim($this->input->post('email')),
+        'password'   => password_hash(
+                            $this->input->post('password'),
+                            PASSWORD_DEFAULT
+                        )
+    );
+
+    if($this->super_model->insert_into('registration', $data))
+    {
+        $this->session->set_flashdata(
+            'success',
+            'Successfully Registered!'
         );
-        if($this->super_model->insert_into("registration", $data)){
-          $this->session->set_flashdata('success', 'Successfully Registered!');
-    redirect('users/index');
-        }
+
+        redirect('users/index');
     }
+    else
+    {
+        $this->session->set_flashdata(
+            'error',
+            'Registration Failed!'
+        );
+
+        redirect('register');
+    }
+}
 
    public function user_logout()
     {
