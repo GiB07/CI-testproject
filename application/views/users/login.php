@@ -14,6 +14,11 @@
                 <?= $this->session->flashdata('error_msg'); ?>
             </div>
         <?php endif; ?>
+        <?php if($this->session->flashdata('success')): ?>
+<script>
+swal("Success!", "<?= $this->session->flashdata('success'); ?>", "success");
+</script>
+<?php endif; ?>
 
         <!-- LOGIN FORM -->
         <form id="loginForm" action="<?= base_url('users/login'); ?>" method="post">
