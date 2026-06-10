@@ -10,7 +10,7 @@
                 <h2 class="dashboard-title mb-1">
                     Welcome Back,
                     <span class="user-name">
-                       <?= ucwords($this->session->userdata('fullname')); ?>
+                       <?= ucwords($this->session->userdata('fname')); ?>
                     </span>
                 </h2>
 
