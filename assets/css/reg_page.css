@@ -92,11 +92,11 @@ body{
 
 /* Inputs */
 .input-group-modern .form-control{
-    height:56px;
-    padding-left:50px;
-
-    border:none;
-    border-radius:16px;
+    width:100%;
+    padding:14px 16px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:14px;
 
     background:rgba(255,255,255,.12);
     color:#fff;
