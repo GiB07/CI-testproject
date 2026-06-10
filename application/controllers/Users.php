@@ -190,8 +190,8 @@ public function login(){
             'password'=>$password,
         );
         if($this->super_model->insert_into("registration", $data)){
-           echo "<script>alert('Successfully Registered!'); 
-                window.location ='".base_url()."users/index'; </script>";
+          $this->session->set_flashdata('success', 'Successfully Registered!');
+    redirect('users/index');
         }
     }
 
