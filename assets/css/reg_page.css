@@ -5,7 +5,7 @@
     box-sizing:border-box;
 }
 
-body{
+/* body{
     min-height:100vh;
     display:flex;
     justify-content:center;
@@ -17,116 +17,169 @@ body{
         url('../img/kapedark.jpg');
     background-size:cover;
     background-position:center;
+} */
+ body{
+    background:
+    radial-gradient(circle at top left,#8b5cf6,#111827),
+    radial-gradient(circle at bottom right,#ec4899,#111827);
 }
 
+/* Background */
+.auth-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+        url('../images/tattoo-bg.jpg') center/cover no-repeat;
+}
+
+/* Glass Card */
 .register-card{
     width:100%;
-    max-width:1000px;
-    min-height:650px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(20px);
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 20px 50px rgba(0,0,0,.35);
-}
-
-.left-side{
-    background-image:
-        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url('../img/kape.jpg');
-    background-size:cover;
-    background-position:center;
-}
-
-.right-side{
+    max-width:750px;
     padding:40px;
-    background:#fff;
-    overflow-y:auto;
+    border-radius:28px;
+
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.18);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.25);
 }
 
-.right-side h1{
+/* Brand */
+.brand-section{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.brand-section h1{
+    color:#fff;
+    font-size:42px;
+    font-weight:700;
     margin-bottom:10px;
-    color:#222;
+    letter-spacing:.5px;
 }
 
-.subtitle{
-    color:#777;
-    margin-bottom:25px;
+.brand-section p{
+    color:rgba(255,255,255,.8);
+    font-size:15px;
+    margin:0;
 }
 
-.form-group{
-    margin-bottom:15px;
+/* Input Container */
+.input-group-modern{
+    position:relative;
+    margin-bottom:18px;
 }
 
-.form-control{
-    width:100%;
-    padding:14px 16px;
-    border:1px solid #ddd;
-    border-radius:12px;
-    font-size:14px;
+.input-group-modern i{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:rgba(255,255,255,.7);
+    font-size:16px;
+    z-index:2;
+}
+
+/* Inputs */
+.input-group-modern .form-control{
+    height:56px;
+    padding-left:50px;
+
+    border:none;
+    border-radius:16px;
+
+    background:rgba(255,255,255,.12);
+    color:#fff;
+
+    backdrop-filter:blur(10px);
+
     transition:.3s;
 }
 
-.form-control:focus{
-    border-color:#000;
-    box-shadow:0 0 0 3px rgba(0,0,0,.1);
+.input-group-modern .form-control::placeholder{
+    color:rgba(255,255,255,.6);
 }
 
+.input-group-modern .form-control:focus{
+    background:rgba(255,255,255,.18);
+    box-shadow:
+        0 0 0 3px rgba(255,255,255,.15);
+    color:#fff;
+}
+
+/* Password Message */
+.password-msg{
+    margin-top:5px;
+    margin-bottom:15px;
+    text-align:center;
+    font-weight:600;
+}
+
+/* Button */
 .btn-register{
     width:100%;
-    padding:15px;
+    height:56px;
+
     border:none;
-    border-radius:12px;
-    background:#000;
-    color:#fff;
-    font-weight:600;
-    cursor:pointer;
+    border-radius:16px;
+
+    background:rgba(255,255,255,.9);
+    color:#111;
+
+    font-weight:700;
+    font-size:16px;
+
     transition:.3s;
 }
 
 .btn-register:hover{
     transform:translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(255,255,255,.25);
 }
 
+/* Login Link */
 .login-link{
-    margin-top:15px;
     text-align:center;
+    margin-top:20px;
+    color:rgba(255,255,255,.8);
 }
 
 .login-link a{
-    color:#000;
-    font-weight:600;
+    color:#fff;
     text-decoration:none;
+    font-weight:600;
 }
 
-.password-msg{
-    display:none;
-    margin-bottom:15px;
-    padding:12px;
-    border-radius:10px;
-    font-size:14px;
+.login-link a:hover{
+    text-decoration:underline;
 }
 
-.password-error{
-    display:block;
-    background:#ffe5e5;
-    color:#d60000;
-}
-
+/* Mobile */
 @media(max-width:768px){
 
     .register-card{
-        grid-template-columns:1fr;
-    }
-
-    .left-side{
-        height:220px;
-    }
-
-    .right-side{
         padding:25px;
+        border-radius:22px;
+    }
+
+    .brand-section h1{
+        font-size:32px;
+    }
+
+    .row > div{
+        margin-bottom:15px;
     }
 }
 /* end reg page */
