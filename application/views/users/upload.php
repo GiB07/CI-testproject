@@ -44,108 +44,105 @@
         </div>
 
         <!-- Main Content -->
-        <div class="glass-container">
-
-            <div class="d-flex justify-content-between align-items-center mb-4">
-
-                <h4 class="text-white mb-0">
-                    Reservation Services
-                </h4>
-
-            </div>
-
-            <div class="row g-4">
+            <div class="product-container mt-4">
 
                 <div class="d-flex justify-content-between align-items-center mb-4">
-
-                    <button class="btn btn-primary"
-                            data-bs-toggle="modal"
-                            data-bs-target="#productModal">
-                        <i class="bi bi-plus"></i> Add Product
-                    </button>
-
+                    <h4 class="text-white mb-0">Brewed with Love.</h4>
                 </div>
 
-                <!-- Reservation Card -->
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="row g-4">
 
-                    <a href="<?= base_url('hut_reserve'); ?>"
-                       class="text-decoration-none">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
 
-                        <div class="reservation-card h-100">
-
-                            <div class="card-body text-center">
-
-                                <div class="card-icon mb-4">
-
-                                    <i class="fa fa-calendar"></i>
-
-                                </div>
-
-                                <h5 class="card-title text-white fw-bold">
-                                    Reservation
-                                </h5>
-
-                                <p class="card-desc mb-0">
-                                    Book your tattoo session and manage your appointments.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-                <!-- Future Card Example -->
-                
-                <div class="col-12 col-sm-6 col-lg-4">
-
-                    <div class="row g-4">
-
-                        <?php foreach($products as $toggle): ?>
-
-                        <div class="col-12 col-sm-6 col-lg-3">
-
-                            <div class="card">
-
-                                <!-- IMAGE SECTION -->
-                                <div class="imgBx">
-                                    <img src="<?= base_url('uploads/products/'.$toggle->image); ?>" alt="<?= $toggle->product_name; ?>">
-                                </div>
-
-                                <!-- CONTENT SECTION -->
-                                <div class="contentBx">
-
-                                    <h2><?= $toggle->product_name; ?></h2>
-
-                                    <p class="product-desc"><?= $toggle->description; ?></p>
-                                    <p class="product-desc" hidden><?= $toggle->type; ?></p>
-
-                                    <!-- PRICE (replaces size/color section) -->
-                                    <div class="price">
-                                        ₱<?= number_format($toggle->price,2); ?>
-                                    </div>
-
-                                    <input type="checkbox"
-                                        onchange="toggleProduct(this, <?= $toggle->product_id; ?>)"
-                                        <?= ($toggle->toggle == 'on') ? 'checked' : ''; ?>>
-                                    <label>Available</label>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <?php endforeach; ?>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#productModal">
+                            <i class="bi bi-plus"></i> Add Product
+                        </button>
 
                     </div>
 
-                </div>
-               
+                    <!-- Reservation Card -->
+                    <div class="col-12 col-sm-6 col-lg-4">
 
+                        <a href="<?= base_url('hut_reserve'); ?>"
+                        class="text-decoration-none">
+
+                            <div class="reservation-card h-100">
+
+                                <div class="card-body text-center">
+
+                                    <div class="card-icon mb-4">
+
+                                        <i class="fa fa-calendar"></i>
+
+                                    </div>
+
+                                    <h5 class="card-title text-white fw-bold">
+                                        Reservation
+                                    </h5>
+
+                                    <p class="card-desc mb-0">
+                                        Book your tattoo session and manage your appointments.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <!-- Future Card Example -->
+                    
+                    <div class="col-12 col-sm-6 col-lg-4">
+
+                        <div class="row g-4">
+
+                            <?php foreach($products as $toggle): ?>
+
+                            <div class="col-12 col-sm-6 col-lg-3">
+
+                                <div class="card">
+
+                                    <!-- IMAGE SECTION -->
+                                    <div class="imgBx">
+                                        <img src="<?= base_url('uploads/products/'.$toggle->image); ?>" alt="<?= $toggle->product_name; ?>">
+                                    </div>
+
+                                    <!-- CONTENT SECTION -->
+                                    <div class="contentBx">
+
+                                        <h2><?= $toggle->product_name; ?></h2>
+
+                                        <p class="product-desc"><?= $toggle->description; ?></p>
+                                        <p class="product-desc" hidden><?= $toggle->type; ?></p>
+
+                                        <!-- PRICE (replaces size/color section) -->
+                                        <div class="price">
+                                            ₱<?= number_format($toggle->price,2); ?>
+                                        </div>
+
+                                        <input type="checkbox"
+                                            onchange="toggleProduct(this, <?= $toggle->product_id; ?>)"
+                                            <?= ($toggle->toggle == 'on') ? 'checked' : ''; ?>>
+                                        <label>Available</label>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <?php endforeach; ?>
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                
             </div>
 
         </div>
