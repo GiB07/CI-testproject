@@ -70,3 +70,6 @@ $route['products/save_product']             = 'Users/save_product';
 $route['products/add_to_cart']              = 'Users/add_to_cart';
 $route['products/cart_count']               = 'Users/cart_count';
 // end
+// toggle
+$route['products/toggle_status']            = 'Users/toggle_status';
+// end

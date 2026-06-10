@@ -102,29 +102,46 @@
                 
                 <div class="col-12 col-sm-6 col-lg-4">
 
-                    <a href="#" class="text-decoration-none">
+                    <div class="row g-4">
 
-                        <div class="reservation-card h-100">
+                        <?php foreach($products as $toggle): ?>
 
-                            <div class="card-body text-center">
+                        <div class="col-12 col-sm-6 col-lg-3">
 
-                                <div class="card-icon mb-4">
-                                    <i class="fa fa-user"></i>
+                            <div class="card">
+
+                                <!-- IMAGE SECTION -->
+                                <div class="imgBx">
+                                    <img src="<?= base_url('uploads/products/'.$toggle->image); ?>" alt="<?= $toggle->product_name; ?>">
                                 </div>
 
-                                <h5 class="card-title text-white fw-bold">
-                                    Artists
-                                </h5>
+                                <!-- CONTENT SECTION -->
+                                <div class="contentBx">
 
-                                <p class="card-desc mb-0">
-                                    View available tattoo artists.
-                                </p>
+                                    <h2><?= $toggle->product_name; ?></h2>
+
+                                    <p class="product-desc"><?= $toggle->description; ?></p>
+                                    <p class="product-desc" hidden><?= $toggle->type; ?></p>
+
+                                    <!-- PRICE (replaces size/color section) -->
+                                    <div class="price">
+                                        ₱<?= number_format($toggle->price,2); ?>
+                                    </div>
+
+                                    <input type="checkbox"
+                                        onchange="toggleProduct(this, <?= $toggle->product_id; ?>)"
+                                        <?= ($toggle->toggle == 'on') ? 'checked' : ''; ?>>
+                                    <label>Available</label>
+
+                                </div>
 
                             </div>
 
                         </div>
 
-                    </a>
+                        <?php endforeach; ?>
+
+                    </div>
 
                 </div>
                
@@ -301,4 +318,27 @@ function saveProduct()
 
     });
 }
+
+    function toggleProduct(checkbox, product_id){
+
+        var toggle;
+
+        if (checkbox.checked) {
+            toggle = 'on';
+        } else {
+            toggle = 'off';
+        }
+
+        $.ajax({
+            url: "<?= base_url('products/toggle_status'); ?>",
+            type: "POST",
+            data: {
+                product_id: product_id,
+                toggle: toggle
+            },
+            success: function(response) {
+                console.log(response);
+            }
+        });
+    }
 </script>

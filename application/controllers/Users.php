@@ -63,10 +63,26 @@ class Users extends CI_Controller {
     }
 
     public function upload(){
+        
+        $data['products'] = $this->super_model->select_all_order_by('products', 'product_id', 'ASC');
+
         $this->load->view('user_template/header');
         $this->load->view('user_template/navbar');
         $this->load->view('users/upload');
         $this->load->view('user_template/footer');
+    }
+
+    public function toggle_status(){
+
+        $product_id = $this->input->post('product_id');
+        $toggle     = $this->input->post('toggle');
+
+        $this->db->where('product_id', $product_id);
+        $this->db->update('products', array(
+            'toggle' => $toggle
+        ));
+
+        echo 'success';
     }
 
 
