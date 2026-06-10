@@ -95,7 +95,7 @@
     </header>
     <script>
         function logoutUser(){
-            
+
             swal({
                 title: "Logout",
                 text: "Are you sure you want to logout?",
@@ -108,7 +108,7 @@
             },
             function()
             {
-                window.location = "<?= base_url('users/user_logout'); ?>";
+                window.location = "<?= base_url('user_logout'); ?>";
             });
         }
     </script>
