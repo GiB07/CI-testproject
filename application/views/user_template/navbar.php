@@ -93,28 +93,22 @@
         </nav>
 
     </header>
-    <script>
+<script>
 function logoutUser()
 {
     swal({
-        title: "Logout?",
-        text: "You will be logged out of your account.",
+        title: "Logout",
+        text: "Are you sure you want to logout?",
         type: "warning",
         showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
         confirmButtonText: "Yes, Logout",
-        cancelButtonText: "Cancel"
-    }, function(isConfirm) {
-
-        if (isConfirm) {
-
-            swal("Success!", "You have successfully logged out.", "success");
-
-            setTimeout(function() {
-                window.location = "<?= base_url('users/user_logout'); ?>";
-            }, 1000);
-
-        }
-
+        cancelButtonText: "Cancel",
+        closeOnConfirm: false
+    },
+    function()
+    {
+        window.location = "<?= base_url('users/user_logout'); ?>";
     });
 }
 </script>
