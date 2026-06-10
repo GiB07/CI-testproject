@@ -76,10 +76,11 @@
                         <div class="dropdown-divider"></div>
 
                         <a class="dropdown-item text-danger"
-                           href="<?= base_url('users/user_logout'); ?>">
+                            href="javascript:void(0);"
+                            onclick="logoutUser()">
 
-                            <i class="bi bi-box-arrow-right"></i>
-                            Logout
+                                <i class="bi bi-box-arrow-right"></i>
+                                Logout
 
                         </a>
 
@@ -92,3 +93,22 @@
         </nav>
 
     </header>
+    <script>
+        function logoutUser(){
+            
+            swal({
+                title: "Logout",
+                text: "Are you sure you want to logout?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, Logout",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false
+            },
+            function()
+            {
+                window.location = "<?= base_url('users/user_logout'); ?>";
+            });
+        }
+    </script>

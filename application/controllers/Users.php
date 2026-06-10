@@ -196,9 +196,10 @@ public function login(){
     }
 
     public function user_logout(){
+
         $this->session->sess_destroy();
-        echo "<script>alert('You have successfully logged out.'); 
-        window.location ='".base_url()."users/index'; </script>";
+        $this->session->set_flashdata('success', 'You have successfully logged out.');
+        redirect('users/index');
     }
 
     public function save_product()

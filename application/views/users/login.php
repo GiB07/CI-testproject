@@ -8,6 +8,15 @@
             <h1>The 8:30 Club!</h1>
             <p>Coffee: because adulting is hard</p>
         </div>
+        <?php if($this->session->flashdata('success')): ?>
+            <script>
+            swal(
+                "Success",
+                "<?= $this->session->flashdata('success'); ?>",
+                "success"
+            );
+            </script>
+        <?php endif; ?>
 
         <?php if($this->session->flashdata('error_msg')): ?>
             <div class="alert-error">
