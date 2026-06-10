@@ -96,6 +96,8 @@
     <script>
         function logoutUser(){
 
+        alert('clicked');
+
             swal({
                 title: "Logout",
                 text: "Are you sure you want to logout?",
