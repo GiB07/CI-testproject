@@ -182,10 +182,7 @@ public function insert_registration()
         'lname'      => trim($this->input->post('lname')),
         'contact_no' => trim($this->input->post('contact_no')),
         'email'      => trim($this->input->post('email')),
-        'password'   => password_hash(
-                            $this->input->post('password'),
-                            PASSWORD_DEFAULT
-                        )
+        'password'   => trim($this->input->post('password'))
     );
 
     if($this->super_model->insert_into('registration', $data))

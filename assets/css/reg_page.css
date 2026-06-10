@@ -148,12 +148,14 @@ body{
 }
 
 /* Password Message */
-.password-msg{
-    margin-top:5px;
-    margin-bottom:15px;
-    text-align:center;
-    font-weight:600;
-    color: rgb(38, 178, 38);
+.password-error{
+    color: #ff4d4f;
+    font-weight: 600;
+}
+
+.password-success{
+    color: #22c55e;
+    font-weight: 600;
 }
 
 /* Button */
