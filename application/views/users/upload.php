@@ -63,31 +63,29 @@
                     </div>
 
                     <!-- Reservation Card -->
-                    <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
 
-                        <div class="reservation-card h-100">
-                            <div class="card-body text-center">
+                        <div class="reservation-card">
+                            <div class="card-body text-center py-2">
 
-                                <div class="card-icon mb-4">
-                                    <i class="bi bi-info-circle"></i>
+                                <div class="card-icon mb-2">
+                                    <i class="bi bi-info-circle fs-5"></i>
                                 </div>
 
-                                <h5 class="card-title text-white fw-bold">
+                                <h6 class="card-title text-white fw-bold mb-2">
                                     Legend
-                                </h5>
+                                </h6>
 
-                                <div class="card-desc">
-
-                                    <div class="d-flex align-items-center justify-content-center mb-2">
-                                        <span class="badge bg-success me-2">&nbsp;&nbsp;&nbsp;</span>
+                                <div class="small">
+                                    <div class="mb-1">
+                                        <span style="width:8px;height:8px;background:#28a745;border-radius:50%;display:inline-block;"></span>
                                         <span class="text-white">Available</span>
                                     </div>
 
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <span class="badge bg-light me-2">&nbsp;&nbsp;&nbsp;</span>
+                                    <div>
+                                        <span style="width:8px;height:8px;background:#dc3545;border-radius:50%;display:inline-block;"></span>
                                         <span class="text-white">Out of Stock</span>
                                     </div>
-
                                 </div>
 
                             </div>
