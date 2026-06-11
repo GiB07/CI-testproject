@@ -65,41 +65,33 @@
                     <!-- Reservation Card -->
                     <div class="col-12 col-sm-6 col-lg-4">
 
-                        <!-- <a href="<?= base_url('hut_reserve'); ?>"
-                        class="text-decoration-none"> -->
+                        <div class="reservation-card h-100">
+                            <div class="card-body text-center">
 
-                            <div class="reservation-card h-100">
+                                <div class="card-icon mb-4">
+                                    <i class="bi bi-info-circle"></i>
+                                </div>
 
-                                <div class="card-body text-center">
+                                <h5 class="card-title text-white fw-bold">
+                                    Legend
+                                </h5>
 
-                                    <div class="card-icon mb-4">
+                                <div class="card-desc">
 
-                                        <i class="bi bi-pin"></i>
-
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <span class="badge bg-success me-2">&nbsp;&nbsp;&nbsp;</span>
+                                        <span class="text-white">Available</span>
                                     </div>
 
-                                    <h5 class="card-title text-white fw-bold">
-                                        Legend
-                                    </h5>
-
-                                    <p class="card-desc mb-0">
-                                        for future reservations
-                                        <label class="switch">
-                                            <input type="checkbox" disabled>
-                                            <span class="slider">Available</span>
-                                        </label>
-                                        <br>
-                                        <label class="switch">
-                                            <input type="checkbox" disabled checked>
-                                            <span class="slider">Out of Stock</span>
-                                        </label>
-                                    </p>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <span class="badge bg-danger me-2">&nbsp;&nbsp;&nbsp;</span>
+                                        <span class="text-white">Out of Stock</span>
+                                    </div>
 
                                 </div>
 
                             </div>
-
-                        </a>
+                        </div>
 
                     </div>
 
