@@ -490,3 +490,21 @@ input:checked + .slider:before {
     font-weight: 700;
 }
 /* end */
+
+/* for glass buttons */
+.glass-btn {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.15),
+        inset 0 1px 1px rgba(255,255,255,0.15);
+
+    transition: all 0.3s ease;
+}
+
+.glass-btn:hover {
+    transform: translateY(-2px);
+}
+/* end */

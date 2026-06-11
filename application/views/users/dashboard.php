@@ -51,18 +51,18 @@
 
         <?php $type = $this->input->get('type'); ?>
 
-            <a href="<?= base_url('users/dashboard'); ?>" 
-            class="btn btn-sm <?= !$type ? 'btn-light' : 'btn-outline-light' ?>">
+            <a href="<?= base_url('users/dashboard'); ?>"
+                class="btn btn-sm glass-btn <?= !$type ? 'btn-light' : 'btn-outline-light' ?>">
                 All
             </a>
 
-            <a href="<?= base_url('users/dashboard?type=hot'); ?>" 
-            class="btn btn-sm <?= $type=='hot' ? 'btn-danger' : 'btn-outline-light' ?>">
+            <a href="<?= base_url('users/dashboard?type=hot'); ?>"
+                class="btn btn-sm glass-btn <?= $type=='hot' ? 'btn-danger' : 'btn-outline-light' ?>">
                 Hot
             </a>
 
-            <a href="<?= base_url('users/dashboard?type=cold'); ?>" 
-            class="btn btn-sm <?= $type=='cold' ? 'btn-info' : 'btn-outline-light' ?>">
+            <a href="<?= base_url('users/dashboard?type=cold'); ?>"
+                class="btn btn-sm glass-btn <?= $type=='cold' ? 'btn-info' : 'btn-outline-light' ?>">
                 Cold
             </a>
 
