@@ -272,6 +272,12 @@ function saveProduct()
         return false;
     }
 
+    if(description == '')
+    {
+        swal("Warning", "Product Description is required.", "warning");
+        return false;
+    }
+
     if(price == '' || parseFloat(price) <= 0)
     {
         swal("Warning", "Please enter a valid price.", "warning");
@@ -312,6 +318,8 @@ function saveProduct()
                 document.getElementById('productForm').reset();
 
                 $('#productModal').modal('hide');
+
+                    location.reload();
 
             }else{
 
