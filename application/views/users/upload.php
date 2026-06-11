@@ -52,6 +52,7 @@
                     <h4 class="text-white mb-0">Brewed with Love.</h4>
 
                     <button class="btn btn-primary"
+                            style="background-color: #d3a05f; border-color: #d3a05f;"
                             data-bs-toggle="modal"
                             data-bs-target="#productModal">
                         <i class="bi bi-plus"></i> Add Product
