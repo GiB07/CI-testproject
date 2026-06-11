@@ -167,7 +167,7 @@
             <div class="modal-header">
 
                 <h5 class="modal-title">
-                    Add Tattoo Product
+                    Add New Product
                 </h5>
 
                 <button type="button"
