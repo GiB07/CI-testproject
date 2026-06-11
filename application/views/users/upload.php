@@ -84,7 +84,7 @@
                                     </div>
 
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <span class="badge bg-danger me-2">&nbsp;&nbsp;&nbsp;</span>
+                                        <span class="badge bg-light me-2">&nbsp;&nbsp;&nbsp;</span>
                                         <span class="text-white">Out of Stock</span>
                                     </div>
 
