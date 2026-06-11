@@ -51,8 +51,7 @@
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h4 class="text-white mb-0">Brewed with Love.</h4>
 
-                    <button class="btn btn"
-                            style="background-color: #d3a05f; border-color: #d3a05f;"
+                    <button class="btn btn-outline-warning"
                             data-bs-toggle="modal"
                             data-bs-target="#productModal">
                         <i class="bi bi-plus"></i> Add Product
