@@ -48,11 +48,17 @@
 
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h4 class="text-white mb-0">Brewed with Love.</h4>
+
+                    <button class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                        <i class="bi bi-plus"></i> Add Product
+                    </button>
                 </div>
 
                 <div class="row g-4">
 
-                    <div class="d-flex justify-content-between align-items-center mb-4">
+                    <!-- <div class="d-flex justify-content-between align-items-center mb-4">
 
                         <button class="btn btn-primary"
                                 data-bs-toggle="modal"
@@ -60,7 +66,7 @@
                             <i class="bi bi-plus"></i> Add Product
                         </button>
 
-                    </div>
+                    </div> -->
 
                     <!-- Reservation Card -->
                     <div class="col-6 col-sm-4 col-md-3 col-lg-2">
