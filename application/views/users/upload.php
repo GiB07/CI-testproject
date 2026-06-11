@@ -85,7 +85,12 @@
                                     <p class="card-desc mb-0">
                                         for future reservations
                                         <label class="switch">
-                                            <input type="checkbox" disabled>
+                                            <input type="checkbox" disabled>Available
+                                            <span class="slider"></span>
+                                        </label>
+                                        <br>
+                                        <label class="switch">
+                                            <input type="checkbox" disabled checked>Out of Stock
                                             <span class="slider"></span>
                                         </label>
                                     </p>
