@@ -7,11 +7,16 @@
         <div class="row align-items-center mb-4">
 
             <div class="col-md-6">
+                <?php
+                    $fullname = $this->session->userdata('fullname');
+                    $fname = !empty($fullname) ? explode(' ', trim($fullname))[0] : 'User';
+                ?>
+
                 <div class="glass-welcome">
                     <h2 class="dashboard-title mb-1">
                         Welcome Back,
                         <span class="user-name">
-                            <?= ucwords($this->session->userdata('fullname')); ?>
+                            <?= ucwords($fname); ?>
                         </span>
                     </h2>
                 </div>
