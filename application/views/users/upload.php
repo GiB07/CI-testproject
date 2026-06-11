@@ -86,6 +86,7 @@
                                         for future reservations
                                         <label class="switch">
                                             <input type="checkbox" disabled>
+                                            <span class="slider"></span>
                                         </label>
                                     </p>
 
