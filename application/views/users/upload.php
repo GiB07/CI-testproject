@@ -81,9 +81,9 @@
                                 <h6 class="card-title text-white fw-bold mb-2">
                                     Legend
                                 </h6>
-                                <h7 class="card-title text-white fw-bold mb-2">
+                                <h8 class="text-white">
                                     Toggle to:
-                                </h7>
+                                </h8>
                                 <div class="small">
                                     <div class="mb-1">
                                         <span style="width:8px;height:8px;background:#28a745;border-radius:50%;display:inline-block;"></span>
