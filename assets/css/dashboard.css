@@ -507,4 +507,9 @@ input:checked + .slider:before {
 .glass-btn:hover {
     transform: translateY(-2px);
 }
+
+.btn-outline-light.glass-btn {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+}
 /* end */
