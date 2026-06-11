@@ -85,7 +85,7 @@
                                     <p class="card-desc mb-0">
                                         for future reservations
                                         <label class="switch"><input type="checkbox" disabled></label>
-                                        <label class="switch"><input type="checkbox" disabled checked></label>
+                                        <!-- <label class="switch"><input type="checkbox" disabled checked></label> -->
                                     </p>
 
                                 </div>
