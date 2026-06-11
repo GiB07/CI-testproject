@@ -94,7 +94,7 @@ body{
 .input-group-modern .form-control{
     width:100%;
     padding:14px 16px;
-    border:1px solid #ddd;
+    /* border:1px solid #ddd; */
     border-radius:12px;
     font-size:14px;
 
