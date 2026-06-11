@@ -162,7 +162,7 @@
 
     <div class="modal-dialog" role="document">
 
-        <div class="modal-content">
+        <div class="modal-conten glass-modal">
 
             <div class="modal-header">
 
