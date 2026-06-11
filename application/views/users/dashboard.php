@@ -7,12 +7,14 @@
         <div class="row align-items-center mb-4">
 
             <div class="col-md-6">
-                <h2 class="dashboard-title mb-1">
-                    Welcome Back,
-                    <span class="user-name">
-                       <?= ucwords($this->session->userdata('fullname')); ?>
-                    </span>
-                </h2>
+                <div class="glass-welcome">
+                    <h2 class="dashboard-title mb-1">
+                        Welcome Back,
+                        <span class="user-name">
+                            <?= ucwords($this->session->userdata('fullname')); ?>
+                        </span>
+                    </h2>
+                </div>
 
                 <p class="dashboard-subtitle mb-0">
                     Manage your freshly brewed coffee shop reservations.
