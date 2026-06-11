@@ -85,12 +85,12 @@
                                 <div class="small">
                                     <div class="mb-1">
                                         <span style="width:8px;height:8px;background:#28a745;border-radius:50%;display:inline-block;"></span>
-                                        <span class="text-white">Available</span>
+                                        <span class="text-white">Sell</span>
                                     </div>
 
                                     <div>
                                         <span style="width:8px;height:8px;background:#dc3545;border-radius:50%;display:inline-block;"></span>
-                                        <span class="text-white">Out of Stock</span>
+                                        <span class="text-white">Dont sell</span>
                                     </div>
                                 </div>
 
