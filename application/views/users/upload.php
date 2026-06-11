@@ -15,7 +15,7 @@
                 </h2>
 
                 <p class="dashboard-subtitle mb-0">
-                    Manage your tattoo shop reservations.
+                    Manage your freshly brewed coffee shop stocks.
                 </p>
             </div>
 
@@ -65,8 +65,8 @@
                     <!-- Reservation Card -->
                     <div class="col-12 col-sm-6 col-lg-4">
 
-                        <a href="<?= base_url('hut_reserve'); ?>"
-                        class="text-decoration-none">
+                        <!-- <a href="<?= base_url('hut_reserve'); ?>"
+                        class="text-decoration-none"> -->
 
                             <div class="reservation-card h-100">
 
@@ -74,16 +74,20 @@
 
                                     <div class="card-icon mb-4">
 
-                                        <i class="fa fa-calendar"></i>
+                                        <i class="bi bi-pin"></i>
 
                                     </div>
 
                                     <h5 class="card-title text-white fw-bold">
-                                        Reservation
+                                        Legend
                                     </h5>
 
                                     <p class="card-desc mb-0">
                                         for future reservations
+                                        <label class="switch">
+                                            <input type="checkbox" disabled>
+                                            <span class="slider"></span>
+                                        </label>
                                     </p>
 
                                 </div>
