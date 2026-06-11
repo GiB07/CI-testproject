@@ -75,6 +75,8 @@
                                     <div class="card-icon mb-4">
 
                                         <i class="bi bi-pin"></i>
+                                        <label class="switch"><input type="checkbox" disabled></label>
+                                        <label class="switch"><input type="checkbox" disabled checked></label>
 
                                     </div>
 
@@ -84,10 +86,7 @@
 
                                     <p class="card-desc mb-0">
                                         for future reservations
-                                        <label class="switch">
-                                            <input type="checkbox" disabled>
-                                            <span class="slider"></span>
-                                        </label>
+                                        
                                     </p>
 
                                 </div>
