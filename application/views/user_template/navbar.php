@@ -37,7 +37,7 @@
                 
             <span id="cartCount">
                 <button class="btn btn-sm btn-danger position-relative">
-                    <i class="bi bi-cart">
+                    <i class="bi bi-cart"> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">Cart</span>
                 <?= isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart'], 'qty')) : 0; ?>
                 </i>
                 </button>
