@@ -39,7 +39,7 @@
                 <button class="btn btn-sm btn-danger position-relative">
                     View Cart
                     <i class="bi bi-cart">
-                        <span class="cart-badge" style="background-color: white; color: grey;">
+                        <span class="cart-badge" style="background-color: #ffffff;color: #000000;display: inline-block;padding: 2px 8px;border-radius: 999px;font-family: sans-serif;font-size: 12px;font-weight: bold;">
                             <?= isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart'], 'qty')) : 0; ?>
                         </span>
                 </i>
