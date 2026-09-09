@@ -111,6 +111,6 @@
         });
     }
      $('#cartCount').on('click', function() {
-          alert('jQuery clicked the badge!');
+          alert('YAWA KA!');
       });
 </script>
