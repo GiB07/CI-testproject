@@ -131,18 +131,18 @@ body .upload{
 }
 /* new card design */
 .product-container {
-    background:rgba(255,255,255,.08);
-    border-radius:24px;
-    padding:30px;
+    background: rgba(255,255,255,.08);
+    border-radius: 24px;
+    padding: 30px;
     position: relative;
-    
-}
 
-.product-container .card .contentBx .price {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 8px;
+    /* Responsive card layout */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .product-container .card {
@@ -152,6 +152,10 @@ body .upload{
     background: #232323;
     border-radius: 20px;
     overflow: hidden;
+
+    /* Prevent cards from overflowing */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .product-container .card:before {
@@ -172,21 +176,22 @@ body .upload{
 
 .product-container .card:after {
     content: "The 8:30 Club!";
-    position: initial;
+    position: absolute;
     top: 30%;
     left: -20%;
     font-size: 6em;
     font-weight: 800;
     font-style: italic;
     color: rgba(255, 255, 255, 0.04);
-
+    white-space: nowrap;
+    pointer-events: none;
 }
 
 .product-container .card .imgBx {
     position: absolute;
     top: 50%;
+    left: 0;
     transform: translateY(-50%);
-    /* z-index: 1000; */
     width: 100%;
     height: 100%;
     transition: .5s;
@@ -195,7 +200,6 @@ body .upload{
 .product-container .card:hover .imgBx {
     top: 0%;
     transform: translateY(-25%);
-    /* bug  */
 }
 
 .product-container .card .imgBx img {
@@ -203,17 +207,23 @@ body .upload{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(20deg);
+
+    /* Responsive image */
     width: 270px;
+    max-width: 85%;
+    height: auto;
 }
 
 .product-container .card .contentBx {
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 100px;
     text-align: center;
     transition: 1s;
     z-index: 90;
+    box-sizing: border-box;
 }
 
 .product-container .card:hover .contentBx {
@@ -225,6 +235,13 @@ body .upload{
     font-weight: 600;
     letter-spacing: 1px;
     color: #fff;
+}
+
+.product-container .card .contentBx .price {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 8px;
 }
 
 .product-container .card .contentBx .size,
@@ -271,13 +288,13 @@ body .upload{
     background: #fff;
     margin: 0 5px;
     transition: .5s;
-    color: #111;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.product-container .card .contentBx .size span:hover {  /* other bug */
+.product-container .card .contentBx .size span:hover {
     background: #B90000;
+    color: #fff;
 }
 
 .product-container .card .contentBx .color span {
@@ -290,15 +307,15 @@ body .upload{
 }
 
 .product-container .card .contentBx .color span:nth-child(2) {
-     background: #EDFFE4;
+    background: #EDFFE4;
 }
 
 .product-container .card .contentBx .color span:nth-child(3) {
-     background: #92687b;
+    background: #92687b;
 }
 
 .product-container .card .contentBx .color span:nth-child(4) {
-     background: #464449;
+    background: #464449;
 }
 
 .product-container .card .contentBx a {
@@ -319,6 +336,108 @@ body .upload{
     opacity: 1;
     transform: translateY(0px);
     transition-delay: .7s;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+@media (max-width: 768px) {
+
+    .product-container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .product-container .card {
+        width: 300px;
+        height: 430px;
+    }
+
+    .product-container .card .imgBx img {
+        width: 250px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+@media (max-width: 480px) {
+
+    .product-container {
+        padding: 15px 10px;
+        border-radius: 18px;
+        gap: 15px;
+    }
+
+    .product-container .card {
+        width: 100%;
+        max-width: 320px;
+        height: 420px;
+        border-radius: 18px;
+    }
+
+    .product-container .card .imgBx img {
+        width: 230px;
+        max-width: 75%;
+    }
+
+    .product-container .card:after {
+        font-size: 4em;
+        left: -15%;
+    }
+
+    .product-container .card .contentBx {
+        height: 95px;
+    }
+
+    .product-container .card:hover .contentBx {
+        height: 190px;
+    }
+
+    .product-container .card .contentBx .size,
+    .product-container .card .contentBx .color {
+        padding: 6px 10px;
+    }
+
+    .product-container .card .contentBx .size h3,
+    .product-container .card .contentBx .color h3 {
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-right: 5px;
+    }
+
+    .product-container .card .contentBx a {
+        padding: 8px 16px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+@media (max-width: 360px) {
+
+    .product-container {
+        padding: 10px 5px;
+    }
+
+    .product-container .card {
+        height: 400px;
+    }
+
+    .product-container .card .imgBx img {
+        width: 210px;
+    }
+
+    .product-container .card .contentBx h2 {
+        font-size: 20px;
+    }
+
+    .product-container .card .contentBx .price {
+        font-size: 16px;
+    }
 }
 /* end */
 
