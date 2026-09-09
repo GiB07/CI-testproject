@@ -110,4 +110,7 @@
 
         });
     }
+     $('#cartCount').on('click', function() {
+          alert('jQuery clicked the badge!');
+      });
 </script>
