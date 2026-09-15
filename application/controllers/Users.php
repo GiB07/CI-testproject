@@ -300,7 +300,6 @@ public function insert_registration()
             return;
         }
 
-        // Get product details
         $product = $this->super_model->select_custom_where(
             'products',
             "product_id = " . (int) $id
@@ -316,18 +315,18 @@ public function insert_registration()
 
         $p = $product[0];
 
-        // Calculate total amount
         $total_amount = $p->price * $qty;
 
-        // Save order
         $data = array(
             'user_id'      => $user_id,
-            'total_amount' => $total_amount,
             'status'       => 'Pending',
             'created_at'   => date('Y-m-d H:i:s'),
-            'name'         => $p->product_name,
             'added_by'     => $fullname,
-            'qty'          => $qty
+            'name'         => $p->product_name,
+            'price'        => $p->price,
+            'qty'          => $qty,
+            'total_amount' => $total_amount,
+            
             
         );
 
@@ -346,24 +345,6 @@ public function insert_registration()
             ]);
         }
     }
-
-    public function cart_count(){
-            
-        $cart = $this->session->userdata('cart');
-
-        $count = 0;
-
-        if($cart)
-        {
-            foreach($cart as $item)
-            {
-                $count += $item['qty'];
-            }
-        }
-
-        echo $count;
-    }
-
 
 
 }
