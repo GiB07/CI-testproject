@@ -279,41 +279,72 @@ public function insert_registration()
 
     public function add_to_cart(){
 
-        $id = $this->input->post('product_id');
-        $qty = $this->input->post('qty');
+        $id  = $this->input->post('product_id');
+        $qty = (int) $this->input->post('qty');
+        $user_id = $this->session->userdata('user_id');
+        $fullname = $this->session->userdata('fullname');
 
-        $product = $this->super_model->select_custom_where('products', "product_id = '$id'");
+        if (empty($user_id)) {
+            echo json_encode([
+                'status'  => 'error',
+                'message' => 'Please log in first.'
+            ]);
+            return;
+        }
 
-        if(!$product)
-        {
-            echo json_encode(['status'=>'error','message'=>'Product not found']);
+        if ($qty <= 0) {
+            echo json_encode([
+                'status'  => 'error',
+                'message' => 'Invalid quantity.'
+            ]);
+            return;
+        }
+
+        // Get product details
+        $product = $this->super_model->select_custom_where(
+            'products',
+            "product_id = " . (int) $id
+        );
+
+        if (!$product) {
+            echo json_encode([
+                'status'  => 'error',
+                'message' => 'Product not found'
+            ]);
             return;
         }
 
         $p = $product[0];
 
-        $cart = $this->session->userdata('cart');
+        // Calculate total amount
+        $total_amount = $p->price * $qty;
 
-        if(isset($cart[$id]))
-        {
-            $cart[$id]['qty'] += $qty;
+        // Save order
+        $data = array(
+            'user_id'      => $user_id,
+            'total_amount' => $total_amount,
+            'status'       => 'Pending',
+            'created_at'   => date('Y-m-d H:i:s'),
+            'name'         => $p->product_name,
+            'added_by'     => $fullname,
+            'qty'          => $qty
+            
+        );
+
+        if ($this->db->insert('orders', $data)) {
+
+            echo json_encode([
+                'status'  => 'success',
+                'message' => 'Order placed successfully'
+            ]);
+
+        } else {
+
+            echo json_encode([
+                'status'  => 'error',
+                'message' => 'Failed to save order'
+            ]);
         }
-        else
-        {
-            $cart[$id] = [
-                'name'  => $p->product_name,
-                'price' => $p->price,
-                'qty'   => $qty,
-                'image' => $p->image
-            ];
-        }
-
-        $this->session->set_userdata('cart', $cart);
-
-        echo json_encode([
-            'status' => 'success',
-            'message' => 'Added to cart'
-        ]);
     }
 
     public function cart_count(){
