@@ -13,9 +13,9 @@
     <script src="<?php echo base_url('assets/js/moment.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/fullcalendar.js'); ?>"></script>
     <!-- <script src="dist/js/dashboard1.js"></script> -->
-    <script type="text/javascript">
+<script>
 $(document).ready(function() {
-    $("#cartTable").DataTable();
+    $('#cartTable').DataTable();
 });
 </script>
 
