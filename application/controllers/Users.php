@@ -378,8 +378,8 @@ public function insert_registration(){
 
         $this->load->view('user_template/header');
         $this->load->view('user_template/navbar');
-        $this->load->view('users/cart', $data);
         $this->load->view('user_template/footer');
+        $this->load->view('users/cart', $data);
     }
 
 
