@@ -214,8 +214,6 @@ public function insert_registration()
 
     public function save_product()
     {
-        $emp_log = $this->session->userdata('register_id');
-        var_dump($emp_log); // Debugging line to check the value of $emp_log
         $path = './uploads/products/';
 
         if (!is_dir($path)) {
