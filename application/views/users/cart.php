@@ -113,6 +113,24 @@
 
         });
     </script>
+    <style>
+        .transparent-red-btn {
+            /* Pure red (255, 0, 0) with 40% opacity */
+            background-color: rgba(255, 0, 0, 0.4); 
+            color: white;
+            border: 2px solid #ff0000;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Darkens slightly when hovered */
+        .transparent-red-btn:hover {
+            background-color: rgba(255, 0, 0, 0.7); 
+        }
+        </style>
 
 
 
