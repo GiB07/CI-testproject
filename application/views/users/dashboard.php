@@ -33,7 +33,7 @@
                     <ol class="breadcrumb justify-content-md-end mb-0">
 
                         <li class="breadcrumb-item">
-                            <a href="<?= base_url('users/dashboard'); ?>" class="btn btn-md glass-btn>
+                            <a href="<?= base_url('users/dashboard'); ?>" class="btn btn-md glass-btn">
                                 Home
                             </a>
                         </li>
