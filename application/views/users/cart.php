@@ -1,7 +1,5 @@
 <link href="<?php echo base_url('assets/css/dashboard.css'); ?>" rel="stylesheet">
 
-
-<div class="page-wrapper">
     <div class="container-fluid py-4">
         <div class="container-fluid" style="padding: 30px;">
 
@@ -98,7 +96,6 @@
             </div>
         </div>
     </div>
-</div>
     <script type="text/javascript">
         $(document).ready(function() {
 
