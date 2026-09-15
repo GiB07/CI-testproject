@@ -39,12 +39,12 @@
                         </li>
 
                          <li class="breadcrumb-item">
-                            <a href="<?= base_url('upload'); ?>">
+                            <a href="<?= base_url('upload'); ?>" class="btn btn-md glass-btn">
                                 Upload Stocks
                             </a>
                         </li>
 
-                        <li class="breadcrumb-item active" aria-current="page">
+                        <li class="breadcrumb-item active" aria-current="page" class="btn btn-md glass-btn">
                             Dashboard
                         </li>
 
