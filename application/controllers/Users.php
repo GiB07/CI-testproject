@@ -214,6 +214,17 @@ public function insert_registration()
 
     public function save_product()
     {
+        $register_id  = $this->session->userdata('register_id');
+        $fname = $this->session->userdata('fname');
+
+        if (!$this->session->userdata('logged_in')) {
+            echo json_encode([
+                'status'  => 'error',
+                'message' => 'You must be logged in to upload a product.'
+            ]);
+            return;
+        }
+
         $path = './uploads/products/';
 
         if (!is_dir($path)) {
@@ -239,18 +250,31 @@ public function insert_registration()
 
         $file = $this->upload->data();
 
-        $this->db->insert('products', [
+        $data = array(
             'product_name' => $this->input->post('product_name'),
             'description'  => $this->input->post('description'),
             'price'        => $this->input->post('price'),
             'type'         => $this->input->post('type'),
-            'image'        => $file['file_name']
-        ]);
+            'image'        => $file['file_name'],
+            'register_id'  => $register_id,
+            'uploaded_by'  => $fname
+        );
 
-        echo json_encode([
-            'status' => 'success',
-            'message' => 'Product uploaded successfully'
-        ]);
+        if ($this->db->insert('products', $data)) {
+
+            echo json_encode([
+                'status'  => 'success',
+                'message' => 'Product uploaded successfully',
+                'register_id' => $register_id
+            ]);
+
+        } else {
+
+            echo json_encode([
+                'status'  => 'error',
+                'message' => 'Failed to save product'
+            ]);
+        }
     }
 
     public function add_to_cart(){
