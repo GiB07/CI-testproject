@@ -218,6 +218,8 @@ public function insert_registration()
         var_dump($emp_log); // Debugging line to check the value of $emp_log
         $path = './uploads/products/';
 
+        die();
+
         if (!is_dir($path)) {
             mkdir($path, 0755, true);
         }
