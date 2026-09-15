@@ -1,8 +1,8 @@
 <link href="<?php echo base_url('assets/css/dashboard.css'); ?>" rel="stylesheet">
 
 <div class="page-wrapper">
-    <div class="container-fluid py-3">
-        <div class="container-fluid" style="padding: 30px;">
+    <div class="container-fluid py-1">
+        <div class="container-fluid" style="padding: 1px;">
 
                 <div class="col-md-6">
                     <?php
