@@ -43,7 +43,7 @@
                             </div>
 
                             <a href="<?= base_url('users/dashboard'); ?>" 
-                                class="btn btn-md glass-btn">
+                                class="btn btn-md glass-btn btn-info">
                                 <i class="bi bi-shop"></i> Continue Shopping
                             </a>
 
