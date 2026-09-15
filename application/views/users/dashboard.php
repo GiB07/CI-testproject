@@ -44,8 +44,10 @@
                             </a>
                         </li>
 
-                        <li class="breadcrumb-item active" aria-current="page" class="btn btn-md glass-btn">
-                            Dashboard
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <a class="btn btn-md glass-btn">
+                                Dashboard
+                            </a>
                         </li>
 
                     </ol>

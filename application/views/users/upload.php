@@ -33,13 +33,15 @@
                     <ol class="breadcrumb justify-content-md-end mb-0">
 
                         <li class="breadcrumb-item">
-                            <a href="<?= base_url('users/dashboard'); ?>">
+                            <a href="<?= base_url('users/dashboard'); ?>" class="btn btn-md glass-btn">
                                 Home
                             </a>
                         </li>
 
                         <li class="breadcrumb-item active" aria-current="page">
-                            Upload Stocks
+                            <a class="btn btn-md glass-btn">
+                                Upload Stocks
+                            </a>
                         </li>
 
                     </ol>
