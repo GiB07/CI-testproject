@@ -13,7 +13,18 @@
     <script src="<?php echo base_url('assets/js/moment.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/fullcalendar.js'); ?>"></script>
     <!-- <script src="dist/js/dashboard1.js"></script> -->
-    
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        $("#cartTable").DataTable({
+
+            order: [[ 0, 'asc' ]],
+            lengthMenu: [ [8, 25, 50, -1], [8, 25, 50, "All"] ]
+
+        });
+
+    });
+</script>
 
 </body>
 
