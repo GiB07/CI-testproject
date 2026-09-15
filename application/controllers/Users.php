@@ -214,13 +214,13 @@ public function insert_registration()
 
     public function save_product()
     {
-        $register_id  = $this->session->userdata('register_id');
-        $fname = $this->session->userdata('fname');
+        $register_id  = $this->session->userdata('user_id');
+        $fullname = $this->session->userdata('fullname');
 
-        if (!$this->session->userdata('logged_in')) {
+        if (empty($register_id)) {
             echo json_encode([
                 'status'  => 'error',
-                'message' => 'You must be logged in to upload a product.'
+                'message' => 'Session expired. Please log in again.'
             ]);
             return;
         }
@@ -257,7 +257,7 @@ public function insert_registration()
             'type'         => $this->input->post('type'),
             'image'        => $file['file_name'],
             'register_id'  => $register_id,
-            'uploaded_by'  => $fname
+            'uploaded_by'  => $fullname
         );
 
         if ($this->db->insert('products', $data)) {
