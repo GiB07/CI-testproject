@@ -363,5 +363,24 @@ public function insert_registration(){
         echo $count ? $count : 0;
     }
 
+    public function cart(){
+        $user_id = $this->session->userdata('user_id');
+
+        if (empty($user_id)) {
+            redirect('users/index');
+            return;
+        }
+
+        $data['orders'] = $this->super_model->select_custom_where(
+            'orders',
+            "user_id = " . (int)$user_id . " AND status = 'Pending'"
+        );
+
+        $this->load->view('user_template/header');
+        $this->load->view('user_template/navbar');
+        $this->load->view('users/cart', $data);
+        $this->load->view('user_template/footer');
+    }
+
 
 }
