@@ -14,16 +14,27 @@
     <script src="<?php echo base_url('assets/js/fullcalendar.js'); ?>"></script>
     <!-- <script src="dist/js/dashboard1.js"></script> -->
     <script type="text/javascript">
-    $(document).ready(function() {
-
-        $("#cartTable").DataTable({
-
-            order: [[ 0, 'asc' ]],
-            lengthMenu: [ [8, 25, 50, -1], [8, 25, 50, "All"] ]
-
+$(document).ready(function() {
+    if ($('#cartTable').length) {
+        $('#cartTable').DataTable({
+            paging: true,
+            searching: true,
+            ordering: true,
+            info: true,
+            order: [[0, 'asc']],
+            lengthMenu: [
+                [8, 25, 50, -1],
+                [8, 25, 50, 'All']
+            ],
+            layout: {
+                topStart: 'pageLength',
+                topEnd: 'search',
+                bottomStart: 'info',
+                bottomEnd: 'paging'
+            }
         });
-
-    });
+    }
+});
 </script>
 
 </body>
