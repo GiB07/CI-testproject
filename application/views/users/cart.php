@@ -83,6 +83,12 @@
                                         echo '<td class="added_by" style="text-align:center;">'.htmlspecialchars($value->added_by).'</td>';
                                         echo '<td class="created_at" style="text-align:center;">'.date('M d, Y h:i A', strtotime($value->created_at)).'</td>';
                                         echo '<td class="status" style="text-align:center;">'.$value->status.'</td>';
+                                        echo '<td style="padding: 3px 3px;">';
+                                        echo '<center><button type="button" class="btn btn-primary" style="padding: 1px 3px; font-size: 12px;" onclick=details("")><i class="glyphicon glyphicon-info-sign"></i> Details</button>';
+                                        echo '&nbsp;';
+                                        echo '<button type="button" class="btn btn-danger" style="padding: 1px 3px; font-size: 12px;" onclick=edit("")><i class="glyphicon glyphicon-pencil"></i> EDIT</button>';
+                                        echo '<button type="button" class="btn btn-primary" style="padding: 1px 3px; font-size: 12px;" onclick=adjust_emp("")><i class="glyphicon glyphicon-trash"></i></button></center>';
+                                        echo '</td>';
                                         echo '</tr>';
 
                                         $count++;
