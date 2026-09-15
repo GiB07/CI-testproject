@@ -1,0 +1,83 @@
+```php
+<table id="cartTable" class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th class="text-center" style="width: 5%;">#</th>
+            <th class="text-center" style="width: 25%;">Product</th>
+            <th class="text-center" style="width: 10%;">Price</th>
+            <th class="text-center" style="width: 10%;">Quantity</th>
+            <th class="text-center" style="width: 15%;">Total Amount</th>
+            <th class="text-center" style="width: 15%;">Added By</th>
+            <th class="text-center" style="width: 15%;">Date</th>
+            <th class="text-center" style="width: 10%;">Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <?php
+        $count = 1;
+
+        foreach ($orders as $value):
+
+            echo '<tr>';
+
+            echo '<td class="text-center">'.$count.'</td>';
+
+            echo '<td class="product" style="text-align: center;">'
+                .htmlspecialchars($value->name).
+                '</td>';
+
+            echo '<td class="price" style="text-align: center;">₱'
+                .number_format($value->price, 2).
+                '</td>';
+
+            echo '<td class="qty" style="text-align: center;">'
+                .$value->qty.
+                '</td>';
+
+            echo '<td class="total_amount" style="text-align: center;">₱'
+                .number_format($value->total_amount, 2).
+                '</td>';
+
+            echo '<td class="added_by" style="text-align: center;">'
+                .htmlspecialchars($value->added_by).
+                '</td>';
+
+            echo '<td class="created_at" style="text-align: center;">'
+                .date('M d, Y h:i A', strtotime($value->created_at)).
+                '</td>';
+
+            echo '<td class="status" style="text-align: center;">'
+                .$value->status.
+                '</td>';
+
+            echo '</tr>';
+
+            $count++;
+
+        endforeach;
+        ?>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $("#cartTable").DataTable({
+
+            columnDefs: [
+                { width: '50px', targets: 0 },
+                { width: '25%', targets: 1 },
+                { width: '100px', targets: 2 },
+                { width: '80px', targets: 3 },
+                { width: '120px', targets: 4 },
+                { width: '150px', targets: 5 },
+                { width: '150px', targets: 6 },
+                { width: '100px', targets: 7 }
+            ]
+
+        });
+
+    });
+</script>
+```
