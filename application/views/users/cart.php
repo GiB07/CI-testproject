@@ -110,16 +110,6 @@
 
         $("#cartTable").DataTable({
 
-            columnDefs: [
-                { width: '50px', targets: 0 },
-                { width: '25%', targets: 1 },
-                { width: '100px', targets: 2 },
-                { width: '80px', targets: 3 },
-                { width: '120px', targets: 4 },
-                { width: '150px', targets: 5 },
-                { width: '150px', targets: 6 },
-                { width: '100px', targets: 7 },
-            ]
             order: [[ 0, 'asc' ]],
             "lengthMenu": [ [8, 25, 50, -1], [8, 25, 50, "All"] ]
 
