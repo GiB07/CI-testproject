@@ -120,6 +120,8 @@
                 { width: '150px', targets: 6 },
                 { width: '100px', targets: 7 }
             ]
+            order: [[ 0, 'asc' ]],
+            "lengthMenu": [ [8, 25, 50, -1], [8, 25, 50, "All"] ]
 
         });
 
