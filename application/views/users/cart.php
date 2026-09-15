@@ -1,107 +1,104 @@
 <link href="<?php echo base_url('assets/css/dashboard.css'); ?>" rel="stylesheet">
 
-<div class="container-fluid" style="padding: 30px;">
 
-        <div class="col-md-6">
-            <?php
-                $fullname = $this->session->userdata('fullname');
-                $fname = !empty($fullname) ? explode(' ', trim($fullname))[0] : 'User';
-            ?>
+<div class="page-wrapper">
+    <div class="container-fluid py-4">
+        <div class="container-fluid" style="padding: 30px;">
 
-            <div class="glass-welcome">
-                <h2 class="dashboard-title mb-1">
-                    Welcome Back,
-                    <span class="user-name">
-                        <?= ucwords($fname); ?>
-                    </span>
-                </h2>
-            </div>
+                <div class="col-md-6">
+                    <?php
+                        $fullname = $this->session->userdata('fullname');
+                        $fname = !empty($fullname) ? explode(' ', trim($fullname))[0] : 'User';
+                    ?>
 
-            <p class="dashboard-subtitle mb-0">
-                Manage your freshly brewed coffee shop reservations.
-            </p>
-        </div>
-
-    <div class="row">
-
-        <div class="col-md-12">
-
-            <div class="product-container">
-
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
-
-                    <div>
-                        <h2 style="margin:0;color:#fff;font-weight:600;">
-                            <i class="bi bi-cart3"></i> My Cart
+                    <div class="glass-welcome">
+                        <h2 class="dashboard-title mb-1">
+                            Welcome Back,
+                            <span class="user-name">
+                                <?= ucwords($fname); ?>
+                            </span>
                         </h2>
-
-                        <p style="margin:5px 0 0;color:rgba(255,255,255,.7);">
-                            Your pending orders
-                        </p>
                     </div>
 
-                    <a href="<?= base_url('users/dashboard'); ?>" 
-                       class="btn btn-primary"
-                       style="border-radius:10px;">
-                        <i class="bi bi-shop"></i> Continue Shopping
-                    </a>
-
+                    <p class="dashboard-subtitle mb-0">
+                        Manage your freshly brewed coffee shop reservations.
+                    </p>
                 </div>
 
-                <div style="background:rgba(255,255,255,.95);border-radius:15px;padding:20px;">
+            <div class="row">
 
-                    <table id="cartTable" class="table table-striped table-bordered">
+                <div class="col-md-12">
 
-                        <thead>
-                            <tr>
-                                <th class="text-center" style="width: 5%;">#</th>
-                                <th class="text-center" style="width: 25%;">Product</th>
-                                <th class="text-center" style="width: 10%;">Price</th>
-                                <th class="text-center" style="width: 10%;">Quantity</th>
-                                <th class="text-center" style="width: 15%;">Total Amount</th>
-                                <th class="text-center" style="width: 15%;">Added By</th>
-                                <th class="text-center" style="width: 15%;">Date</th>
-                                <th class="text-center" style="width: 10%;">Status</th>
-                            </tr>
-                        </thead>
+                    <div class="product-container">
 
-                        <tbody>
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
 
-                            <?php
-                            $count = 1;
+                            <div>
+                                <h2 style="margin:0;color:#fff;font-weight:600;">
+                                    <i class="bi bi-cart3"></i> My Cart
+                                </h2>
 
-                            foreach ($orders as $value):
+                                <p style="margin:5px 0 0;color:rgba(255,255,255,.7);">
+                                    Your pending orders
+                                </p>
+                            </div>
 
-                                echo '<tr>';
-                                echo '<td class="text-center">'.$count.'</td>';
-                                echo '<td class="product" style="text-align:center;">'.htmlspecialchars($value->name).'</td>';
-                                echo '<td class="price" style="text-align:center;">₱'.number_format($value->price, 2).'</td>';
-                                echo '<td class="qty" style="text-align:center;">'.$value->qty.'</td>';
-                                echo '<td class="total_amount" style="text-align:center;">₱'.number_format($value->total_amount, 2).'</td>';
-                                echo '<td class="added_by" style="text-align:center;">'.htmlspecialchars($value->added_by).'</td>';
-                                echo '<td class="created_at" style="text-align:center;">'.date('M d, Y h:i A', strtotime($value->created_at)).'</td>';
-                                echo '<td class="status" style="text-align:center;">'.$value->status.'</td>';
-                                echo '</tr>';
+                            <a href="<?= base_url('users/dashboard'); ?>" 
+                            class="btn btn-primary"
+                            style="border-radius:10px;">
+                                <i class="bi bi-shop"></i> Continue Shopping
+                            </a>
 
-                                $count++;
+                        </div>
 
-                            endforeach;
-                            ?>
+                        <div style="background:rgba(255,255,255,.95);border-radius:15px;padding:20px;">
 
-                        </tbody>
+                            <table id="cartTable" class="table table-striped table-bordered">
 
-                    </table>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" style="width: 5%;">#</th>
+                                        <th class="text-center" style="width: 25%;">Product</th>
+                                        <th class="text-center" style="width: 10%;">Price</th>
+                                        <th class="text-center" style="width: 10%;">Quantity</th>
+                                        <th class="text-center" style="width: 15%;">Total Amount</th>
+                                        <th class="text-center" style="width: 15%;">Added By</th>
+                                        <th class="text-center" style="width: 15%;">Date</th>
+                                        <th class="text-center" style="width: 10%;">Status</th>
+                                    </tr>
+                                </thead>
 
+                                <tbody>
+
+                                    <?php
+                                    $count = 1;
+
+                                    foreach ($orders as $value):
+
+                                        echo '<tr>';
+                                        echo '<td class="text-center">'.$count.'</td>';
+                                        echo '<td class="product" style="text-align:center;">'.htmlspecialchars($value->name).'</td>';
+                                        echo '<td class="price" style="text-align:center;">₱'.number_format($value->price, 2).'</td>';
+                                        echo '<td class="qty" style="text-align:center;">'.$value->qty.'</td>';
+                                        echo '<td class="total_amount" style="text-align:center;">₱'.number_format($value->total_amount, 2).'</td>';
+                                        echo '<td class="added_by" style="text-align:center;">'.htmlspecialchars($value->added_by).'</td>';
+                                        echo '<td class="created_at" style="text-align:center;">'.date('M d, Y h:i A', strtotime($value->created_at)).'</td>';
+                                        echo '<td class="status" style="text-align:center;">'.$value->status.'</td>';
+                                        echo '</tr>';
+
+                                        $count++;
+
+                                    endforeach;
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </div>
-
     <script type="text/javascript">
         $(document).ready(function() {
 
