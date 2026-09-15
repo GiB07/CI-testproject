@@ -45,7 +45,7 @@
                         </li>
 
                         <li class="breadcrumb-item active" aria-current="page">
-                            <a class="btn btn-md glass-btn disabled" style="font-color: #ffffff; cursor: default;">
+                            <a class="btn btn-md glass-btn btn-info disabled">
                                 Dashboard
                             </a>
                         </li>
