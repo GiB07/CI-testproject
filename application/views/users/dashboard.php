@@ -45,7 +45,7 @@
                         </li>
 
                         <li class="breadcrumb-item active" aria-current="page">
-                            <a class="btn btn-md glass-btn">
+                            <a class="btn btn-md glass-btn disabled">
                                 Dashboard
                             </a>
                         </li>
