@@ -2,6 +2,26 @@
 
 <div class="container-fluid" style="padding: 30px;">
 
+        <div class="col-md-6">
+            <?php
+                $fullname = $this->session->userdata('fullname');
+                $fname = !empty($fullname) ? explode(' ', trim($fullname))[0] : 'User';
+            ?>
+
+            <div class="glass-welcome">
+                <h2 class="dashboard-title mb-1">
+                    Welcome Back,
+                    <span class="user-name">
+                        <?= ucwords($fname); ?>
+                    </span>
+                </h2>
+            </div>
+
+            <p class="dashboard-subtitle mb-0">
+                Manage your freshly brewed coffee shop reservations.
+            </p>
+        </div>
+
     <div class="row">
 
         <div class="col-md-12">
