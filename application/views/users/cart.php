@@ -111,9 +111,11 @@
         $("#cartTable").DataTable({
 
             order: [[ 0, 'asc' ]],
-            "lengthMenu": [ [8, 25, 50, -1], [8, 25, 50, "All"] ]
+            lengthMenu: [ [8, 25, 50, -1], [8, 25, 50, "All"] ]
 
         });
 
     });
 </script>
+```
+
