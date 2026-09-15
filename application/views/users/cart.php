@@ -1,64 +1,107 @@
-```php
-<table id="cartTable" class="table table-striped table-bordered">
-    <thead>
-        <tr>
-            <th class="text-center" style="width: 5%;">#</th>
-            <th class="text-center" style="width: 25%;">Product</th>
-            <th class="text-center" style="width: 10%;">Price</th>
-            <th class="text-center" style="width: 10%;">Quantity</th>
-            <th class="text-center" style="width: 15%;">Total Amount</th>
-            <th class="text-center" style="width: 15%;">Added By</th>
-            <th class="text-center" style="width: 15%;">Date</th>
-            <th class="text-center" style="width: 10%;">Status</th>
-        </tr>
-    </thead>
+<div class="container-fluid" style="padding: 30px;">
 
-    <tbody>
-        <?php
-        $count = 1;
+    <div class="row">
 
-        foreach ($orders as $value):
+        <div class="col-md-12">
 
-            echo '<tr>';
+            <div class="product-container">
 
-            echo '<td class="text-center">'.$count.'</td>';
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
 
-            echo '<td class="product" style="text-align: center;">'
-                .htmlspecialchars($value->name).
-                '</td>';
+                    <div>
+                        <h2 style="margin:0;color:#fff;font-weight:600;">
+                            <i class="bi bi-cart3"></i> My Cart
+                        </h2>
 
-            echo '<td class="price" style="text-align: center;">₱'
-                .number_format($value->price, 2).
-                '</td>';
+                        <p style="margin:5px 0 0;color:rgba(255,255,255,.7);">
+                            Your pending orders
+                        </p>
+                    </div>
 
-            echo '<td class="qty" style="text-align: center;">'
-                .$value->qty.
-                '</td>';
+                    <a href="<?= base_url('users/dashboard'); ?>" 
+                       class="btn btn-primary"
+                       style="border-radius:10px;">
+                        <i class="bi bi-shop"></i> Continue Shopping
+                    </a>
 
-            echo '<td class="total_amount" style="text-align: center;">₱'
-                .number_format($value->total_amount, 2).
-                '</td>';
+                </div>
 
-            echo '<td class="added_by" style="text-align: center;">'
-                .htmlspecialchars($value->added_by).
-                '</td>';
+                <div style="background:rgba(255,255,255,.95);border-radius:15px;padding:20px;">
 
-            echo '<td class="created_at" style="text-align: center;">'
-                .date('M d, Y h:i A', strtotime($value->created_at)).
-                '</td>';
+                    <table id="cartTable" class="table table-striped table-bordered">
 
-            echo '<td class="status" style="text-align: center;">'
-                .$value->status.
-                '</td>';
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 5%;">#</th>
+                                <th class="text-center" style="width: 25%;">Product</th>
+                                <th class="text-center" style="width: 10%;">Price</th>
+                                <th class="text-center" style="width: 10%;">Quantity</th>
+                                <th class="text-center" style="width: 15%;">Total Amount</th>
+                                <th class="text-center" style="width: 15%;">Added By</th>
+                                <th class="text-center" style="width: 15%;">Date</th>
+                                <th class="text-center" style="width: 10%;">Status</th>
+                            </tr>
+                        </thead>
 
-            echo '</tr>';
+                        <tbody>
 
-            $count++;
+                            <?php
+                            $count = 1;
 
-        endforeach;
-        ?>
-    </tbody>
-</table>
+                            foreach ($orders as $value):
+
+                                echo '<tr>';
+
+                                echo '<td class="text-center">'.$count.'</td>';
+
+                                echo '<td class="product" style="text-align:center;">'
+                                    .htmlspecialchars($value->name).
+                                    '</td>';
+
+                                echo '<td class="price" style="text-align:center;">₱'
+                                    .number_format($value->price, 2).
+                                    '</td>';
+
+                                echo '<td class="qty" style="text-align:center;">'
+                                    .$value->qty.
+                                    '</td>';
+
+                                echo '<td class="total_amount" style="text-align:center;">₱'
+                                    .number_format($value->total_amount, 2).
+                                    '</td>';
+
+                                echo '<td class="added_by" style="text-align:center;">'
+                                    .htmlspecialchars($value->added_by).
+                                    '</td>';
+
+                                echo '<td class="created_at" style="text-align:center;">'
+                                    .date('M d, Y h:i A', strtotime($value->created_at)).
+                                    '</td>';
+
+                                echo '<td class="status" style="text-align:center;">'
+                                    .$value->status.
+                                    '</td>';
+
+                                echo '</tr>';
+
+                                $count++;
+
+                            endforeach;
+                            ?>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -80,4 +123,3 @@
 
     });
 </script>
-```
