@@ -38,7 +38,7 @@
             <span id="cartCount">
                 <button class="btn btn-sm btn-danger position-relative"
                         onclick="window.location='<?= base_url('users/cart'); ?>'">
-                    View Cart
+                    View Order
                     <i class="bi bi-cart"> -
                         <span class="cart-badge"
                             id="cartBadge"

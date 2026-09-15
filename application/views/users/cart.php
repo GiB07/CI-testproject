@@ -34,7 +34,7 @@
 
                             <div>
                                 <h2 style="margin:0;color:#fff;font-weight:600;">
-                                    <i class="bi bi-cart3"></i> My Cart
+                                    <i class="bi bi-cart3"></i> Orders
                                 </h2>
 
                                 <p style="margin:5px 0 0;color:rgba(255,255,255,.7);">
