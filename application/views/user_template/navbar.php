@@ -36,7 +36,7 @@
             <div class="nav-right">
                 
             <span id="cartCount">
-                <button class="btn btn-md glass-btn btn-info position-relative"
+                <button class="btn btn-md glass-btn btn-danger position-relative"
                         onclick="window.location='<?= base_url('users/cart'); ?>'">
                     View Order
                     <i class="bi bi-cart"> -
