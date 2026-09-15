@@ -6,7 +6,8 @@
 
     <!-- <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script> -->
     <script src="<?php echo base_url('assets/bootstrap5/js/bootstrap.bundle.min.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/js/dataTables.min.js'); ?>"></script>
+    <!-- <script src="<?php echo base_url('assets/js/dataTables.min.js'); ?>"></script> -->
+    <script src="https://cdn.datatables.net/2.3.8/js/dataTables.min.js"></script>
     <script src="<?php echo base_url('assets/js/navbar.js'); ?>"></script>
     <!-- <script src="<?php echo base_url('assets/js/jquery-4.0.0.min.js'); ?>"></script> -->
     <script src="<?php echo base_url('assets/js/sweetalert.min.js'); ?>"></script>
