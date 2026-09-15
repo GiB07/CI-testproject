@@ -36,13 +36,16 @@
             <div class="nav-right">
                 
             <span id="cartCount">
-                <button class="btn btn-sm btn-danger position-relative">
+                <button class="btn btn-sm btn-danger position-relative"
+                        onclick="window.location='<?= base_url('users/cart'); ?>'">
                     View Cart
-                    <i class="bi bi-cart"> - 
-                        <span class="cart-badge" style="background-color: #ffffff;color: #000000;display: inline-flex;align-items: center;justify-content: center;padding: 3px 8px;border-radius: 999px;font-family: sans-serif;font-size: 11px;font-weight: bold;line-height: 1;white-space: nowrap;flex-shrink: 0;-webkit-text-size-adjust: 100%;">
-                            <?= isset($_SESSION['cart']) ? array_sum(array_column($_SESSION['cart'], 'qty')) : 0; ?>
+                    <i class="bi bi-cart"> -
+                        <span class="cart-badge"
+                            id="cartBadge"
+                            style="background-color:#ffffff;color:#000000;display:inline-flex;align-items:center;justify-content:center;padding:3px 8px;border-radius:999px;font-family:sans-serif;font-size:11px;font-weight:bold;line-height:1;">
+                            0
                         </span>
-                </i>
+                    </i>
                 </button>
             </span>
 
@@ -110,7 +113,23 @@
 
         });
     }
-     $('#cartCount').on('click', function() {
-          alert('YAWA KA!');
-      });
+    //  $('#cartCount').on('click', function() {
+    //       alert('YAWA KA!');
+    //   });
+
+      function loadCartCount(){
+        $.ajax({
+            url: "<?= base_url('users/cart_count'); ?>",
+            type: "GET",
+            success: function(response)
+            {
+                $('#cartBadge').text(response);
+            }
+        });
+    }
+
+    $(document).ready(function()
+    {
+        loadCartCount();
+    });
 </script>

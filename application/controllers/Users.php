@@ -174,8 +174,7 @@ public function login(){
         $this->load->view('users/register');
     }
 
-public function insert_registration()
-{
+public function insert_registration(){
     $data = array(
         'fname'      => trim($this->input->post('fname')),
         'mname'      => trim($this->input->post('mname')),
@@ -205,15 +204,14 @@ public function insert_registration()
     }
 }
 
-   public function user_logout()
-    {
+   public function user_logout(){
+
         $this->session->sess_destroy();
         $this->session->set_flashdata('success', 'You have successfully logged out.');
         redirect('users/index');
     }
 
-    public function save_product()
-    {
+    public function save_product(){
         $register_id  = $this->session->userdata('user_id');
         $fullname = $this->session->userdata('fullname');
 
@@ -344,6 +342,25 @@ public function insert_registration()
                 'message' => 'Failed to save order'
             ]);
         }
+    }
+
+    public function cart_count(){
+        $user_id = $this->session->userdata('user_id');
+
+        if (empty($user_id)) {
+            echo 0;
+            return;
+        }
+
+        $this->db->select_sum('qty');
+        $this->db->where('user_id', $user_id);
+        $this->db->where('status', 'Pending');
+
+        $query = $this->db->get('orders');
+
+        $count = $query->row()->qty;
+
+        echo $count ? $count : 0;
     }
 
 
