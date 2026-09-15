@@ -214,6 +214,8 @@ public function insert_registration()
 
     public function save_product()
     {
+        $emp_log = $this->session->userdata('register_id');
+        var_dump($emp_log); // Debugging line to check the value of $emp_log
         $path = './uploads/products/';
 
         if (!is_dir($path)) {
@@ -243,7 +245,7 @@ public function insert_registration()
             'product_name' => $this->input->post('product_name'),
             'description'  => $this->input->post('description'),
             'price'        => $this->input->post('price'),
-            'type'      => $this->input->post('type'),
+            'type'         => $this->input->post('type'),
             'image'        => $file['file_name']
         ]);
 
