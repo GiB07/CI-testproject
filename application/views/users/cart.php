@@ -75,11 +75,11 @@
                                     foreach ($orders as $value):
 
                                         if($value->status == 'Pending'):
-                                            $tag = '<center><button type="button" class="ios-status pending" style="padding: 1px 3px; font-size: 12px;">Pending</button></center>';
+                                            $tag = '<center><button type="button" class="btn ios-status pending" style="padding: 1px 3px; font-size: 12px;">Pending</button></center>';
                                         elseif($value->status == 'Checked out'):
-                                            $tag = '<center><button type="button" class="ios-status checked" style="padding: 1px 3px; font-size: 12px;">Checked out</button></center>';
+                                            $tag = '<center><button type="button" class="btn ios-status checked" style="padding: 1px 3px; font-size: 12px;">Checked out</button></center>';
                                         elseif($value->status == 'Released'):
-                                            $tag = '<center><button type="button" class="ios-status released" style="padding: 1px 3px; font-size: 12px;">Released</button></center>';
+                                            $tag = '<center><button type="button" class="btn ios-status released" style="padding: 1px 3px; font-size: 12px;">Released</button></center>';
                                         endif;
 
                                         echo '<tr>';
@@ -92,9 +92,9 @@
                                         echo '<td class="created_at" style="text-align:center;">'.date('M d, Y h:i A', strtotime($value->created_at)).'</td>';
                                         echo '<td class="status" style="text-align:center;">'.$tag.'</td>';
                                         echo '<td style="padding: 3px 3px;text-align:center;">';
-                                        echo '<button type="button" class="ios-action edit" style="padding: 1px 10px; font-size: 14px;" onclick=edit("")><i class="bi bi-pencil"></i></button>';
+                                        echo '<button type="button" class="btn ios-action edit" style="padding: 1px 10px; font-size: 14px;" onclick=edit("")><i class="bi bi-pencil"></i></button>';
                                         echo '&nbsp;';
-                                        echo '<button type="button" class="ios-action delete" style="padding: 1px 10px; font-size: 14px;" onclick=remove("")><i class="bi bi-trash"></i></button>';
+                                        echo '<button type="button" class="btn ios-action delete" style="padding: 1px 10px; font-size: 14px;" onclick=remove("")><i class="bi bi-trash"></i></button>';
                                         echo '</td>';
                                         echo '</tr>';
 
