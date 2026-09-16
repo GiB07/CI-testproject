@@ -63,7 +63,7 @@
                                         <th class="text-center" style="width: 15%;">Added By</th>
                                         <th class="text-center" style="width: 15%;">Date</th>
                                         <th class="text-center" style="width: 10%;">Status</th>
-                                        <th class="text-center" style="width: 10%;">Action</th>
+                                        <th class="text-center" style="width: 5%;">Action</th>
                                     </tr>
                                 </thead>
 
