@@ -51,7 +51,7 @@
 
                         <div style="background:rgba(255,255,255,.95);border-radius:15px;padding:20px;">
 
-                            <table id="cartTable" class="table table-striped table-bordered">
+                            <table id="cartTable" class="table ios27-table">
 
                                 <thead>
                                     <tr>

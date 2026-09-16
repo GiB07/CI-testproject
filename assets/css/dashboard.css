@@ -527,3 +527,212 @@ input:checked + .slider:before {
     color: #fff;
 }
 /* end */
+
+/* iOS 27-inspired DataTable */
+.ios27-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 8px !important;
+    margin: 0 !important;
+    color: #1c1c1e;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                 "Segoe UI", sans-serif;
+    font-size: 13px;
+}
+
+/* Header */
+.ios27-table thead th {
+    background: #f2f2f7 !important;
+    color: #6e6e73 !important;
+    border: none !important;
+    padding: 13px 10px !important;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .35px;
+    white-space: nowrap;
+}
+
+.ios27-table thead th:first-child {
+    border-radius: 13px 0 0 13px;
+}
+
+.ios27-table thead th:last-child {
+    border-radius: 0 13px 13px 0;
+}
+
+/* Body rows */
+.ios27-table tbody tr {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.035);
+    transition: background .2s ease, transform .2s ease;
+}
+
+.ios27-table tbody td {
+    border: none !important;
+    border-top: 1px solid #f0f0f5 !important;
+    border-bottom: 1px solid #f0f0f5 !important;
+    padding: 14px 10px !important;
+    vertical-align: middle !important;
+    white-space: nowrap;
+}
+
+.ios27-table tbody td:first-child {
+    border-left: 1px solid #f0f0f5 !important;
+    border-radius: 14px 0 0 14px;
+}
+
+.ios27-table tbody td:last-child {
+    border-right: 1px solid #f0f0f5 !important;
+    border-radius: 0 14px 14px 0;
+}
+
+/* Hover effect */
+.ios27-table tbody tr:hover td {
+    background: #f7f7fc !important;
+}
+
+/* Number */
+.ios-number {
+    color: #8e8e93;
+    font-weight: 500;
+}
+
+/* Product */
+.ios27-table .product {
+    color: #1c1c1e;
+    font-weight: 600;
+}
+
+/* Price and totals */
+.ios27-table .price {
+    color: #636366;
+}
+
+.ios27-table .total_amount {
+    color: #049e04;
+    font-weight: 700;
+}
+
+/* Quantity */
+.ios27-table .qty {
+    font-weight: 600;
+    color: #3a3a3c;
+}
+
+/* Status pills */
+.ios-status {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    background: #e5e5ea;
+    color: #636366;
+}
+
+.ios-status.pending {
+    background: #fff0c2;
+    color: #946200;
+}
+
+.ios-status.checked {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.ios-status.released {
+    background: #dff7e5;
+    color: #18753a;
+}
+
+/* Action buttons */
+.ios-actions {
+    white-space: nowrap !important;
+}
+
+.ios-action {
+    width: 31px;
+    height: 31px;
+    border: none;
+    border-radius: 50%;
+    margin: 0 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.ios-action.edit {
+    background: #fff0c2;
+    color: #946200;
+}
+
+.ios-action.delete {
+    background: #ffe1e5;
+    color: #d70015;
+}
+
+.ios-action:hover {
+    opacity: .8;
+    transform: scale(1.08);
+}
+
+/* DataTables search and length controls */
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #d1d1d6 !important;
+    border-radius: 999px !important;
+    padding: 8px 14px !important;
+    outline: none;
+    background: #f2f2f7;
+    font-size: 13px;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid #d1d1d6;
+    border-radius: 999px;
+    padding: 6px 12px;
+    background: #f2f2f7;
+    outline: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border: none !important;
+    border-radius: 999px !important;
+    padding: 5px 12px !important;
+    color: #049e04 !important;
+    background: transparent !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: #049e04 !important;
+    color: #fff !important;
+}
+
+.dataTables_wrapper .dataTables_info {
+    color: #8e8e93;
+    font-size: 12px;
+}
+
+/* Responsive mobile layout */
+@media (max-width: 768px) {
+    .ios27-table {
+        font-size: 12px;
+    }
+
+    .ios27-table thead th,
+    .ios27-table tbody td {
+        padding: 10px 8px !important;
+    }
+
+    .ios27-table thead th {
+        font-size: 10px;
+    }
+
+    .ios-action {
+        width: 28px;
+        height: 28px;
+    }
+}
