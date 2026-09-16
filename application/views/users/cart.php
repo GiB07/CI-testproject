@@ -75,11 +75,11 @@
                                     foreach ($orders as $value):
 
                                         if($value->status == 'Pending'):
-                                            $tag = '<center><button type="button" class="btn btn-warning" style="padding: 1px 3px; font-size: 12px;">Pending</button></center>';
+                                            $tag = '<center><button type="button" class="btn btn-md glass-btn btn-warning" style="padding: 1px 3px; font-size: 12px;">Pending</button></center>';
                                         elseif($value->status == 'Checked out'):
-                                            $tag = '<center><button type="button" class="btn btn-info" style="padding: 1px 3px; font-size: 12px;">Checked out</button></center>';
+                                            $tag = '<center><button type="button" class="btn btn-md glass-btn btn-info" style="padding: 1px 3px; font-size: 12px;">Checked out</button></center>';
                                         elseif($value->status == 'Released'):
-                                            $tag = '<center><button type="button" class="btn btn-primary" style="padding: 1px 3px; font-size: 12px;">Released</button></center>';
+                                            $tag = '<center><button type="button" class="btn btn-md glass-btn btn-primary" style="padding: 1px 3px; font-size: 12px;">Released</button></center>';
                                         endif;
 
                                         echo '<tr>';
