@@ -58,12 +58,12 @@
                                         <th class="text-center" style="width: 5%;">#</th>
                                         <th class="text-center" style="width: 20%;">Product</th>
                                         <th class="text-center" style="width: 10%;">Price</th>
-                                        <th class="text-center" style="width: 10%;">Quantity</th>
+                                        <th class="text-center" style="width: 5%;">Quantity</th>
                                         <th class="text-center" style="width: 10%;">Total Amount</th>
                                         <th class="text-center" style="width: 15%;">Added By</th>
                                         <th class="text-center" style="width: 15%;">Date</th>
                                         <th class="text-center" style="width: 10%;">Status</th>
-                                        <th class="text-center" style="width: 5%;">Action</th>
+                                        <th class="text-center" style="width: 10%;">Action</th>
                                     </tr>
                                 </thead>
 
