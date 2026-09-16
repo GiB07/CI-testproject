@@ -49,7 +49,7 @@
 
                         </div>
 
-                        <div style="background:rgba(255,255,255,.95);border-radius:15px;padding:20px;">
+                        <!-- <div style="background:rgba(255,255,255,.95);border-radius:15px;padding:20px;"> -->
 
                             <table id="cartTable" class="table ios27-table">
 
@@ -104,7 +104,7 @@
                                     ?>
                                 </tbody>
                             </table>
-                        </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
