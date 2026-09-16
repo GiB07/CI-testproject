@@ -74,6 +74,14 @@
 
                                     foreach ($orders as $value):
 
+                                        if($value['status'] == 'Pending'):
+                                            $tag = '<center><button type="button" class="btn btn-warning" style="padding: 1px 3px; font-size: 12px;">Pending</button></center>';
+                                        elseif($value['status'] == 'Checked out'):
+                                            $tag = '<center><button type="button" class="btn btn-info" style="padding: 1px 3px; font-size: 12px;">Checked out</button></center>';
+                                        elseif($value['status'] == 'Released'):
+                                            $tag = '<center><button type="button" class="btn btn-primary" style="padding: 1px 3px; font-size: 12px;">Released</button></center>';
+                                        endif;
+
                                         echo '<tr>';
                                         echo '<td class="text-center">'.$count.'</td>';
                                         echo '<td class="product" style="text-align:center;">'.htmlspecialchars($value->name).'</td>';
@@ -82,7 +90,7 @@
                                         echo '<td class="total_amount" style="text-align:center;">₱'.number_format($value->total_amount, 2).'</td>';
                                         echo '<td class="added_by" style="text-align:center;">'.htmlspecialchars($value->added_by).'</td>';
                                         echo '<td class="created_at" style="text-align:center;">'.date('M d, Y h:i A', strtotime($value->created_at)).'</td>';
-                                        echo '<td class="status" style="text-align:center;">'.$value->status.'</td>';
+                                        echo '<td class="status" style="text-align:center;">'.$tag.'</td>';
                                         echo '<td style="padding: 3px 3px;text-align:center;">';
                                         echo '<button type="button" class="btn btn-md glass-btn btn-warning" style="padding: 1px 10px; font-size: 14px;" onclick=edit("")><i class="bi bi-pencil" style="color: black;"></i></button>';
                                         echo '&nbsp;';
