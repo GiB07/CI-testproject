@@ -84,7 +84,9 @@
                                         echo '<td class="created_at" style="text-align:center;">'.date('M d, Y h:i A', strtotime($value->created_at)).'</td>';
                                         echo '<td class="status" style="text-align:center;">'.$value->status.'</td>';
                                         echo '<td style="padding: 3px 3px;">';
-                                        echo '<button type="button" class="btn btn-md glass-btn btn-danger" style="padding: 1px 10px; font-size: 14px;" onclick=edit("")><i class="glyphicon glyphicon-pencil"></i> EDIT</button>';
+                                        echo '<button type="button" class="btn btn-md glass-btn btn-warning" style="padding: 1px 10px; font-size: 14px;" onclick=edit("")><i class="glyphicon glyphicon-pencil"></i> Edit</button>';
+                                        echo '&nbsp;';
+                                        echo '<button type="button" class="btn btn-md glass-btn btn-danger" style="padding: 1px 10px; font-size: 14px;" onclick=remove("")><i class="glyphicon glyphicon-trash"></i> Remove</button>';
                                         echo '</td>';
                                         echo '</tr>';
 
