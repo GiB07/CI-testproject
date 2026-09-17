@@ -59,7 +59,7 @@
                     <h4 class="text-white mb-0">Brewed with Love.</h4>
 
                      <!-- Reservation Card -->
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="col-8 col-sm-8 col-md-8 col-lg-8">
 
                         <div class="reservation-card">
                             <div class="card-body py-0" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;width: fit-content;  height: 50px;">
@@ -105,35 +105,6 @@
                         </button>
 
                     </div> -->
-
-                    <!-- Reservation Card -->
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-
-                        <div class="reservation-card">
-                            <div class="card-body py-0" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;width: fit-content;  height: 50px;">
-
-                                <div class="small" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
-
-                                    <h8 class="text-white mb-0">
-                                        Toggle to:
-                                    </h8>
-
-                                    <div style="display:flex;align-items:center;gap:5px;">
-                                        <span style="width:8px;height:8px;background:#28a745;border-radius:50%;display:inline-block;"></span>
-                                        <span class="text-white">Sell</span>
-                                    </div>
-
-                                    <div style="display:flex;align-items:center;gap:5px;">
-                                        <span style="width:8px;height:8px;background:#dc3545;border-radius:50%;display:inline-block;"></span>
-                                        <span class="text-white">Dont sell</span>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
 
                     <!-- Future Card Example -->
 
