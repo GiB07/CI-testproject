@@ -124,29 +124,73 @@
         });
 
         function remove(id) {
-            // alert('Remove functionality is not implemented yet.');
 
-            $.ajax({
-                url: "<?php echo base_url('remove_order'); ?>",
-                type: 'POST',
-                data: {id: id},
-                success: function(data) {
-                console.log('Success:', data);
-                    if(response.status == 'success'){
+            swal({
+                title: "Are you sure?",
+                text: "Once removed, you will not be able to recover this order!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                confirmButtonText: "Yes, remove it",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false
+            },
+            function(isConfirm) {
 
-                        swal("Success!", response.message, "success");
+                if (isConfirm) {
 
-                        // Reload the page to reflect the changes
-                        location.reload();
-                    } else {
-                        alert('Failed to remove the order. Please try again.');
+                    $.ajax({
+                        url: "<?php echo base_url('remove_order'); ?>",
+                        type: "POST",
+                        data: {
+                            id: id
+                        },
+                        success: function(data) {
 
-                    }
-                },
-                error: function(xhr, status, error) {
-                console.error('Error:', error);
+                            console.log("Success:", data);
+
+                            if ($.trim(data) == "success") {
+
+                                swal({
+                                    title: "Removed!",
+                                    text: "The order has been removed successfully.",
+                                    type: "success",
+                                    timer: 1200,
+                                    showConfirmButton: false
+                                });
+
+                                setTimeout(function() {
+                                    location.reload();
+                                }, 1200);
+
+                            } else {
+
+                                swal(
+                                    "Error",
+                                    "Failed to remove the order. Please try again.",
+                                    "error"
+                                );
+
+                            }
+                        },
+
+                        error: function(xhr, status, error) {
+
+                            console.error("Error:", error);
+
+                            swal(
+                                "Error",
+                                "Something went wrong while removing the order.",
+                                "error"
+                            );
+
+                        }
+                    });
+
                 }
+
             });
+
         }
     </script>
 
