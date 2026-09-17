@@ -127,7 +127,7 @@
             // alert('Remove functionality is not implemented yet.');
 
             $.ajax({
-                url: <?php echo base_url('users/remove_order'); ?>,
+                url: "<?php echo base_url('users/remove_order'); ?>",
                 type: 'POST',
                 data: {id: id},
                 success: function(data) {
