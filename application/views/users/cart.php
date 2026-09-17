@@ -280,49 +280,39 @@
         }
 
         function edit(id, current_qty) {
-
-            swal({
+            Swal.fire({
                 title: "Edit Quantity",
-                text: '<input type="number" id="edit_qty" class="form-control" min="1" value="' + current_qty + '" style="width:100%; margin-top:10px;">',
-                html: true,
+                input: "number",
+                inputValue: current_qty,
+                inputAttributes: {
+                    min: 1,
+                    class: "form-control"
+                },
+                showCancelButton: true,
+                confirmButtonText: "Update",
+                cancelButtonText: "Cancel",
                 icon: "warning",
-                buttons: ["Cancel", "Update"],
-                dangerMode: true
-            }).then(function(isConfirm) {
-
-                if (isConfirm) {
-
-                    var qty = $('#edit_qty').val();
-
-                    if (qty == '' || qty < 1) {
-
-                        swal(
-                            "Error",
-                            "Please enter a valid quantity.",
-                            "error"
-                        );
-
-                        return;
+                inputValidator: (value) => {
+                    if (!value || value < 1) {
+                        return "Please enter a valid quantity.";
                     }
+                }
+            }).then(function(result) {
+                if (result.isConfirmed) {
+                    var qty = result.value;
 
                     $.ajax({
-
                         url: "<?php echo base_url('edit_quantity'); ?>",
-
                         type: "POST",
-
                         data: {
                             id: id,
                             qty: qty
                         },
-
                         success: function(data) {
-
                             console.log("Success:", data);
 
                             if ($.trim(data) == "success") {
-
-                                swal(
+                                Swal.fire(
                                     "Success",
                                     "The quantity has been updated successfully.",
                                     "success"
@@ -333,35 +323,25 @@
                                 }, 1200);
 
                             } else {
-
-                                swal(
+                                Swal.fire(
                                     "Error",
                                     "Failed to update the quantity. Please try again.",
                                     "error"
                                 );
-
                             }
-
                         },
-
                         error: function(xhr, status, error) {
-
                             console.error("Error:", error);
 
-                            swal(
+                            Swal.fire(
                                 "Error",
                                 "Something went wrong while updating the quantity.",
                                 "error"
                             );
-
                         }
-
                     });
-
                 }
-
             });
-
         }
     </script>
 
