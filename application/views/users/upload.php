@@ -80,39 +80,36 @@
                     <!-- Reservation Card -->
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
 
-                        <div class="reservation-card" style="width:100%;">
-
-                            <div class="card-body py-2" style="display:flex;align-items:center;justify-content:center;gap:15px;">
+                        <div class="reservation-card">
+                            <div class="card-body py-2" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;">
 
                                 <div class="card-icon">
                                     <i class="bi bi-info-circle fs-5"></i>
                                 </div>
 
                                 <h6 class="card-title text-white fw-bold mb-0">
-                                    Actions:
+                                    Legend
                                 </h6>
 
-                                <div class="small" style="display:flex;align-items:center;gap:12px;">
+                                <h8 class="text-white mb-0">
+                                    Toggle to:
+                                </h8>
 
-                                    <div>
-                                        <span style="width:8px;height:8px;background:#ffc107;border-radius:50%;display:inline-block;"></span>
-                                        <span class="text-white">✏️ Edit</span>
+                                <div class="small" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+
+                                    <div style="display:flex;align-items:center;gap:5px;">
+                                        <span style="width:8px;height:8px;background:#28a745;border-radius:50%;display:inline-block;"></span>
+                                        <span class="text-white">Sell</span>
                                     </div>
 
-                                    <div>
+                                    <div style="display:flex;align-items:center;gap:5px;">
                                         <span style="width:8px;height:8px;background:#dc3545;border-radius:50%;display:inline-block;"></span>
-                                        <span class="text-white">🗑 Remove</span>
-                                    </div>
-
-                                    <div>
-                                        <span style="width:8px;height:8px;background:#7db5f5;border-radius:50%;display:inline-block;"></span>
-                                        <span class="text-white">↩ Undo</span>
+                                        <span class="text-white">Dont sell</span>
                                     </div>
 
                                 </div>
 
                             </div>
-
                         </div>
 
                     </div>
