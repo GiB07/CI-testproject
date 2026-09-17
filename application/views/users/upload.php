@@ -81,7 +81,7 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
 
                         <div class="reservation-card">
-                            <div class="card-body py-2" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;">
+                            <div class="card-body py-2" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;width: fit-content;">
 
                                 <div class="card-icon">
                                     <i class="bi bi-info-circle fs-5"></i>
