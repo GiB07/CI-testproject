@@ -415,4 +415,40 @@ public function insert_registration(){
         echo 'success';
     }
 
+    public function edit_quantity(){
+
+        $id  = $this->input->post('id');
+        $qty = (int) $this->input->post('qty');
+
+        if(empty($id) || $qty <= 0)
+        {
+            echo 'error';
+            return;
+        }
+
+        // Get the existing order
+        $order = $this->db
+            ->where('order_id', $id)
+            ->get('orders')
+            ->row();
+
+        if(!$order)
+        {
+            echo 'error';
+            return;
+        }
+
+        // Recalculate total amount
+        $total_amount = $order->price * $qty;
+
+        // Update quantity and total amount
+        $this->db->where('order_id', $id);
+        $this->db->update('orders', array(
+            'qty'          => $qty,
+            'total_amount' => $total_amount
+        ));
+
+        echo 'success';
+    }
+
 }

@@ -116,7 +116,7 @@
                                             echo '<td class="created_at" style="text-align:center;font-size: 14px;">'.date('M d, Y h:i A', strtotime($value->created_at)).'</td>';
                                             echo '<td class="status" style="text-align:center;">'.$tag.'</td>';
                                             echo '<td style="padding: 3px 3px;text-align:center;">';
-                                            echo '<button type="button" class="btn ios-action edit" style="padding: 1px 10px; font-size: 14px;" onclick=edit("")><i class="bi bi-pencil" style="color: black;"></i></button>';
+                                            echo '<button type="button" class="btn ios-action edit" style="padding: 1px 10px; font-size: 14px;" onclick="edit('.$value->order_id.', '.$value->qty.')"><i class="bi bi-pencil" style="color: black;"></i></button>';
                                             echo '&nbsp;';
                                             if ($value->status == 'Removed') {
                                                 echo '<button type="button" class="btn ios-action undo" style="padding: 1px 10px; font-size: 14px;" onclick="undo('.$value->order_id.')"><i class="bi bi-arrow-counterclockwise" style="color: black;"></i></button>';
@@ -271,6 +271,91 @@
                                 "error"
                             );
                         }
+                    });
+
+                }
+
+            });
+
+        }
+
+        function edit(id, current_qty) {
+
+            swal({
+                title: "Edit Quantity",
+                text: '<input type="number" id="edit_qty" class="form-control" min="1" value="' + current_qty + '" style="width:100%; margin-top:10px;">',
+                html: true,
+                icon: "warning",
+                buttons: ["Cancel", "Update"],
+                dangerMode: true
+            }).then(function(isConfirm) {
+
+                if (isConfirm) {
+
+                    var qty = $('#edit_qty').val();
+
+                    if (qty == '' || qty < 1) {
+
+                        swal(
+                            "Error",
+                            "Please enter a valid quantity.",
+                            "error"
+                        );
+
+                        return;
+                    }
+
+                    $.ajax({
+
+                        url: "<?php echo base_url('edit_quantity'); ?>",
+
+                        type: "POST",
+
+                        data: {
+                            id: id,
+                            qty: qty
+                        },
+
+                        success: function(data) {
+
+                            console.log("Success:", data);
+
+                            if ($.trim(data) == "success") {
+
+                                swal(
+                                    "Success",
+                                    "The quantity has been updated successfully.",
+                                    "success"
+                                );
+
+                                setTimeout(function() {
+                                    location.reload();
+                                }, 1200);
+
+                            } else {
+
+                                swal(
+                                    "Error",
+                                    "Failed to update the quantity. Please try again.",
+                                    "error"
+                                );
+
+                            }
+
+                        },
+
+                        error: function(xhr, status, error) {
+
+                            console.error("Error:", error);
+
+                            swal(
+                                "Error",
+                                "Something went wrong while updating the quantity.",
+                                "error"
+                            );
+
+                        }
+
                     });
 
                 }
