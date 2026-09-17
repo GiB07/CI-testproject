@@ -81,15 +81,7 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
 
                         <div class="reservation-card">
-                            <div class="card-body py-2" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;width: fit-content;">
-
-                                <div class="card-icon">
-                                    <i class="bi bi-info-circle fs-5"></i>
-                                </div>
-
-                                <h6 class="card-title text-white fw-bold mb-0">
-                                    Legend
-                                </h6>
+                            <div class="card-body py-0" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;width: fit-content;  height: 50px;">
 
                                 <h8 class="text-white mb-0">
                                     Toggle to:
