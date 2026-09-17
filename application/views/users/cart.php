@@ -76,8 +76,8 @@
 
                                         if($value->status == 'Pending'):
                                             $tag = '<center><button type="button" class="btn ios-status pending" style="padding: 1px 3px; font-size: 12px;">Pending</button></center>';
-                                        elseif($value->status == 'Checked out'):
-                                            $tag = '<center><button type="button" class="btn ios-status checked" style="padding: 1px 3px; font-size: 12px;">Checked out</button></center>';
+                                        elseif($value->status == 'Removed'):
+                                            $tag = '<center><button type="button" class="btn ios-status removed" style="padding: 1px 3px; font-size: 12px;">Removed</button></center>';
                                         elseif($value->status == 'Released'):
                                             $tag = '<center><button type="button" class="btn ios-status released" style="padding: 1px 3px; font-size: 12px;">Released</button></center>';
                                         endif;
