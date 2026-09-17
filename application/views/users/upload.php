@@ -84,7 +84,7 @@
                             <div class="card-body py-2" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;width: fit-content;  height: 50px;">
 
                                 <h8 class="text-white mb-0">
-                                   <i class="bi bi-info-circle fs-5">Toggle to:</i>
+                                   <i class="bi bi-info-circle fs-5"></i>Toggle to:
                                 </h8>
 
                                 <div class="small" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
