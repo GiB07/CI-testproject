@@ -135,9 +135,9 @@
                 cancelButtonText: "Cancel",
                 closeOnConfirm: false
             },
-            function(isConfirm) {
+           
 
-                if (isConfirm) {
+                
 
                     $.ajax({
                         url: "<?php echo base_url('remove_order'); ?>",
@@ -187,9 +187,9 @@
                         }
                     });
 
-                }
+                
 
-            });
+            );
 
         }
     </script>
