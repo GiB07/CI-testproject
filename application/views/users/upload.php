@@ -80,7 +80,7 @@
                     <!-- Reservation Card -->
                     <div class="col-6 col-sm-4 col-md-3 col-lg-2">
 
-                        <div class="reservation-card">
+                        <div class="reservation-card" style="width:100%;">
                             <div class="card-body text-center py-2">
 
                                 <div class="card-icon mb-2">
