@@ -203,9 +203,9 @@
         confirmButtonText: "Yes, undo it",
         cancelButtonText: "Cancel",
         confirmButtonColor: "#d33"
-    }, function(isConfirm) {
+    }).then(function(result) {
 
-        if (isConfirm) {
+        if (result.isConfirmed) {
 
             $.ajax({
                 url: "<?php echo base_url('undo_order'); ?>",
@@ -237,7 +237,6 @@
                         );
 
                     }
-
                 },
 
                 error: function(xhr, status, error) {
@@ -249,14 +248,12 @@
                         "Something went wrong while undoing the order.",
                         "error"
                     );
-
                 }
             });
 
         }
 
     });
-
 }
     </script>
 
