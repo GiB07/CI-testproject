@@ -193,19 +193,20 @@
 
         }
 
-        function undo(id) {
+function undo(id) {
 
     swal({
         title: "Are you sure?",
         text: "You want to recover this order?",
-        type: "warning",
-        showCancelButton: true,
-        confirmButtonText: "Yes, undo it",
-        cancelButtonText: "Cancel",
-        confirmButtonColor: "#d33"
-    }).then(function(result) {
+        icon: "warning",
+        buttons: {
+            cancel: "Cancel",
+            confirm: "Yes, undo it"
+        },
+        dangerMode: true
+    }).then(function(isConfirm) {
 
-        if (result.isConfirmed) {
+        if (isConfirm) {
 
             $.ajax({
                 url: "<?php echo base_url('undo_order'); ?>",
@@ -254,6 +255,7 @@
         }
 
     });
+
 }
     </script>
 
