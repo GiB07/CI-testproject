@@ -67,36 +67,34 @@
                                     </tr>
                                 </thead>
 
-                               <tbody>
+                                <tbody>
 
                                     <?php
                                     $count = 1;
 
                                     foreach ($orders as $value):
 
-                                        if ($value['status'] == 'Pending'):
+                                        if($value->status == 'Pending'):
                                             $tag = '<center><button type="button" class="btn ios-status pending" style="padding: 1px 3px; font-size: 12px;">Pending</button></center>';
-                                        elseif ($value['status'] == 'Removed'):
+                                        elseif($value->status == 'Removed'):
                                             $tag = '<center><button type="button" class="btn ios-status removed" style="padding: 1px 3px; font-size: 12px;">Removed</button></center>';
-                                        elseif ($value['status'] == 'Released'):
+                                        elseif($value->status == 'Released'):
                                             $tag = '<center><button type="button" class="btn ios-status released" style="padding: 1px 3px; font-size: 12px;">Released</button></center>';
-                                        else:
-                                            $tag = '';
                                         endif;
 
                                         echo '<tr>';
                                         echo '<td class="text-center">'.$count.'</td>';
-                                        echo '<td class="product" style="text-align:center;font-size: 14px;">'.htmlspecialchars($value['name']).'</td>';
-                                        echo '<td class="price" style="text-align:center;font-size: 14px;">₱'.number_format($value['price'], 2).'</td>';
-                                        echo '<td class="qty" style="text-align:center;font-size: 14px;">'.$value['qty'].'</td>';
-                                        echo '<td class="total_amount" style="text-align:center;font-size: 14px;">₱'.number_format($value['total_amount'], 2).'</td>';
-                                        echo '<td class="added_by" style="text-align:center;font-size: 14px;">'.htmlspecialchars($value['added_by']).'</td>';
-                                        echo '<td class="created_at" style="text-align:center;font-size: 14px;">'.date('M d, Y h:i A', strtotime($value['created_at'])).'</td>';
+                                        echo '<td class="product" style="text-align:center;font-size: 14px;">'.htmlspecialchars($value->name).'</td>';
+                                        echo '<td class="price" style="text-align:center;font-size: 14px;">₱'.number_format($value->price, 2).'</td>';
+                                        echo '<td class="qty" style="text-align:center;font-size: 14px;">'.$value->qty.'</td>';
+                                        echo '<td class="total_amount" style="text-align:center;font-size: 14px;">₱'.number_format($value->total_amount, 2).'</td>';
+                                        echo '<td class="added_by" style="text-align:center;font-size: 14px;">'.htmlspecialchars($value->added_by).'</td>';
+                                        echo '<td class="created_at" style="text-align:center;font-size: 14px;">'.date('M d, Y h:i A', strtotime($value->created_at)).'</td>';
                                         echo '<td class="status" style="text-align:center;">'.$tag.'</td>';
                                         echo '<td style="padding: 3px 3px;text-align:center;">';
-                                        echo '<button type="button" class="btn ios-action edit" style="padding: 1px 10px; font-size: 14px;" onclick="edit(\''.$value['id'].'\')"><i class="bi bi-pencil" style="color: black;"></i></button>';
+                                        echo '<button type="button" class="btn ios-action edit" style="padding: 1px 10px; font-size: 14px;" onclick=edit("")><i class="bi bi-pencil" style="color: black;"></i></button>';
                                         echo '&nbsp;';
-                                        echo '<button type="button" class="btn ios-action remove" style="padding: 1px 10px; font-size: 14px;" onclick="remove(\''.$value['id'].'\')"><i class="bi bi-trash" style="color: black;"></i></button>';
+                                        echo '<button type="button" class="btn ios-action remove" style="padding: 1px 10px; font-size: 14px;" onclick=remove("'.$value->id.'")><i class="bi bi-trash" style="color: black;"></i></button>';
                                         echo '</td>';
                                         echo '</tr>';
 
@@ -104,7 +102,6 @@
 
                                     endforeach;
                                     ?>
-
                                 </tbody>
                             </table>
                         </div>
