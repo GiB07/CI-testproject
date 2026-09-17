@@ -280,88 +280,90 @@
         }
 
         function edit(id, current_qty) {
-    var input = document.createElement("input");
-    input.type = "number";
-    input.id = "edit_qty";
-    input.className = "form-control";
-    input.min = "1";
-    input.value = current_qty;
-    input.style.width = "100%";
-    input.style.marginTop = "10px";
 
-    swal({
-        title: "Edit Quantity",
-        content: input,
-        icon: "warning",
-        buttons: ["Cancel", "Update"],
-        dangerMode: true
-    }).then(function(isConfirm) {
-        if (isConfirm) {
-            var qty = input.value;
+            var input = document.createElement("input");
+            input.type = "number";
+            input.id = "edit_qty";
+            input.className = "form-control";
+            input.min = "1";
+            input.value = current_qty;
+            input.style.width = "120px";              
+            input.style.height = "38px";            
+            input.style.margin = "15px auto 0 auto"; 
+            input.style.backgroundColor = "#f2f2f2"; 
+            input.style.border = "1px solid #ccc";   
+            input.style.textAlign = "center";   
 
-            // 1. Check for invalid numbers
-            if (qty == '' || qty < 1) {
-                swal(
-                    "Error",
-                    "Please enter a valid quantity.",
-                    "error"
-                );
-                return;
-            }
+            swal({
+                title: "Edit Quantity",
+                content: input,
+                icon: "warning",
+                buttons: ["Cancel", "Update"],
+                dangerMode: true
+            }).then(function(isConfirm) {
+                if (isConfirm) {
+                    var qty = input.value;
 
-            // 2. Check if the quantity actually changed
-            if (qty == current_qty) {
-                swal(
-                    "Info",
-                    "No changes were made to the quantity.",
-                    "info"
-                );
-                return;
-            }
-
-            // 3. Send AJAX request only when quantity is different
-            $.ajax({
-                url: "<?php echo base_url('edit_quantity'); ?>",
-                type: "POST",
-                data: {
-                    id: id,
-                    qty: qty
-                },
-                success: function(data) {
-                    console.log("Success:", data);
-
-                    if ($.trim(data) == "success") {
-                        swal(
-                            "Success",
-                            "The quantity has been updated successfully.",
-                            "success"
-                        );
-
-                        setTimeout(function() {
-                            location.reload();
-                        }, 1200);
-
-                    } else {
+                    if (qty == '' || qty < 1) {
                         swal(
                             "Error",
-                            "Failed to update the quantity. Please try again.",
+                            "Please enter a valid quantity.",
                             "error"
                         );
+                        return;
                     }
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error:", error);
 
-                    swal(
-                        "Error",
-                        "Something went wrong while updating the quantity.",
-                        "error"
-                    );
+                    if (qty == current_qty) {
+                        swal(
+                            "Info",
+                            "No changes were made to the quantity.",
+                            "info"
+                        );
+                        return;
+                    }
+
+                    $.ajax({
+                        url: "<?php echo base_url('edit_quantity'); ?>",
+                        type: "POST",
+                        data: {
+                            id: id,
+                            qty: qty
+                        },
+                        success: function(data) {
+                            console.log("Success:", data);
+
+                            if ($.trim(data) == "success") {
+                                swal(
+                                    "Success",
+                                    "The quantity has been updated successfully.",
+                                    "success"
+                                );
+
+                                setTimeout(function() {
+                                    location.reload();
+                                }, 1200);
+
+                            } else {
+                                swal(
+                                    "Error",
+                                    "Failed to update the quantity. Please try again.",
+                                    "error"
+                                );
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Error:", error);
+
+                            swal(
+                                "Error",
+                                "Something went wrong while updating the quantity.",
+                                "error"
+                            );
+                        }
+                    });
                 }
             });
         }
-    });
-}
     </script>
 
 
