@@ -195,69 +195,69 @@
 
         function undo(id) {
 
-            swal({
-                title: "Are you sure?",
-                text: "You want to recover this order?",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonText: "Yes, undo it",
-                cancelButtonText: "Cancel",
-                confirmButtonColor: "#d33"
-            }).then(function(isConfirm) {
+    swal({
+        title: "Are you sure?",
+        text: "You want to recover this order?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, undo it",
+        cancelButtonText: "Cancel",
+        confirmButtonColor: "#d33"
+    }, function(isConfirm) {
 
-                if (isConfirm) {
+        if (isConfirm) {
 
-                    $.ajax({
-                        url: "<?php echo base_url('undo_order'); ?>",
-                        type: "POST",
-                        data: {id: id },
+            $.ajax({
+                url: "<?php echo base_url('undo_order'); ?>",
+                type: "POST",
+                data: { id: id },
 
-                        success: function(data) {
+                success: function(data) {
 
-                            console.log("Success:", data);
+                    console.log("Success:", data);
 
-                            if ($.trim(data) == "success") {
+                    if ($.trim(data) == "success") {
 
-                                swal(
-                                    "Success",
-                                    "The order has been undone successfully.",
-                                    "success"
-                                );
+                        swal(
+                            "Success",
+                            "The order has been undone successfully.",
+                            "success"
+                        );
 
-                                setTimeout(function() {
-                                    location.reload();
-                                }, 1200);
+                        setTimeout(function() {
+                            location.reload();
+                        }, 1200);
 
-                            } else {
+                    } else {
 
-                                swal(
-                                    "Error",
-                                    "Failed to undo the order. Please try again.",
-                                    "error"
-                                );
+                        swal(
+                            "Error",
+                            "Failed to undo the order. Please try again.",
+                            "error"
+                        );
 
-                            }
+                    }
 
-                        },
+                },
 
-                        error: function(xhr, status, error) {
+                error: function(xhr, status, error) {
 
-                            console.error("Error:", error);
+                    console.error("Error:", error);
 
-                            swal(
-                                "Error",
-                                "Something went wrong while removing the order.",
-                                "error"
-                            );
-
-                        }
-                    });
+                    swal(
+                        "Error",
+                        "Something went wrong while undoing the order.",
+                        "error"
+                    );
 
                 }
-
             });
 
         }
+
+    });
+
+}
     </script>
 
 
