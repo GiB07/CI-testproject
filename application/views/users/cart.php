@@ -142,7 +142,7 @@
                     $.ajax({
                         url: "<?php echo base_url('remove_order'); ?>",
                         type: "POST",
-                        data: {id: id},
+                        data: { id: id },
 
                         success: function(data) {
 
@@ -183,6 +183,7 @@
                             );
 
                         }
+
                     });
 
                 }
