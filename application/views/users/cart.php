@@ -94,7 +94,7 @@
                                         echo '<td style="padding: 3px 3px;text-align:center;">';
                                         echo '<button type="button" class="btn ios-action edit" style="padding: 1px 10px; font-size: 14px;" onclick=edit("")><i class="bi bi-pencil" style="color: black;"></i></button>';
                                         echo '&nbsp;';
-                                        echo '<button type="button" class="btn ios-action delete" style="padding: 1px 10px; font-size: 14px;" onclick=remove("")><i class="bi bi-trash" style="color: black;"></i></button>';
+                                        echo '<button type="button" class="btn ios-action remove" style="padding: 1px 10px; font-size: 14px;" onclick=remove("'.$value->id.'")><i class="bi bi-trash" style="color: black;"></i></button>';
                                         echo '</td>';
                                         echo '</tr>';
 
@@ -124,7 +124,19 @@
         });
 
         function remove(id) {
-            alert('Remove functionality is not implemented yet.');
+            // alert('Remove functionality is not implemented yet.');
+
+            $.ajax({
+                url: <?php echo base_url('users/remove_order'); ?>,
+                type: 'POST',
+                data: {id: id},
+                success: function(data) {
+                console.log('Success:', data);
+                },
+                error: function(xhr, status, error) {
+                console.error('Error:', error);
+                }
+            });
         }
     </script>
 
