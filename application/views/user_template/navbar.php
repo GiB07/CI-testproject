@@ -5,7 +5,7 @@
 <div class="preloader">
     <div class="loader">
         <div class="loader__figure"></div>
-        <p class="loader__label">The 8:30 Club!</p>
+        <p class="loader__label">The <strong style="color: red;">8:30</strong> Club!</p>
     </div>
 </div>
 
@@ -23,7 +23,7 @@
 
                 <div class="brand-text">
                     <h3 class="brand-title">
-                        The 8:30 Club!
+                        The <strong style="color: red;">8:30</strong> Club!
                     </h3>
 
                     <span class="brand-subtitle">

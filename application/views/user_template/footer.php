@@ -43,7 +43,7 @@
 
                     <div class="footer-hours-row">
                         <span>SUNDAY</span>
-                        <span>CLOSED</span>
+                        <span style="color: red;"><strong>CLOSED</strong></span>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
             <div class="footer-bottom">
 
                 <div class="footer-copy">
-                    © 2026 The 8:30 Club! All rights reserved.
+                    © 2026 The <strong style="color: red;">8:30</strong> Club! All rights reserved.
                 </div>
 
                 <div class="footer-social">
@@ -72,7 +72,7 @@
 
             <!-- Large Brand -->
             <div class="footer-brand">
-                THE 8:30 CLUB!
+                THE <strong style="color: red;">8:30</strong> CLUB!
             </div>
 
         </div>
