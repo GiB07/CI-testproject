@@ -280,7 +280,6 @@
         }
 
         function edit(id, current_qty) {
-    // 1. Create the HTML element programmatically
     var input = document.createElement("input");
     input.type = "number";
     input.id = "edit_qty";
@@ -292,15 +291,15 @@
 
     swal({
         title: "Edit Quantity",
-        content: input, // 2. Pass the created element here
+        content: input,
         icon: "warning",
         buttons: ["Cancel", "Update"],
         dangerMode: true
     }).then(function(isConfirm) {
         if (isConfirm) {
-            // Retrieve value directly from the created element
             var qty = input.value;
 
+            // 1. Check for invalid numbers
             if (qty == '' || qty < 1) {
                 swal(
                     "Error",
@@ -310,6 +309,17 @@
                 return;
             }
 
+            // 2. Check if the quantity actually changed
+            if (qty == current_qty) {
+                swal(
+                    "Info",
+                    "No changes were made to the quantity.",
+                    "info"
+                );
+                return;
+            }
+
+            // 3. Send AJAX request only when quantity is different
             $.ajax({
                 url: "<?php echo base_url('edit_quantity'); ?>",
                 type: "POST",
