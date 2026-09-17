@@ -124,27 +124,72 @@
         });
 
         function remove(id) {
-            // alert('Remove functionality is not implemented yet.');
 
-            $.ajax({
-                url: "<?php echo base_url('remove_order'); ?>",
-                type: 'POST',
-                data: {id: id},
-                success: function(data) {
-                console.log('Success:', data);
-                    if ($.trim(data) == 'success') {
+            swal({
+                title: "Remove Order?",
+                text: "Are you sure you want to remove this order?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                confirmButtonText: "Yes, remove it",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false
+            }, function(isConfirm) {
 
-                        // Reload the page to reflect the changes
-                        location.reload();
-                    } else {
-                        alert('Failed to remove the order. Please try again.');
+                if (!isConfirm) {
+                    return;
+                }
+
+                $.ajax({
+                    url: "<?php echo base_url('remove_order'); ?>",
+                    type: "POST",
+                    data: {
+                        id: id
+                    },
+                    success: function(data) {
+
+                        console.log("Success:", data);
+
+                        if ($.trim(data) == "success") {
+
+                            swal({
+                                title: "Removed!",
+                                text: "The order has been removed successfully.",
+                                type: "success",
+                                timer: 1200,
+                                showConfirmButton: false
+                            });
+
+                            setTimeout(function() {
+                                location.reload();
+                            }, 1200);
+
+                        } else {
+
+                            swal(
+                                "Error",
+                                "Failed to remove the order. Please try again.",
+                                "error"
+                            );
+
+                        }
+
+                    },
+                    error: function(xhr, status, error) {
+
+                        console.error("Error:", error);
+
+                        swal(
+                            "Error",
+                            "Something went wrong while removing the order.",
+                            "error"
+                        );
 
                     }
-                },
-                error: function(xhr, status, error) {
-                console.error('Error:', error);
-                }
+                });
+
             });
+
         }
     </script>
 
