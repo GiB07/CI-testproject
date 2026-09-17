@@ -280,68 +280,78 @@
         }
 
         function edit(id, current_qty) {
-            
-            swal({
-                title: "Edit Quantity",
-                html: '<input type="number" id="edit_qty" class="form-control" min="1" value="' + current_qty + '" style="width:100%; margin-top:10px;">',
-                icon: "warning",
-                buttons: ["Cancel", "Update"],
-                dangerMode: true
-            }).then(function(isConfirm) {
-                if (isConfirm) {
-                    var qty = $('#edit_qty').val();
+    // 1. Create the HTML element programmatically
+    var input = document.createElement("input");
+    input.type = "number";
+    input.id = "edit_qty";
+    input.className = "form-control";
+    input.min = "1";
+    input.value = current_qty;
+    input.style.width = "100%";
+    input.style.marginTop = "10px";
 
-                    if (qty == '' || qty < 1) {
+    swal({
+        title: "Edit Quantity",
+        content: input, // 2. Pass the created element here
+        icon: "warning",
+        buttons: ["Cancel", "Update"],
+        dangerMode: true
+    }).then(function(isConfirm) {
+        if (isConfirm) {
+            // Retrieve value directly from the created element
+            var qty = input.value;
+
+            if (qty == '' || qty < 1) {
+                swal(
+                    "Error",
+                    "Please enter a valid quantity.",
+                    "error"
+                );
+                return;
+            }
+
+            $.ajax({
+                url: "<?php echo base_url('edit_quantity'); ?>",
+                type: "POST",
+                data: {
+                    id: id,
+                    qty: qty
+                },
+                success: function(data) {
+                    console.log("Success:", data);
+
+                    if ($.trim(data) == "success") {
+                        swal(
+                            "Success",
+                            "The quantity has been updated successfully.",
+                            "success"
+                        );
+
+                        setTimeout(function() {
+                            location.reload();
+                        }, 1200);
+
+                    } else {
                         swal(
                             "Error",
-                            "Please enter a valid quantity.",
+                            "Failed to update the quantity. Please try again.",
                             "error"
                         );
-                        return;
                     }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error:", error);
 
-                    $.ajax({
-                        url: "<?php echo base_url('edit_quantity'); ?>",
-                        type: "POST",
-                        data: {
-                            id: id,
-                            qty: qty
-                        },
-                        success: function(data) {
-                            console.log("Success:", data);
-
-                            if ($.trim(data) == "success") {
-                                swal(
-                                    "Success",
-                                    "The quantity has been updated successfully.",
-                                    "success"
-                                );
-
-                                setTimeout(function() {
-                                    location.reload();
-                                }, 1200);
-
-                            } else {
-                                swal(
-                                    "Error",
-                                    "Failed to update the quantity. Please try again.",
-                                    "error"
-                                );
-                            }
-                        },
-                        error: function(xhr, status, error) {
-                            console.error("Error:", error);
-
-                            swal(
-                                "Error",
-                                "Something went wrong while updating the quantity.",
-                                "error"
-                            );
-                        }
-                    });
+                    swal(
+                        "Error",
+                        "Something went wrong while updating the quantity.",
+                        "error"
+                    );
                 }
             });
         }
+    });
+}
     </script>
 
 
