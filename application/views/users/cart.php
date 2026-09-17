@@ -127,11 +127,19 @@
             // alert('Remove functionality is not implemented yet.');
 
             $.ajax({
-                url: "<?php echo base_url('users/remove_order'); ?>",
+                url: "<?php echo base_url('remove_order'); ?>",
                 type: 'POST',
                 data: {id: id},
                 success: function(data) {
                 console.log('Success:', data);
+                    if ($.trim(data) == 'success') {
+
+                        // Reload the page to reflect the changes
+                        location.reload();
+                    } else {
+                        alert('Failed to remove the order. Please try again.');
+
+                    }
                 },
                 error: function(xhr, status, error) {
                 console.error('Error:', error);
