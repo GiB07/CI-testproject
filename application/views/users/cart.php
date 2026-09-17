@@ -134,7 +134,7 @@
                 confirmButtonText: "Yes, remove it",
                 cancelButtonText: "Cancel",
                 closeOnConfirm: false
-            },
+            });
            
 
                 
@@ -185,11 +185,9 @@
                             );
 
                         }
-                    });
+                    });  
 
-                
-
-            );
+            
 
         }
     </script>
