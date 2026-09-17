@@ -379,8 +379,8 @@ public function insert_registration(){
         $this->load->view('users/cart', $data);
     }
 
-    public function remove_order()
-{
+    public function remove_order(){
+
         $id = $this->input->post('id');
 
         if(empty($id))
@@ -397,5 +397,22 @@ public function insert_registration(){
         echo 'success';
     }
 
+    public function undo_order(){
+
+        $id = $this->input->post('id');
+
+        if(empty($id))
+        {
+            echo 'error';
+            return;
+        }
+
+        $this->db->where('order_id', $id);
+        $this->db->update('orders', array(
+            'status' => 'Pending'
+        ));
+
+        echo 'success';
+    }
 
 }
