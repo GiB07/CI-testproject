@@ -50,7 +50,7 @@
                         </div>
 
                         <div style="background:rgba(255,255,255,.95);border-radius:15px;padding:20px;">
-
+<div class="table-responsive">
                             <table id="cartTable" class="table ios27-table">
 
                                 <thead>
@@ -108,6 +108,7 @@
                                     ?>
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                     </div>
                 </div>
