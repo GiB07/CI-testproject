@@ -675,6 +675,11 @@ input:checked + .slider:before {
     color: #d70015;
 }
 
+.ios-action.undo {
+    background: #7db5f5;
+    color: #fffeff;
+}
+
 .ios-action:hover {
     opacity: .8;
     transform: scale(1.08);

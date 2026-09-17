@@ -94,7 +94,11 @@
                                         echo '<td style="padding: 3px 3px;text-align:center;">';
                                         echo '<button type="button" class="btn ios-action edit" style="padding: 1px 10px; font-size: 14px;" onclick=edit("")><i class="bi bi-pencil" style="color: black;"></i></button>';
                                         echo '&nbsp;';
-                                        echo '<button type="button" class="btn ios-action remove" style="padding: 1px 10px; font-size: 14px;" onclick=remove('.$value->order_id.')><i class="bi bi-trash" style="color: black;"></i></button>';
+                                        if ($value->status == 'Removed') {
+                                            echo '<button type="button" class="btn ios-action undo" style="padding: 1px 10px; font-size: 14px;" onclick="undo('.$value->order_id.')"><i class="bi bi-arrow-counterclockwise" style="color: black;"></i></button>';
+                                        } else {
+                                            echo '<button type="button" class="btn ios-action remove" style="padding: 1px 10px; font-size: 14px;" onclick="remove('.$value->order_id.')"><i class="bi bi-trash" style="color: black;"></i></button>';
+                                        }
                                         echo '</td>';
                                         echo '</tr>';
 
@@ -127,7 +131,7 @@
 
             swal({
                 title: "Are you sure?",
-                text: "Once removed, you will not be able to recover this order.",
+                text: "Once removed, you will be able to recover this order.",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonText: "Yes, remove it",
