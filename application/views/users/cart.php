@@ -94,7 +94,7 @@
                                         echo '<td style="padding: 3px 3px;text-align:center;">';
                                         echo '<button type="button" class="btn ios-action edit" style="padding: 1px 10px; font-size: 14px;" onclick=edit("")><i class="bi bi-pencil" style="color: black;"></i></button>';
                                         echo '&nbsp;';
-                                        echo '<button type="button" class="btn ios-action remove" style="padding: 1px 10px; font-size: 14px;" onclick=remove("'.$value->id.'")><i class="bi bi-trash" style="color: black;"></i></button>';
+                                        echo '<button type="button" class="btn ios-action remove" style="padding: 1px 10px; font-size: 14px;" onclick=remove('.$value->order_id.')><i class="bi bi-trash" style="color: black;"></i></button>';
                                         echo '</td>';
                                         echo '</tr>';
 
