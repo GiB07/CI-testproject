@@ -815,4 +815,9 @@ input:checked + .slider:before {
         font-size: 10px;
     }
 }
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
 /* end */
