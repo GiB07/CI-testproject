@@ -39,7 +39,7 @@
                         </li>
 
                          <li class="breadcrumb-item">
-                            <a href="<?= base_url('upload'); ?>" class="btn btn-md glass-btn">
+                            <a href="<?= base_url('upload'); ?>" class="btn btn-md glass-btn" style="color:#fff;">
                                 Upload Stocks
                             </a>
                         </li>
