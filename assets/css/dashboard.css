@@ -741,3 +741,78 @@ input:checked + .slider:before {
         height: 28px;
     }
 }
+
+/* Responsive table rows */
+.ios27-table {
+    table-layout: auto;
+    max-width: 100%;
+}
+
+.ios27-table tbody tr {
+    width: 100%;
+}
+
+.ios27-table tbody td {
+    max-width: 200px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* Keep these columns compact */
+.ios27-table .qty,
+.ios27-table .price,
+.ios27-table .total_amount,
+.ios27-table .status,
+.ios27-table .ios-actions {
+    white-space: nowrap !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .ios27-table {
+        width: 100% !important;
+        font-size: 12px;
+    }
+
+    .ios27-table thead th {
+        padding: 9px 6px !important;
+        font-size: 9px;
+    }
+
+    .ios27-table tbody td {
+        padding: 10px 6px !important;
+        max-width: 120px;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    /* Don't break these */
+    .ios27-table tbody td:first-child,
+    .ios27-table .price,
+    .ios27-table .qty,
+    .ios27-table .total_amount,
+    .ios27-table .status,
+    .ios27-table .ios-actions {
+        white-space: nowrap !important;
+    }
+
+    .ios27-table .product {
+        max-width: 120px;
+        white-space: normal !important;
+        word-break: break-word;
+    }
+
+    .ios-action {
+        width: 28px;
+        height: 28px;
+        margin: 0 1px;
+    }
+
+    .ios-status {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+}
+/* end */
