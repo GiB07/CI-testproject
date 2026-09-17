@@ -33,14 +33,14 @@ class super_model extends CI_Model
     {
         $this->db->where($where);
         $query = $this->db->get($table);
-        return $query->result();
+        return $query->result_array();
     }
 
     public function select_all_order_by($table, $column, $order)
     {
         $this->db->order_by($column, $order);
         $query = $this->db->get($table);
-        return $query->result();
+        return $query->result_array();
 
     }
 // =============reset=====================
