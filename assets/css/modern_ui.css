@@ -149,3 +149,207 @@
     font-style: normal;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 30px 0;
+}
+
+/* Top Section */
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 70px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h6 {
+    margin: 0 0 22px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .3px;
+}
+
+.footer-column a {
+    width: fit-content;
+    margin-bottom: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    transition: opacity .2s ease;
+}
+
+.footer-column a:hover {
+    opacity: .55;
+}
+
+/* Opening Hours */
+
+.footer-hours {
+    width: 100%;
+}
+
+.footer-hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 0;
+    border-top: 1px solid #222;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .4px;
+}
+
+.footer-hours-row:last-child {
+    border-bottom: 1px solid #222;
+}
+
+.footer-hours-row span:last-child {
+    text-align: right;
+}
+
+/* Divider */
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: #222;
+    margin: 35px 0;
+}
+
+/* Bottom */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-copy {
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    transition: opacity .2s ease;
+}
+
+.footer-social a:hover {
+    opacity: .55;
+}
+
+/* Large Brand */
+
+.footer-brand {
+    width: 100%;
+    margin-top: 20px;
+    font-size: clamp(90px, 17vw, 230px);
+    line-height: .75;
+    font-weight: 800;
+    letter-spacing: -7px;
+    white-space: nowrap;
+    text-align: center;
+    transform: translateY(15px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        padding: 45px 20px 0;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 30px;
+    }
+
+    .footer-hours {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .footer-social {
+        flex-wrap: wrap;
+    }
+
+    .footer-divider {
+        margin: 28px 0;
+    }
+
+    .footer-brand {
+        font-size: 18vw;
+        letter-spacing: -3px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-hours {
+        grid-column: auto;
+    }
+
+    .footer-hours-row {
+        font-size: 9px;
+    }
+
+    .footer-bottom {
+        gap: 15px;
+    }
+
+    .footer-social {
+        gap: 12px;
+    }
+
+    .footer-brand {
+        font-size: 19vw;
+        letter-spacing: -2px;
+    }
+}
+

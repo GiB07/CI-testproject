@@ -1,6 +1,83 @@
-        <footer class="footer">
-            © 2018 Elegent Admin by wrappixel.com
-        </footer>
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <!-- Top Footer -->
+            <div class="footer-top">
+
+                <!-- Pages -->
+                <div class="footer-column">
+                    <h6>Pages</h6>
+
+                    <a href="#">HOME</a>
+                    <a href="#">ABOUT</a>
+                    <a href="#">CONTACT</a>
+                    <a href="#">MENU</a>
+                    <a href="#">RESERVATION</a>
+                </div>
+
+                <!-- Admin -->
+                <div class="footer-column">
+                    <h6>Admin</h6>
+
+                    <a href="#">STYLE GUIDE</a>
+                    <a href="#">INSTRUCTIONS</a>
+                    <a href="#">LICENSES</a>
+                    <a href="#">CHANGELOG</a>
+                    <a href="#">COMPONENTS</a>
+                </div>
+
+                <!-- Opening Hours -->
+                <div class="footer-column footer-hours">
+                    <h6>Opening hours</h6>
+
+                    <div class="footer-hours-row">
+                        <span>MONDAY — THURSDAY</span>
+                        <span>8 AM - 9 PM</span>
+                    </div>
+
+                    <div class="footer-hours-row">
+                        <span>FRIDAY — SATURDAY</span>
+                        <span>8 AM - 11 PM</span>
+                    </div>
+
+                    <div class="footer-hours-row">
+                        <span>SUNDAY</span>
+                        <span>CLOSED</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="footer-divider"></div>
+
+            <!-- Bottom Info -->
+            <div class="footer-bottom">
+
+                <div class="footer-copy">
+                    © 2026 The 8:30 Club! All rights reserved.
+                </div>
+
+                <div class="footer-social">
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">THREADS</a>
+                    <a href="#">LINKEDIN</a>
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="footer-divider"></div>
+
+            <!-- Large Brand -->
+            <div class="footer-brand">
+                THE 8:30 CLUB!
+            </div>
+
+        </div>
+
+    </footer>
     </div>
     
 
