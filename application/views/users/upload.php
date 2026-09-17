@@ -62,7 +62,7 @@
                     <div class="col-8 col-sm-8 col-md-8 col-lg-8">
 
                         <div class="reservation-card">
-                            <div class="card-body py-0" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;width: fit-content;  height: 50px;">
+                            <div class="card-body py-0" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;width: fit-content;  height: 35px;">
 
                                 <div class="small" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
                                     
