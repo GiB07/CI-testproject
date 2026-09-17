@@ -206,9 +206,7 @@
                     $.ajax({
                         url: "<?php echo base_url('undo_order'); ?>",
                         type: "POST",
-                        data: {
-                            id: id
-                        },
+                        data: {id: id},
 
                         success: function(data) {
 
