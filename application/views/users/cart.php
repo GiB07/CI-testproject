@@ -123,73 +123,73 @@
 
         });
 
-function remove(id) {
+        function remove(id) {
 
-    swal({
-        title: "Are you sure?",
-        text: "Once removed, you will not be able to recover this order.",
-        type: "warning",
-        showCancelButton: true,
-        confirmButtonText: "Yes, remove it",
-        cancelButtonText: "Cancel",
-        confirmButtonColor: "#d33"
-    }).then(function(isConfirm) {
+            swal({
+                title: "Are you sure?",
+                text: "Once removed, you will not be able to recover this order.",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Yes, remove it",
+                cancelButtonText: "Cancel",
+                confirmButtonColor: "#d33"
+            }).then(function(isConfirm) {
 
-        if (isConfirm) {
+                if (isConfirm) {
 
-            $.ajax({
-                url: "<?php echo base_url('remove_order'); ?>",
-                type: "POST",
-                data: {
-                    id: id
-                },
+                    $.ajax({
+                        url: "<?php echo base_url('remove_order'); ?>",
+                        type: "POST",
+                        data: {
+                            id: id
+                        },
 
-                success: function(data) {
+                        success: function(data) {
 
-                    console.log("Success:", data);
+                            console.log("Success:", data);
 
-                    if ($.trim(data) == "success") {
+                            if ($.trim(data) == "success") {
 
-                        swal(
-                            "Success",
-                            "The order has been removed successfully.",
-                            "success"
-                        );
+                                swal(
+                                    "Success",
+                                    "The order has been removed successfully.",
+                                    "success"
+                                );
 
-                        setTimeout(function() {
-                            location.reload();
-                        }, 1200);
+                                setTimeout(function() {
+                                    location.reload();
+                                }, 1200);
 
-                    } else {
+                            } else {
 
-                        swal(
-                            "Error",
-                            "Failed to remove the order. Please try again.",
-                            "error"
-                        );
+                                swal(
+                                    "Error",
+                                    "Failed to remove the order. Please try again.",
+                                    "error"
+                                );
 
-                    }
+                            }
 
-                },
+                        },
 
-                error: function(xhr, status, error) {
+                        error: function(xhr, status, error) {
 
-                    console.error("Error:", error);
+                            console.error("Error:", error);
 
-                    swal(
-                        "Error",
-                        "Something went wrong while removing the order.",
-                        "error"
-                    );
+                            swal(
+                                "Error",
+                                "Something went wrong while removing the order.",
+                                "error"
+                            );
+
+                        }
+                    });
 
                 }
+
             });
 
         }
-
-    });
-
-}
     </script>
 
 
