@@ -371,7 +371,7 @@ public function insert_registration(){
             return;
         }
 
-        $data['orders'] = $this->super_model->select_custom_where('orders',"user_id = " . (int)$user_id . " AND status = 'Pending, Removed'");
+        $data['orders'] = $this->super_model->select_custom_where('orders',"user_id = " . (int)$user_id . " AND status IN ('Pending', 'Removed')");
 
         $this->load->view('user_template/header');
         $this->load->view('user_template/navbar');
