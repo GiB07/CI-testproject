@@ -66,7 +66,7 @@
 
                                 <div class="small" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
                                     
-                                    <h8 class="text-white mb-0">
+                                    &nbsp;<h8 class="text-white mb-0">
                                         Toggle to:
                                     </h8>
 
