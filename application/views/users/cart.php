@@ -197,7 +197,7 @@
 
             swal({
                 title: "Are you sure?",
-                text: "Once undone, you will be able to recover this order.",
+                text: "You want to recover this order?",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonText: "Yes, undo it",
@@ -220,7 +220,7 @@
 
                                 swal(
                                     "Success",
-                                    "The order has been removed successfully.",
+                                    "The order has been undone successfully.",
                                     "success"
                                 );
 
@@ -232,7 +232,7 @@
 
                                 swal(
                                     "Error",
-                                    "Failed to remove the order. Please try again.",
+                                    "Failed to undo the order. Please try again.",
                                     "error"
                                 );
 
