@@ -122,6 +122,10 @@
             });
 
         });
+
+        function remove(id) {
+            alert('Remove functionality is not implemented yet.');
+        }
     </script>
 
 
