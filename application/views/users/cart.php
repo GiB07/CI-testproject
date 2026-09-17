@@ -132,11 +132,9 @@
             swal({
                 title: "Are you sure?",
                 text: "Once removed, you will be able to recover this order.",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonText: "Yes, remove it",
-                cancelButtonText: "Cancel",
-                confirmButtonColor: "#d33"
+                icon: "warning",
+                buttons: ["Cancel", "Yes, remove it"],
+                dangerMode: true
             }).then(function(isConfirm) {
 
                 if (isConfirm) {
@@ -193,69 +191,69 @@
 
         }
 
-function undo(id) {
+        function undo(id) {
 
-    swal({
-        title: "Are you sure?",
-        text: "You want to recover this order?",
-        icon: "warning",
-        buttons: ["Cancel", "Yes, undo it"],
-        dangerMode: true
-    }).then(function(isConfirm) {
+            swal({
+                title: "Are you sure?",
+                text: "You want to recover this order?",
+                icon: "warning",
+                buttons: ["Cancel", "Yes, undo it"],
+                dangerMode: true
+            }).then(function(isConfirm) {
 
-        if (isConfirm) {
+                if (isConfirm) {
 
-            $.ajax({
-                url: "<?php echo base_url('undo_order'); ?>",
-                type: "POST",
-                data: {
-                    id: id
-                },
+                    $.ajax({
+                        url: "<?php echo base_url('undo_order'); ?>",
+                        type: "POST",
+                        data: {
+                            id: id
+                        },
 
-                success: function(data) {
+                        success: function(data) {
 
-                    console.log("Success:", data);
+                            console.log("Success:", data);
 
-                    if ($.trim(data) == "success") {
+                            if ($.trim(data) == "success") {
 
-                        swal(
-                            "Success",
-                            "The order has been undone successfully.",
-                            "success"
-                        );
+                                swal(
+                                    "Success",
+                                    "The order has been undone successfully.",
+                                    "success"
+                                );
 
-                        setTimeout(function() {
-                            location.reload();
-                        }, 1200);
+                                setTimeout(function() {
+                                    location.reload();
+                                }, 1200);
 
-                    } else {
+                            } else {
 
-                        swal(
-                            "Error",
-                            "Failed to undo the order. Please try again.",
-                            "error"
-                        );
+                                swal(
+                                    "Error",
+                                    "Failed to undo the order. Please try again.",
+                                    "error"
+                                );
 
-                    }
-                },
+                            }
+                        },
 
-                error: function(xhr, status, error) {
+                        error: function(xhr, status, error) {
 
-                    console.error("Error:", error);
+                            console.error("Error:", error);
 
-                    swal(
-                        "Error",
-                        "Something went wrong while undoing the order.",
-                        "error"
-                    );
+                            swal(
+                                "Error",
+                                "Something went wrong while undoing the order.",
+                                "error"
+                            );
+                        }
+                    });
+
                 }
+
             });
 
         }
-
-    });
-
-}
     </script>
 
 
