@@ -51,6 +51,30 @@
 
                         <div style="background:rgba(255,255,255,.95);border-radius:15px;padding:20px;">
                             <div class="table-responsive">
+                                    <div class="ios27-legend">
+                                        <span class="legend-title">Actions:</span>
+
+                                        <span class="legend-item">
+                                            <span class="legend-action edit">
+                                                <i class="bi bi-pencil"></i>
+                                            </span>
+                                            Edit
+                                        </span>
+
+                                        <span class="legend-item">
+                                            <span class="legend-action remove">
+                                                <i class="bi bi-trash"></i>
+                                            </span>
+                                            Remove
+                                        </span>
+
+                                        <span class="legend-item">
+                                            <span class="legend-action undo">
+                                                <i class="bi bi-arrow-counterclockwise"></i>
+                                            </span>
+                                            Undo
+                                        </span>
+                                    </div>
                                 <table id="cartTable" class="table ios27-table">
 
                                     <thead>

@@ -820,4 +820,70 @@ input:checked + .slider:before {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
+/* ios-legend */
+.ios27-legend {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #f2f2f7;
+    border: 1px solid #e5e5ea;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.legend-title {
+    color: #6e6e73;
+    font-weight: 600;
+    margin-right: 3px;
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #636366;
+    white-space: nowrap;
+}
+
+.legend-action {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.legend-action i {
+    color: black;
+    font-size: 12px;
+}
+
+.legend-action.edit {
+    background: #fff0c2;
+}
+
+.legend-action.remove {
+    background: #ffe1e5;
+}
+
+.legend-action.undo {
+    background: #7db5f5;
+}
+
+@media (max-width: 768px) {
+    .ios27-legend {
+        padding: 7px 9px;
+        gap: 7px;
+        font-size: 11px;
+    }
+
+    .legend-action {
+        width: 23px;
+        height: 23px;
+    }
+}
 /* end */
