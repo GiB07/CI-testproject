@@ -148,6 +148,7 @@ function remove(id) {
                 success: function(data) {
 
                     console.log("Success:", data);
+                    console.log(swal.version);
 
                     if ($.trim(data) == "success") {
 
