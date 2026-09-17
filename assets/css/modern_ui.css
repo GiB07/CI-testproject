@@ -276,7 +276,7 @@
 .footer-brand {
     width: 100%;
     margin-top: 20px;
-    font-size: clamp(90px, 17vw, 230px);
+    font-size: clamp(96px, 33vw, 182px);
     line-height: .75;
     font-weight: 800;
     letter-spacing: -7px;
