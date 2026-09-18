@@ -928,7 +928,7 @@ input:checked + .slider:before {
 .checkout-total {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     color: #636366;
     font-size: 13px;
 }
