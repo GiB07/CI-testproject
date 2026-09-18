@@ -138,7 +138,8 @@
                                     </table>
                                 </div>
                             </div>
-                            <!-- Checkout Panel -->
+                        </div>
+                        <!-- Checkout Panel -->
                             <div class="col-md-3">
 
                                 <div class="checkout-card">
@@ -166,7 +167,6 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
