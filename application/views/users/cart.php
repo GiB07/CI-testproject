@@ -422,6 +422,7 @@
                 var product = $(node).find('.product').text().trim();
                 var qty = $(node).find('.qty').text().trim();
                 var total_amount = $(node).find('.total_amount').text().trim();
+                var status = $(node).find('.status').text().trim();
 
                 var amount = $(node).find('.total_amount').text()
                     .replace('₱', '')
@@ -434,6 +435,7 @@
                 summary += '<div class="order-summary-item">';
                 summary += '    <span class="order-product">' + product + '</span>';
                 summary += '    <span class="order-total_amount">' + total_amount + '</span>';
+                summary += '    <span class="order-status ' + status.toLowerCase() + '">' + status + '</span>';
                 summary += '    <span class="order-qty">x' + qty + '</span>';
                 summary += '</div>';
 

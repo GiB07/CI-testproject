@@ -960,6 +960,12 @@ input:checked + .slider:before {
     text-overflow: ellipsis;
 }
 
+.order-status {
+    width: 35%;
+    text-align: center;
+    font-weight: 600;
+}
+
 .order-total_amount {
     width: 35%;
     text-align: center;
