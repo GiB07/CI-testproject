@@ -149,6 +149,8 @@
                                         Order Summary
                                     </h4>
 
+                                    <div class="checkout-line"></div>
+
                                     <div class="checkout-total">
                                         <span>Total Orders</span>
                                         <strong id="totalOrders">0</strong>
