@@ -973,7 +973,7 @@ input:checked + .slider:before {
 }
 
 .order-qty {
-    width: 20%;
+    width: 30%;
     text-align: right;
     font-weight: 600;
 }
