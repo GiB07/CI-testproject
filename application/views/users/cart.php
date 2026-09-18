@@ -182,14 +182,7 @@
                 lengthMenu: [ [8, 25, 50, -1], [8, 25, 50, "All"] ]
 
             });
-
-            var table = $('#cartTable').DataTable();
-
-            var totalOrders = table.rows(function(index, data, node) {
-                return $(node).find('.status').text().trim() === 'Pending';
-            }).count();
-
-            $('#totalOrders').text(totalOrders);
+                updateOrderSummary();
 
         });
 
@@ -406,23 +399,32 @@
             });
         }
 
-        function updateTotalOrders(cartTable) {
+        function updateOrderSummary() {
 
+            var table = $('#cartTable').DataTable();
+            var summary = '';
             var totalOrders = 0;
 
-            cartTable.rows().every(function() {
+            table.rows().every(function() {
 
-                var row = this.node();
-                var status = $(row).find('.status').text().trim();
+                var node = this.node();
 
-                if (status != 'Removed') {
-                    totalOrders++;
-                }
+                var product = $(node).find('.product').text().trim();
+                var qty = $(node).find('.qty').text().trim();
+                var status = $(node).find('.status').text().trim();
+
+                summary += '<div class="order-summary-item">';
+                summary += '    <span class="order-product">' + product + '</span>';
+                summary += '    <span class="order-status ' + status.toLowerCase() + '">' + status + '</span>';
+                summary += '    <span class="order-qty">x' + qty + '</span>';
+                summary += '</div>';
+
+                totalOrders++;
 
             });
 
+            $('#orderSummaryList').html(summary);
             $('#totalOrders').text(totalOrders);
-
         }
     </script>
 

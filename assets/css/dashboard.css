@@ -938,4 +938,49 @@ input:checked + .slider:before {
     font-size: 22px;
     font-weight: 700;
 }
+
+.order-summary-list {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.order-summary-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 6px 0;
+    font-size: 13px;
+}
+
+.order-product {
+    width: 45%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.order-status {
+    width: 35%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.order-qty {
+    width: 20%;
+    text-align: right;
+    font-weight: 600;
+}
+
+.order-status.pending {
+    color: #28a745;
+}
+
+.order-status.removed {
+    color: #dc3545;
+}
+
+.order-status.released {
+    color: #007bff;
+}
 /*END*/
