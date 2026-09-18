@@ -149,6 +149,11 @@
                                         Order Summary
                                     </h4>
 
+                                    <div class="checkout-total">
+                                        <span>Total Orders</span>
+                                        <strong id="totalOrders">0</strong>
+                                    </div>
+
                                     <div class="checkout-line"></div>
 
                                     <div id="orderSummaryList" class="order-summary-list">
@@ -156,11 +161,6 @@
                                     </div>
 
                                     <div class="checkout-line"></div>
-
-                                    <div class="checkout-total">
-                                        <span>Total Orders</span>
-                                        <strong id="totalOrders">0</strong>
-                                    </div>
 
                                     <div class="checkout-total">
                                         <span>Subtotal</span>
