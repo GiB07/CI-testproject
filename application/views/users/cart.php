@@ -429,7 +429,9 @@
                     .replace(/,/g, '')
                     .trim();
 
-                subtotal += parseFloat(amount) || 0;
+                if (status !== 'Removed') {
+                    subtotal += parseFloat(amount) || 0;
+                }
                 totalOrders++;
 
                 summary += '<div class="order-summary-item">';
