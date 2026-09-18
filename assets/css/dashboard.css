@@ -885,5 +885,16 @@ input:checked + .slider:before {
         width: 23px;
         height: 23px;
     }
+
+    .legend-subtotal {
+    margin-left: auto;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    }
+
+    .legend-subtotal strong {
+        font-size: 17px;
+    }
 }
 /* end */

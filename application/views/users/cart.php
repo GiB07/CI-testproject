@@ -74,6 +74,10 @@
                                             </span>
                                             Undo
                                         </span>
+
+                                        <span class="legend-subtotal">
+                                            Subtotal: <strong>₱0.00</strong>
+                                        </span>
                                     </div>
                                 <table id="cartTable" class="table ios27-table">
 
