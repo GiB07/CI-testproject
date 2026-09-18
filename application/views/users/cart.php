@@ -419,10 +419,10 @@
 
                 var node = this.node();
 
-                var product = $(node).find('.product').text().trim();
-                var qty = $(node).find('.qty').text().trim();
+                var product      = $(node).find('.product').text().trim();
+                var qty          = $(node).find('.qty').text().trim();
                 var total_amount = $(node).find('.total_amount').text().trim();
-                var status = $(node).find('.status').text().trim();
+                var status       = $(node).find('.status').text().trim();
 
                 var amount = $(node).find('.total_amount').text()
                     .replace('₱', '')
