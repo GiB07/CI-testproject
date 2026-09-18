@@ -430,9 +430,13 @@
                     .trim();
 
                 if (status !== 'Removed') {
-                   totalOrders++;
+                    subtotal += parseFloat(amount) || 0;
                 }
                 
+                if (status !== 'Removed') {
+                    totalOrders++;
+                }
+
                 summary += '<div class="order-summary-item">';
                 summary += '    <span class="order-product">' + product + '</span>';
                 summary += '    <span class="order-total_amount">' + price + '</span>';
