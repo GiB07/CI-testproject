@@ -433,7 +433,7 @@
 
                 summary += '<div class="order-summary-item">';
                 summary += '    <span class="order-product">' + product + '</span>';
-                summary += '    <span class="order-status ' + status.toLowerCase() + '">' + status + '</span>';
+                summary += '    <span class="order-status">' + total_amount + '</span>';
                 summary += '    <span class="order-qty">x' + qty + '</span>';
                 summary += '</div>';
 
