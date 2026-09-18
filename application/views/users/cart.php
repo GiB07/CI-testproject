@@ -397,6 +397,25 @@
                 }
             });
         }
+
+        function updateTotalOrders(cartTable) {
+
+            var totalOrders = 0;
+
+            cartTable.rows().every(function() {
+
+                var row = this.node();
+                var status = $(row).find('.status').text().trim();
+
+                if (status != 'Removed') {
+                    totalOrders++;
+                }
+
+            });
+
+            $('#totalOrders').text(totalOrders);
+
+        }
     </script>
 
 
