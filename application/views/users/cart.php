@@ -432,13 +432,13 @@
                     .trim();
 
                 if (status !== 'Removed') {
-                    
+
                     subtotal += parseFloat(amount) || 0;
                     totalOrders++;
 
                     summary += '<div class="order-summary-item">';
                     summary += '    <span class="order-qty">x' + qty + '</span>';
-                    summary += '    <span class="order-product">' + product + '</span>';
+                    summary += '    <span class="order-product"><strong>' + product + '</strong></span>';
                     summary += '    <span class="order-total_amount">' + price + '</span>';
                     // summary += '    <span class="order-status ' + status.toLowerCase() + '">' + status + '</span>';
                     summary += '</div>';
