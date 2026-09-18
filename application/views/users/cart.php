@@ -85,7 +85,7 @@
                                                 <th class="text-center" style="width: 10%;">Price</th>
                                                 <th class="text-center" style="width: 5%;">Quantity</th>
                                                 <th class="text-center" style="width: 10%;">Total Amount</th>
-                                                <th class="text-center" style="width: 15%;">Added By</th>
+                                                <th class="text-center" style="width: 15%;" hidden>Added By</th>
                                                 <th class="text-center" style="width: 15%;">Date</th>
                                                 <th class="text-center" style="width: 10%;">Status</th>
                                                 <th class="text-center" style="width: 10%;">Action</th>
@@ -113,7 +113,7 @@
                                                 echo '<td class="price" style="text-align:center;font-size: 14px;">₱'.number_format($value->price, 2).'</td>';
                                                 echo '<td class="qty" style="text-align:center;font-size: 14px;">'.$value->qty.'</td>';
                                                 echo '<td class="total_amount" style="text-align:center;font-size: 14px;">₱'.number_format($value->total_amount, 2).'</td>';
-                                                echo '<td class="added_by" style="text-align:center;font-size: 14px;">'.htmlspecialchars($value->added_by).'</td>';
+                                                echo '<td class="added_by" style="text-align:center;font-size: 14px;" hidden>'.htmlspecialchars($value->added_by).'</td>';
                                                 echo '<td class="created_at" style="text-align:center;font-size: 14px;">'.date('M d, Y h:i A', strtotime($value->created_at)).'</td>';
                                                 echo '<td class="status" style="text-align:center;">'.$tag.'</td>';
                                                 echo '<td style="padding: 3px 3px;text-align:center;">';
