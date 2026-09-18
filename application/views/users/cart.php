@@ -183,6 +183,14 @@
 
             });
 
+            var table = $('#cartTable').DataTable();
+
+            var totalOrders = table.rows(function(index, data, node) {
+                return $(node).find('.status').text().trim() === 'Pending';
+            }).count();
+
+            $('#totalOrders').text(totalOrders);
+
         });
 
         function remove(id) {
