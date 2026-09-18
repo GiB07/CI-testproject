@@ -162,6 +162,11 @@
                                         <strong id="totalOrders">0</strong>
                                     </div>
 
+                                    <div class="checkout-total">
+                                        <span>Subtotal</span>
+                                        <strong id="subtotal">₱0.00</strong>
+                                    </div>
+
                                     <div class="checkout-line"></div>
 
                                     <button type="button" class="btn btn-md glass-btn btn-success" onclick="checkout()">
@@ -408,6 +413,7 @@
             var table = $('#cartTable').DataTable();
             var summary = '';
             var totalOrders = 0;
+            var subtotal = 0;
 
             table.rows().every(function() {
 
@@ -417,18 +423,31 @@
                 var qty = $(node).find('.qty').text().trim();
                 var status = $(node).find('.status').text().trim();
 
+                var amount = $(node).find('.total_amount').text()
+                    .replace('₱', '')
+                    .replace(/,/g, '')
+                    .trim();
+
+                subtotal += parseFloat(amount) || 0;
+                totalOrders++;
+
                 summary += '<div class="order-summary-item">';
                 summary += '    <span class="order-product">' + product + '</span>';
                 summary += '    <span class="order-status ' + status.toLowerCase() + '">' + status + '</span>';
                 summary += '    <span class="order-qty">x' + qty + '</span>';
                 summary += '</div>';
 
-                totalOrders++;
-
             });
 
             $('#orderSummaryList').html(summary);
             $('#totalOrders').text(totalOrders);
+
+            $('#subtotal').text(
+                '₱' + subtotal.toLocaleString('en-PH', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })
+            );
         }
     </script>
 
