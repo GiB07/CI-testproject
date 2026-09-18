@@ -938,19 +938,4 @@ input:checked + .slider:before {
     font-size: 22px;
     font-weight: 700;
 }
-
-.checkout-btn {
-    width: 100%;
-    border: none !important;
-    border-radius: 12px !important;
-    background: #049e04 !important;
-    color: #fff !important;
-    padding: 11px 15px !important;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.checkout-btn:hover {
-    opacity: .85;
-}
 /*END*/

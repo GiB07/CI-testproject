@@ -160,7 +160,7 @@
 
                                     <div class="checkout-line"></div>
 
-                                    <button type="button" class="btn checkout-btn" onclick="checkout()">
+                                    <button type="button" class="btn btn-md glass-btn btn-success" onclick="checkout()">
                                         <i class="bi bi-cart-check"></i>
                                         Checkout
                                     </button>
