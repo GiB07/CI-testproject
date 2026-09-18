@@ -140,9 +140,7 @@
                             </div>
                             <!-- Checkout Panel -->
                             <div class="col-md-3">
-
                                 <div class="checkout-card">
-
                                     <div class="checkout-icon">
                                         <i class="bi bi-cart-check"></i>
                                     </div>
@@ -150,6 +148,12 @@
                                     <h4 class="checkout-title">
                                         Order Summary
                                     </h4>
+
+                                    <div class="checkout-line"></div>
+
+                                    <div id="orderSummaryList" class="order-summary-list">
+                                        <!-- Orders will be loaded here -->
+                                    </div>
 
                                     <div class="checkout-line"></div>
 
