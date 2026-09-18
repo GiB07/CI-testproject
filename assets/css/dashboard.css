@@ -958,6 +958,7 @@ input:checked + .slider:before {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    flex: 1;
 }
 
 .order-status {
@@ -967,13 +968,13 @@ input:checked + .slider:before {
 }
 
 .order-total_amount {
-    width: 35%;
+    width: 80px;
     text-align: center;
     font-weight: 600;
 }
 
 .order-qty {
-    width: 30%;
+    width: 35px;
     text-align: right;
     font-weight: 600;
 }
